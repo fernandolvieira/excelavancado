@@ -1,0 +1,638 @@
+[
+    {
+        "id": "G2_T1_01",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Você está simulando o financiamento de novos equipamentos de TI (laptops e servidores) para a instituição de ensino. O valor total do projeto é de R$ 85.000,00 (célula B1), com uma taxa de juros anual de 15% (célula B2) e prazo de 48 meses (célula B3).",
+        "enunciado": "Calcule o valor exato da parcela mensal deste financiamento. Lembre-se de ajustar a taxa de juros para o período mensal.",
+        "dica": "A taxa informada é anual, mas os pagamentos são mensais. Divida a taxa por 12.",
+        "arquivo_download": "simulador_financiamento_ti.xlsx",
+        "resultado_esperado": "-2365,45"
+    },
+    {
+        "id": "G2_T1_02",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Na sua planilha de gestão de aluguéis de temporada do Airbnb, a coluna C possui o 'Bairro', a coluna D o 'Número de Hóspedes' e a coluna F o 'Valor da Diária'.",
+        "enunciado": "Calcule o valor médio da diária (Coluna F) especificamente para reservas no bairro 'Copacabana' que tenham 4 ou mais hóspedes.",
+        "dica": "O intervalo de média é o primeiro argumento da função.",
+        "arquivo_download": "base_reservas_rj.xlsx",
+        "resultado_esperado": "350,00"
+    },
+    {
+        "id": "G2_T1_03",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MAIOR",
+            "MENOR"
+        ],
+        "contexto": "Você exportou as notas de 150 avaliações de clientes ocultos em lojas locais. As notas finais estão na coluna E.",
+        "enunciado": "Para definir os extremos da premiação, encontre a 3ª maior nota e a 2ª menor nota da base. Subtraia a 2ª menor nota da 3ª maior nota e informe o resultado.",
+        "dica": "Use a função MAIOR para a primeira parte e MENOR para a segunda, depois subtraia os resultados.",
+        "arquivo_download": "notas_cliente_oculto.xlsx",
+        "resultado_esperado": "45"
+    },
+    {
+        "id": "G2_T1_04",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "SOMA"
+        ],
+        "contexto": "Gestão de despesas com assinaturas e kits do Clube do Malte. A coluna D contém os valores de todas as compras de cervejas artesanais do ano.",
+        "enunciado": "Calcule o total absoluto gasto no ano somando toda a coluna D.",
+        "dica": "A função mais fundamental do Excel para agrupamento total.",
+        "arquivo_download": "gastos_clube_malte.xlsx",
+        "resultado_esperado": "1840,50"
+    },
+    {
+        "id": "G2_T1_05",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MÉDIA"
+        ],
+        "contexto": "Controle de serviços diários da Malibu Barbearia. A linha 2 contém a quantidade de cortes realizados por dia no mês de Agosto (B2:AF2).",
+        "enunciado": "Descubra a média diária de cortes de cabelo realizados ao longo do mês.",
+        "dica": "A função calcula a média aritmética ignorando células em branco nativamente.",
+        "arquivo_download": "agenda_malibu_agosto.xlsx",
+        "resultado_esperado": "14"
+    },
+    {
+        "id": "G2_T1_06",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "ORDEM"
+        ],
+        "contexto": "Emissão de boletins do Diário Eletrônico. A média do aluno Fernando está na célula G15. As médias de todos os 40 alunos da turma estão no intervalo G2:G41.",
+        "enunciado": "Calcule a posição (ranking) da nota deste aluno em relação à turma toda, considerando a maior nota como o 1º lugar.",
+        "dica": "Use referência absoluta ($) no intervalo da turma para que a fórmula possa ser arrastada sem erros.",
+        "arquivo_download": "boletim_turma_a.xlsx",
+        "resultado_esperado": "5"
+    },
+    {
+        "id": "G2_T1_07",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MENOR"
+        ],
+        "contexto": "Orçamento para upgrade de PC. Você extraiu 80 cotações do Mercado Livre e Amazon para um SSD 1TB SATA III na coluna C.",
+        "enunciado": "A cotação mais baixa (1º) costuma ser golpe. Encontre o 3º menor preço da lista para uma estimativa mais realista.",
+        "dica": "O segundo argumento da função define o 'k-ésimo' item desejado.",
+        "arquivo_download": "cotacoes_hardware.xlsx",
+        "resultado_esperado": "315,90"
+    },
+    {
+        "id": "G2_T1_08",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MAIOR"
+        ],
+        "contexto": "Auditoria de uso de banda em infraestrutura Cloud (Azure). A coluna B registra picos de transferência de dados em GB por hora durante 30 dias.",
+        "enunciado": "Para dimensionar o novo contrato, identifique o 5º maior pico de consumo registrado na base.",
+        "dica": "A função MAIOR é ideal para encontrar o top N de um conjunto de dados.",
+        "arquivo_download": "logs_azure_banda.xlsx",
+        "resultado_esperado": "412"
+    },
+    {
+        "id": "G2_T1_09",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Análise de vendas da Shopee. Coluna A: Produto. Coluna C: Tamanho. Coluna E: Valor Vendido.",
+        "enunciado": "Calcule o ticket médio (média dos valores vendidos) exclusivamente para as 'Camisetas' (Produto) do tamanho 'G3'.",
+        "dica": "Múltiplas condições exigem a versão 'SES' da função de média.",
+        "arquivo_download": "vendas_ecommerce.xlsx",
+        "resultado_esperado": "68,50"
+    },
+    {
+        "id": "G2_T2_01",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "ORDEM"
+        ],
+        "contexto": "Você precisa classificar os alunos do curso pelo seu desempenho na Média Final (célula B2) em relação à turma (intervalo B$2:B$50).",
+        "enunciado": "Qual alternativa apresenta a sintaxe correta para criar um ranking onde a MAIOR nota recebe a posição 1?",
+        "alternativas": [
+            "=ORDEM(B2; B$2:B$50; 0)",
+            "=ORDEM(B$2:B$50; B2; 1)",
+            "=CLASSIFICAR(B2; B$2:B$50)",
+            "=ORDEM(B2; B$2:B$50; 1)"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O terceiro argumento (ordem) como '0' ou omitido significa ordem decrescente (do maior para o menor)."
+    },
+    {
+        "id": "G2_T2_02",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "MÉDIASES",
+            "MÉDIA"
+        ],
+        "contexto": "Tentativa de calcular a média de compras filtrando valores acima de R$ 500,00: =MÉDIA(SE(B2:B100>500; B2:B100)).",
+        "enunciado": "Qual função nativa substitui essa matriz e calcula a média com critério de forma mais direta e leve?",
+        "alternativas": [
+            "=MÉDIASES(B2:B100; B2:B100; \">500\")",
+            "=SOMASES(B2:B100; B2:B100; \">500\")/CONT.NÚM(B2:B100)",
+            "=MÉDIA(B2:B100; \">500\")",
+            "=MÉDIA.SE.ERRO(B2:B100; \">500\")"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função MÉDIASES (ou MÉDIA.SE) foi criada especificamente para substituir lógicas matriciais pesadas."
+    },
+    {
+        "id": "G2_T2_03",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "MAIOR",
+            "MÁXIMO"
+        ],
+        "contexto": "Analisando a capacidade de rede, você quer descobrir o 4º maior pico registrado no mês.",
+        "enunciado": "Por que a função MÁXIMO não serve para essa tarefa?",
+        "alternativas": [
+            "MÁXIMO retorna apenas o 1º valor mais alto absoluto.",
+            "MÁXIMO ignora valores duplicados.",
+            "MÁXIMO só funciona com formatos de datas e horas.",
+            "MÁXIMO é uma função volátil e deixa a planilha pesada."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "MÁXIMO não possui o argumento 'k' para especificar a posição desejada."
+    },
+    {
+        "id": "G2_T2_04",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Você utilizou a fórmula =PGTO(1%; 12; 1500) para calcular a parcela de um empréstimo de R$ 1.500.",
+        "enunciado": "Por padrão, o Excel retornará um resultado negativo (ex: -133,36). Por que isso acontece?",
+        "alternativas": [
+            "Porque representa um fluxo de caixa de saída (pagamento).",
+            "Porque a taxa de juros não foi dividida por 12.",
+            "Porque o valor presente (VP) deve ser sempre maior que zero.",
+            "É um bug de formatação contábil do Excel."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Funções financeiras seguem o princípio de fluxo de caixa. O empréstimo entra (+), as parcelas saem (-)."
+    },
+    {
+        "id": "G2_T2_05",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "MENOR"
+        ],
+        "contexto": "Buscando o menor tempo de resposta em um servidor.",
+        "enunciado": "Na prática, qual é a diferença de resultado entre =MÍNIMO(A:A) e =MENOR(A:A; 1)?",
+        "alternativas": [
+            "Nenhuma. Ambas retornarão exatamente o mesmo valor.",
+            "MÍNIMO ignora erros, MENOR não.",
+            "MENOR(A:A; 1) gera erro, pois o índice começa em 0.",
+            "MÍNIMO é mais rápido na execução de grandes dados."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O 1º menor valor de um conjunto é, por definição lógica e matemática, o seu valor mínimo."
+    },
+    {
+        "id": "G2_T2_06",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "SOMA"
+        ],
+        "contexto": "Você selecionou a coluna inteira =SOMA(D:D) para somar os valores das corridas de app. Porém, a célula D1 contém o texto 'Valor da Corrida'.",
+        "enunciado": "Como a função SOMA reage ao encontrar texto no meio de um intervalo numérico?",
+        "alternativas": [
+            "Ela ignora o texto e soma apenas os números normalmente.",
+            "Ela retorna o erro #VALOR!.",
+            "Ela tenta converter o texto em número, falha e retorna 0.",
+            "Ela exige o uso da função SOMA.SE para ignorar o cabeçalho."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função SOMA nativamente ignora textos e células vazias dentro do intervalo."
+    },
+    {
+        "id": "G2_T2_07",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "MÉDIA"
+        ],
+        "contexto": "Tabela de pesagem na academia. Algumas células estão vazias porque o aluno faltou.",
+        "enunciado": "Ao usar a função =MÉDIA(B2:B30), como o Excel trata as células vazias?",
+        "alternativas": [
+            "Ignora as células vazias (não entram no denominador).",
+            "Trata as vazias como zero, puxando a média para baixo.",
+            "Retorna erro #N/D.",
+            "Exige o uso de uma função condicional extra."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "MÉDIA considera apenas células com valores numéricos para dividir a soma total."
+    },
+    {
+        "id": "G2_T2_08",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "ORDEM"
+        ],
+        "contexto": "Ranking de vendedores. João e Maria venderam exatamente R$ 10.000,00, empatando no topo.",
+        "enunciado": "Usando =ORDEM.EQ(), qual será a posição atribuída a ambos?",
+        "alternativas": [
+            "Ambos recebem a posição 1, e o próximo recebe a posição 3.",
+            "O Excel desempata alfabeticamente.",
+            "Ambos recebem a posição 1, e o próximo recebe a posição 2.",
+            "A função retorna erro #DUPLICATA!."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "ORDEM.EQ atribui o rank superior a empates. Como ocuparam o 1º e 2º lugar virtuais, o próximo é o 3º."
+    },
+    {
+        "id": "G2_T2_09",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Cálculo de média condicional.",
+        "enunciado": "O que a função MÉDIASES retorna se absolutamente nenhuma linha atender aos critérios informados (ex: buscar um produto que não existe na base)?",
+        "alternativas": [
+            "O erro #DIV/0!",
+            "O valor 0",
+            "O erro #N/D",
+            "Célula em branco"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Sem dados válidos, a soma é 0 e a contagem é 0. Divisão por zero gera #DIV/0!."
+    },
+    {
+        "id": "G2_T3_01",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Parcela de empréstimo. Valor presente em A1, taxa de juros MENSAL em A2, e o prazo em ANOS em A3.",
+        "enunciado": "Complete a função PGTO adaptando os anos para meses.",
+        "estrutura": "=PGTO(____; A3 * ____; A1)",
+        "lacunas_esperadas": [
+            "A2",
+            "12"
+        ]
+    },
+    {
+        "id": "G2_T3_02",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "MENOR"
+        ],
+        "contexto": "Buscando o segundo orçamento mais barato na coluna D.",
+        "enunciado": "Preencha para retornar o 2º menor valor.",
+        "estrutura": "=MENOR(____; ____)",
+        "lacunas_esperadas": [
+            "D:D",
+            "2"
+        ]
+    },
+    {
+        "id": "G2_T3_03",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Ticket médio de compras de camisas G3 (coluna C) com valor maior que zero (coluna F).",
+        "enunciado": "Complete os critérios da média.",
+        "estrutura": "=MÉDIASES(F:F; ____; \"G3\"; F:F; ____)",
+        "lacunas_esperadas": [
+            "C:C",
+            "\">0\""
+        ]
+    },
+    {
+        "id": "G2_T3_04",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "MAIOR"
+        ],
+        "contexto": "Descobrindo o 3º maior faturamento diário na coluna B.",
+        "enunciado": "Complete a fórmula.",
+        "estrutura": "=MAIOR(____; ____)",
+        "lacunas_esperadas": [
+            "B:B",
+            "3"
+        ]
+    },
+    {
+        "id": "G2_T3_05",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "ORDEM"
+        ],
+        "contexto": "Ranking de tempos de corrida da Garupa (Coluna C). O menor tempo deve ser o 1º lugar.",
+        "enunciado": "Preencha o último argumento para ordenar em formato crescente.",
+        "estrutura": "=ORDEM(C2; C$2:C$50; ____)",
+        "lacunas_esperadas": [
+            "1"
+        ]
+    },
+    {
+        "id": "G2_T3_06",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "SOMA"
+        ],
+        "contexto": "Somando gastos de Janeiro (coluna C) e Março (coluna E) simultaneamente.",
+        "enunciado": "Complete a função SOMA para colunas separadas.",
+        "estrutura": "=SOMA(____; ____)",
+        "lacunas_esperadas": [
+            "C:C",
+            "E:E"
+        ]
+    },
+    {
+        "id": "G2_T3_07",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "MÉDIA"
+        ],
+        "contexto": "Cálculo simples da nota geral na coluna D.",
+        "enunciado": "Insira o nome da função correta.",
+        "estrutura": "=____(D:D)",
+        "lacunas_esperadas": [
+            "MÉDIA"
+        ]
+    },
+    {
+        "id": "G2_T3_08",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Cálculo de parcela com Taxa (A1), Nper (A2) e VP (B1).",
+        "enunciado": "Complete com o argumento do Valor Presente.",
+        "estrutura": "=PGTO(A1; A2; ____)",
+        "lacunas_esperadas": [
+            "B1"
+        ]
+    },
+    {
+        "id": "G2_T3_09",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Média de avaliações (D:D) exclusivamente do motorista 'João' (C:C).",
+        "enunciado": "Preencha o intervalo e o critério.",
+        "estrutura": "=MÉDIASES(____; C:C; ____)",
+        "lacunas_esperadas": [
+            "D:D",
+            "\"João\""
+        ]
+    },
+    {
+        "id": "G2_T4_01",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "ORDEM"
+        ],
+        "contexto": "Placar de equipe de vendas. A pontuação atual está em D5 e todas as pontuações em D$2:D$100.",
+        "enunciado": "Escreva a fórmula usando ORDEM para calcular a posição deste vendedor do maior para o menor (decrescente).",
+        "respostas_aceitas": [
+            "(?i)=ordem\\(\\s*D5\\s*;\\s*D\\$2:D\\$100\\s*(;\\s*0)?\\s*\\)",
+            "(?i)=ordem\\.eq\\(\\s*D5\\s*;\\s*D\\$2:D\\$100\\s*(;\\s*0)?\\s*\\)"
+        ],
+        "dica_validacao": "O argumento de ordem (0) é opcional para decrescente."
+    },
+    {
+        "id": "G2_T4_02",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Financiamento de curso. Taxa de 2% ao mês (F1), Prazo de 12 meses (F2) e Valor de R$ 2.000,00 (F3).",
+        "enunciado": "Escreva a fórmula completa. Adicione um sinal de menos na frente do valor do empréstimo para o resultado final ficar positivo.",
+        "respostas_aceitas": [
+            "(?i)=pgto\\(\\s*F1\\s*;\\s*F2\\s*;\\s*-F3\\s*\\)",
+            "(?i)=-pgto\\(\\s*F1\\s*;\\s*F2\\s*;\\s*F3\\s*\\)"
+        ],
+        "dica_validacao": "Ordem: Taxa, Nper, VP."
+    },
+    {
+        "id": "G2_T4_03",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Métricas de suporte de TI. Coluna E: Tempo (horas). Coluna F: Urgência. Coluna G: Técnico.",
+        "enunciado": "Escreva a fórmula para calcular o tempo médio de resolução (E) da urgência 'Alta' (F) atendida pelo técnico 'Carlos' (G).",
+        "respostas_aceitas": [
+            "(?i)=m[eé]diases\\(\\s*E:E\\s*;\\s*F:F\\s*;\\s*\"Alta\"\\s*;\\s*G:G\\s*;\\s*\"Carlos\"\\s*\\)",
+            "(?i)=m[eé]diases\\(\\s*E:E\\s*;\\s*G:G\\s*;\\s*\"Carlos\"\\s*;\\s*F:F\\s*;\\s*\"Alta\"\\s*\\)"
+        ],
+        "dica_validacao": "Intervalo de Média vem primeiro, seguido dos pares de critério."
+    },
+    {
+        "id": "G2_T4_04",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "SOMA"
+        ],
+        "contexto": "Inventário de supermercado. A coluna E possui a quantidade em quilos de todas as caixas de paçoca vendidas.",
+        "enunciado": "Escreva a fórmula simples para somar completamente a coluna E.",
+        "respostas_aceitas": [
+            "(?i)=soma\\(\\s*E:E\\s*\\)"
+        ],
+        "dica_validacao": "Basta referenciar a coluna inteira dentro da função."
+    },
+    {
+        "id": "G2_T4_05",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "MAIOR"
+        ],
+        "contexto": "Análise de limites de crédito (Coluna F).",
+        "enunciado": "Escreva a fórmula para descobrir o 2º maior limite de crédito da coluna F.",
+        "respostas_aceitas": [
+            "(?i)=maior\\(\\s*F:F\\s*;\\s*2\\s*\\)"
+        ],
+        "dica_validacao": "=MAIOR(matriz; k)"
+    },
+    {
+        "id": "G2_T4_06",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "MENOR"
+        ],
+        "contexto": "Tempos de resposta de SLA de chamados técnicos (Coluna H).",
+        "enunciado": "Escreva a fórmula para encontrar o 5º tempo mais rápido (menor) da coluna H.",
+        "respostas_aceitas": [
+            "(?i)=menor\\(\\s*H:H\\s*;\\s*5\\s*\\)"
+        ],
+        "dica_validacao": "=MENOR(matriz; k)"
+    },
+    {
+        "id": "G2_T4_07",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "MÉDIA"
+        ],
+        "contexto": "Benchmark de placa de vídeo. Coluna B contém os frames por segundo (FPS) registrados a cada minuto.",
+        "enunciado": "Escreva a fórmula para calcular a média de FPS da coluna B inteira.",
+        "respostas_aceitas": [
+            "(?i)=m[eé]dia\\(\\s*B:B\\s*\\)"
+        ],
+        "dica_validacao": "Não se esqueça do acento em MÉDIA."
+    },
+    {
+        "id": "G2_T4_08",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "ORDEM"
+        ],
+        "contexto": "Olimpíada de matemática. A nota do aluno está em B2, e todas as notas na coluna B. O menor tempo ganha.",
+        "enunciado": "Escreva a fórmula para classificar o tempo da célula B2 em relação à coluna B, em ordem crescente (menor é o 1º).",
+        "respostas_aceitas": [
+            "(?i)=ordem\\(\\s*B2\\s*;\\s*B:B\\s*;\\s*1\\s*\\)",
+            "(?i)=ordem\\.eq\\(\\s*B2\\s*;\\s*B:B\\s*;\\s*1\\s*\\)"
+        ],
+        "dica_validacao": "Use 1 no último argumento para ordem crescente."
+    },
+    {
+        "id": "G2_T4_09",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Cálculo de despesas corporativas. Valor na coluna C, Departamento na coluna A.",
+        "enunciado": "Escreva a fórmula de MÉDIASES para calcular o gasto médio da coluna C apenas quando o Departamento (A:A) for 'TI'.",
+        "respostas_aceitas": [
+            "(?i)=m[eé]diases\\(\\s*C:C\\s*;\\s*A:A\\s*;\\s*\"TI\"\\s*\\)"
+        ],
+        "dica_validacao": "Argumento 1: C:C. Argumento 2: A:A. Argumento 3: \"TI\""
+    },
+    {
+        "id": "G2_T1_D01",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "MÉDIASES",
+            "MÉDIA"
+        ],
+        "contexto": "Planilha de cotação de SSDs SATA III (base `cotacoes_hardware.xlsx`). A coluna E contém o 'Preço Unitário'.",
+        "enunciado": "Para evitar que ofertas falsas distorçam a média, calcule a média de preços da coluna E desconsiderando todos os valores que sejam estritamente menores que a média geral da própria coluna E.",
+        "dica": "Você precisará concatenar (\">\") com a função MÉDIA(E:E) dentro do critério do MÉDIASES.",
+        "arquivo_download": "cotacoes_hardware.xlsx",
+        "resultado_esperado": "385,40"
+    },
+    {
+        "id": "G2_T1_D02",
+        "grupo": 2,
+        "tipo": 1,
+        "tags": [
+            "SOMA",
+            "MAIOR"
+        ],
+        "contexto": "Análise de bônus de viagens da Garupa e 99 (base `gastos_mobilidade.xlsx`). A coluna F possui o valor de todas as corridas do mês.",
+        "enunciado": "A empresa reembolsa apenas as 3 corridas mais caras do mês. Calcule a soma exata dos 3 maiores valores encontrados na coluna F.",
+        "dica": "Você pode aninhar MAIOR dentro da SOMA utilizando uma constante de matriz (ex: {1;2;3}) no argumento 'k', ou somar 3 funções MAIOR individuais.",
+        "arquivo_download": "gastos_mobilidade.xlsx",
+        "resultado_esperado": "184,90"
+    },
+    {
+        "id": "G2_T2_D01",
+        "grupo": 2,
+        "tipo": 2,
+        "tags": [
+            "ORDEM",
+            "CONT.SES"
+        ],
+        "contexto": "No sistema do 'Seu Cliente Oculto', dois avaliadores tiraram nota 95 (células B10 e B11). Ao usar `=ORDEM(B10; B$2:B$50; 0)`, o Excel dá a posição 3 para ambos e pula a posição 4.",
+        "enunciado": "Qual técnica avançada resolve o problema de empates na função ORDEM, criando um ranking único sem repetições?",
+        "alternativas": [
+            "Somar a função ORDEM com um CONT.SES (ou CONT.SE) que conte o próprio intervalo em expansão: `=ORDEM(...) + CONT.SE(B$2:B10; B10) - 1`",
+            "Trocar o último argumento da função ORDEM para 2, forçando o desempate alfabético.",
+            "Substituir a função ORDEM por MAIOR, que automaticamente ignora duplicatas no ranking.",
+            "Multiplicar a nota por um fator aleatório invisível antes de aplicar a função ORDEM."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O uso do CONT.SE(referência_mista) é o padrão ouro no Excel para tratar matrizes com valores empatados."
+    },
+    {
+        "id": "G2_T3_D01",
+        "grupo": 2,
+        "tipo": 3,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Financiamento de um notebook Asus TUF Gaming. O Banco cobra 18% ao ano (A1), para pagar em 24 meses (A2). O valor da máquina (A3) é R$ 8.000,00 e o cliente quer dar uma entrada de R$ 1.500,00 (A4).",
+        "enunciado": "Complete a fórmula para calcular a parcela mensal exata.",
+        "estrutura": "=PGTO(A1/12; A2; ____(A3-____))",
+        "lacunas_esperadas": [
+            "-",
+            "A4"
+        ]
+    },
+    {
+        "id": "G2_T4_D01",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "PGTO"
+        ],
+        "contexto": "Um novo equipamento de ginástica para a Power Fitness custa R$ 12.000,00 (B1). O prazo é de 5 ANOS (B2), com pagamentos TRIMESTRAIS. A taxa informada é de 3% ao TRIMESTRE (B3).",
+        "enunciado": "Escreva a fórmula do PGTO. Atenção à unidade de tempo de B2 e B3. O resultado final deve ser um valor positivo.",
+        "respostas_aceitas": [
+            "(?i)=-pgto\\(\\s*B3\\s*;\\s*B2\\*4\\s*;\\s*B1\\s*\\)",
+            "(?i)=pgto\\(\\s*B3\\s*;\\s*B2\\*4\\s*;\\s*-B1\\s*\\)"
+        ],
+        "dica_validacao": "Como os pagamentos e a taxa são trimestrais, multiplique os anos por 4 para descobrir o total de parcelas (nper)."
+    },
+    {
+        "id": "G2_T4_D02",
+        "grupo": 2,
+        "tipo": 4,
+        "tags": [
+            "MÉDIASES"
+        ],
+        "contexto": "Avaliando o tempo de duração de cortes na Malibu Barbearia. Coluna D = Tempo em Minutos. Coluna C = Barbeiro. Célula H1 = 'Lucas'.",
+        "enunciado": "Escreva a fórmula para calcular a média de tempo da coluna D, apenas para o barbeiro da célula H1, desconsiderando tempos registrados como zero (0).",
+        "respostas_aceitas": [
+            "(?i)=m[eé]diases\\(\\s*D:D\\s*;\\s*C:C\\s*;\\s*H1\\s*;\\s*D:D\\s*;\\s*\"<>0\"\\s*\\)",
+            "(?i)=m[eé]diases\\(\\s*D:D\\s*;\\s*D:D\\s*;\\s*\"<>0\"\\s*;\\s*C:C\\s*;\\s*H1\\s*\\)"
+        ],
+        "dica_validacao": "Os critérios de diferente de zero devem estar entre aspas: \"<>0\"."
+    }
+]

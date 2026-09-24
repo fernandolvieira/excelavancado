@@ -1,0 +1,636 @@
+[
+    {
+        "id": "G3_T1_01",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DATADIF",
+            "HOJE"
+        ],
+        "contexto": "No sistema acadêmico, a coluna B contém a Data de Nascimento dos alunos. Você precisa calcular a idade exata de cada um até o dia de hoje.",
+        "enunciado": "Calcule a idade em ANOS COMPLETOS do aluno na linha 2, sabendo que ele nasceu em 15/04/1998, utilizando uma fórmula que se atualize automaticamente com a data de hoje.",
+        "dica": "Use DATADIF com o argumento 'Y' e a função HOJE() como data final.",
+        "arquivo_download": "base_alunos_idade.xlsx",
+        "resultado_esperado": "28"
+    },
+    {
+        "id": "G3_T1_02",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DIASTRABALHOTOTAL"
+        ],
+        "contexto": "Auditoria de SLAs de chamados de TI. A coluna C tem a 'Data de Abertura' e a D tem a 'Data de Resolução'.",
+        "enunciado": "Calcule quantos dias ÚTEIS a equipe levou para resolver o chamado da linha 5, que foi aberto em 01/08/2026 e resolvido em 12/08/2026.",
+        "dica": "Esta função exclui sábados e domingos nativamente.",
+        "arquivo_download": "chamados_ti_agosto.xlsx",
+        "resultado_esperado": "8"
+    },
+    {
+        "id": "G3_T1_03",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "FIMMÊS"
+        ],
+        "contexto": "Planejamento financeiro. As compras corporativas (Coluna A) têm vencimento sempre no ÚLTIMO DIA do mês seguinte ao da compra.",
+        "enunciado": "Descubra a data exata de vencimento de uma compra realizada em 15/02/2026.",
+        "dica": "O segundo argumento da função define quantos meses para frente ou para trás você quer avançar antes de ir para o último dia.",
+        "arquivo_download": "fluxo_caixa_compras.xlsx",
+        "resultado_esperado": "31/03/2026"
+    },
+    {
+        "id": "G3_T1_04",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DIATRABALHO"
+        ],
+        "contexto": "Previsão de entrega de equipamentos. O fornecedor promete a entrega em 15 dias úteis a partir da Data do Pedido (Coluna B).",
+        "enunciado": "Calcule a data prevista de entrega para um pedido feito em 01/10/2026.",
+        "dica": "Diferente de DIASTRABALHOTOTAL (que retorna quantidade), esta função retorna uma data futura.",
+        "arquivo_download": "pedidos_hardware.xlsx",
+        "resultado_esperado": "22/10/2026"
+    },
+    {
+        "id": "G3_T1_05",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "ANO",
+            "MÊS",
+            "DIA"
+        ],
+        "contexto": "Você exportou os relatórios de check-in do Airbnb, mas o sistema misturou tudo num texto longo na Coluna A. Você já usou fórmulas de texto para isolar a data na Coluna B, mas precisa agrupar as vendas por Mês.",
+        "enunciado": "Extraia apenas o número do MÊS da data de check-in (14/07/2026) localizada na célula B2.",
+        "dica": "A função extrai um número de 1 a 12 a partir de uma data válida.",
+        "arquivo_download": "relatorio_checkin.xlsx",
+        "resultado_esperado": "7"
+    },
+    {
+        "id": "G3_T1_06",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DATA"
+        ],
+        "contexto": "Um software legado exporta o Ano (Col A), Mês (Col B) e Dia (Col C) em colunas separadas. Você não consegue usar filtros de data com elas separadas.",
+        "enunciado": "Reconstrua a data válida na Coluna D para a linha onde A=2026, B=11 e C=25.",
+        "dica": "A função pede os argumentos exatamente na ordem: Ano, Mês, Dia.",
+        "arquivo_download": "sistema_legado_datas.xlsx",
+        "resultado_esperado": "25/11/2026"
+    },
+    {
+        "id": "G3_T1_07",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DATADIF"
+        ],
+        "contexto": "RH da escola. Precisamos saber o tempo de casa dos professores em MESES para cálculo de bônus.",
+        "enunciado": "Use a data de admissão na Coluna C (10/01/2023) e a data de rescisão na Coluna D (15/09/2026) para descobrir os meses completos trabalhados.",
+        "dica": "O terceiro argumento do DATADIF para meses é 'M'.",
+        "arquivo_download": "rh_tempo_casa.xlsx",
+        "resultado_esperado": "44"
+    },
+    {
+        "id": "G3_T1_08",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DATAM"
+        ],
+        "contexto": "Gestão de licenças de software (ex: Antivírus, Windows). A licença expira exatamente no mesmo dia, após X meses de validade (Coluna E).",
+        "enunciado": "Se a compra foi em 12/05/2026 e a validade é de 24 meses, qual a data de expiração?",
+        "dica": "DATAM avança meses mantendo o mesmo dia do mês (quando possível).",
+        "arquivo_download": "licencas_software.xlsx",
+        "resultado_esperado": "12/05/2028"
+    },
+    {
+        "id": "G3_T1_09",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "AGORA"
+        ],
+        "contexto": "Você está montando um Dashboard de indicadores de rede que precisa exibir o momento exato do último recálculo da planilha.",
+        "enunciado": "Na célula H1, insira a função que retorna a data e a hora do sistema simultaneamente.",
+        "dica": "É uma função sem argumentos, basta abrir e fechar parênteses.",
+        "arquivo_download": "dashboard_rede_vazio.xlsx",
+        "resultado_esperado": "Data e Hora atuais"
+    },
+    {
+        "id": "G3_T2_01",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "HOJE",
+            "AGORA"
+        ],
+        "contexto": "Você quer criar um cabeçalho dinâmico num relatório de vendas.",
+        "enunciado": "Qual é a principal diferença entre as funções =HOJE() e =AGORA()?",
+        "alternativas": [
+            "HOJE retorna apenas a data; AGORA retorna a data e a hora exata.",
+            "HOJE é estática; AGORA é atualizada em tempo real a cada segundo.",
+            "AGORA só funciona em células formatadas como texto.",
+            "Não há diferença, ambas são atalhos para a mesma funcionalidade."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função AGORA é mais detalhada e inclui a fração do dia (hora/minuto/segundo)."
+    },
+    {
+        "id": "G3_T2_02",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "DATADIF"
+        ],
+        "contexto": "A função DATADIF é considerada 'oculta' no Excel (não aparece no autopreencher), mas é amplamente usada.",
+        "enunciado": "Se você deseja saber os ANOS completos entre A1 (início) e B1 (fim), qual é a sintaxe correta?",
+        "alternativas": [
+            "=DATADIF(A1; B1; \"Y\")",
+            "=DATADIF(A1; B1; \"ANOS\")",
+            "=DATADIF(A1; B1; Y)",
+            "=DATADIF(B1; A1; \"Y\")"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O argumento deve ser 'Y' (Year) entre aspas duplas. A data inicial deve vir antes da final."
+    },
+    {
+        "id": "G3_T2_03",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "DIASTRABALHOTOTAL",
+            "DIATRABALHO"
+        ],
+        "contexto": "Trabalhando com prazos úteis, muitos analistas confundem essas duas funções.",
+        "enunciado": "Qual é a diferença fundamental no resultado gerado por DIASTRABALHOTOTAL e DIATRABALHO?",
+        "alternativas": [
+            "DIASTRABALHOTOTAL retorna um número (quantidade de dias); DIATRABALHO retorna uma data.",
+            "DIASTRABALHO desconta os feriados automaticamente; a outra não.",
+            "DIASTRABALHOTOTAL inclui sábados; DIATRABALHO exclui.",
+            "DIATRABALHO só funciona para datas futuras."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Uma calcula a distância entre duas datas. A outra projeta uma nova data a partir de uma quantidade de dias."
+    },
+    {
+        "id": "G3_T2_04",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "FIMMÊS"
+        ],
+        "contexto": "Você precisa descobrir o último dia do mês atual de uma data informada na célula A1.",
+        "enunciado": "O que acontece se você usar a função =FIMMÊS(A1; 0)?",
+        "alternativas": [
+            "Retorna o último dia do mês da própria data em A1.",
+            "Retorna erro, o argumento não pode ser 0.",
+            "Retorna o primeiro dia do mês de A1.",
+            "Retorna o último dia do ano em curso."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O número 0 indica 'zero meses para frente ou para trás', mantendo a análise no mês atual."
+    },
+    {
+        "id": "G3_T2_05",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "DATA"
+        ],
+        "contexto": "Entendendo o sistema de datas do Excel.",
+        "enunciado": "Como o Excel armazena internamente uma data como 01/01/2026?",
+        "alternativas": [
+            "Como um número de série sequencial começando em 01/01/1900.",
+            "Como um texto formatado em dd/mm/aaaa.",
+            "Como uma matriz de três números (dia, mês, ano).",
+            "Como um código binário flutuante atrelado ao Windows."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Por isso podemos somar e subtrair datas! Cada dia é o número 1."
+    },
+    {
+        "id": "G3_T2_06",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "DIASTRABALHOTOTAL"
+        ],
+        "contexto": "Ao calcular o SLA de dias úteis entre duas datas com DIASTRABALHOTOTAL.",
+        "enunciado": "Como você instrui a função a ignorar feriados que caem em dias úteis?",
+        "alternativas": [
+            "Selecionando um intervalo de células contendo as datas dos feriados no 3º argumento.",
+            "A função já é conectada à internet e desconta feriados nacionais automaticamente.",
+            "Usando o argumento \"FERIADOS=SIM\".",
+            "Não é possível. A função só exclui sábados e domingos."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O 3º argumento é opcional e recebe uma lista (matriz) de datas a serem desconsideradas."
+    },
+    {
+        "id": "G3_T2_07",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "DATADIF"
+        ],
+        "contexto": "Você tentou calcular a diferença entre 10/05/2026 (B1) e 01/05/2026 (A1) usando =DATADIF(B1; A1; \"D\").",
+        "enunciado": "O resultado foi o erro #NÚM!. Por que isso ocorreu?",
+        "alternativas": [
+            "A data inicial informada na função é maior que a data final.",
+            "O argumento \"D\" não existe, deve ser \"DIAS\".",
+            "Faltam aspas nas referências das células.",
+            "DATADIF não funciona no mesmo mês."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "No DATADIF, o primeiro argumento deve ser sempre cronologicamente anterior ao segundo."
+    },
+    {
+        "id": "G3_T2_08",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "DATAM",
+            "FIMMÊS"
+        ],
+        "contexto": "Duas faturas foram emitidas em 31/01/2026. A Fatura A vence com DATAM(A1; 1) e a Fatura B com FIMMÊS(A1; 1).",
+        "enunciado": "Quais serão os vencimentos em fevereiro (mês que vai até dia 28)?",
+        "alternativas": [
+            "Ambas vencem em 28/02/2026.",
+            "A Fatura A vence em 31/02 (Erro) e a B em 28/02.",
+            "A Fatura A vence em 28/02 e a B em 01/03.",
+            "A Fatura A vence em 03/03 e a B em 28/02."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O DATAM tenta manter o dia (31), mas como fevereiro termina em 28, ele se ajusta ao último dia válido do mês, assim como o FIMMÊS."
+    },
+    {
+        "id": "G3_T2_09",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "ANO",
+            "MÊS"
+        ],
+        "contexto": "Você tem a data 15/08/2026 em A1.",
+        "enunciado": "O que a fórmula =MÊS(A1) & \"/\" & ANO(A1) vai retornar?",
+        "alternativas": [
+            "O texto '8/2026'",
+            "A data formatada 01/08/2026",
+            "O número 2034 (Soma matemática)",
+            "O erro #VALOR!"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "As funções extraem os números, e o '&' os une como texto."
+    },
+    {
+        "id": "G3_T3_01",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "DATADIF"
+        ],
+        "contexto": "Calculando a idade de alguém (Data Nascimento em A1, Hoje em B1).",
+        "enunciado": "Complete com a unidade correta para anos.",
+        "estrutura": "=DATADIF(A1; B1; \"____\")",
+        "lacunas_esperadas": [
+            "Y"
+        ]
+    },
+    {
+        "id": "G3_T3_02",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "DIASTRABALHOTOTAL"
+        ],
+        "contexto": "Dias úteis do chamado. Início em A2, Fim em B2, lista de feriados na aba Aux na coluna A.",
+        "enunciado": "Preencha as referências.",
+        "estrutura": "=DIASTRABALHOTOTAL(____; B2; Aux!____)",
+        "lacunas_esperadas": [
+            "A2",
+            "A:A"
+        ]
+    },
+    {
+        "id": "G3_T3_03",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "FIMMÊS"
+        ],
+        "contexto": "Fatura vence no último dia do PRÓXIMO mês em relação à emissão (A1).",
+        "enunciado": "Complete a função FIMMÊS.",
+        "estrutura": "=FIMMÊS(____; ____)",
+        "lacunas_esperadas": [
+            "A1",
+            "1"
+        ]
+    },
+    {
+        "id": "G3_T3_04",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "DATA"
+        ],
+        "contexto": "Criando a data do Natal de 2026 manualmente dentro da fórmula.",
+        "enunciado": "Lembre-se da ordem: Ano, Mês, Dia.",
+        "estrutura": "=DATA(____; ____; 25)",
+        "lacunas_esperadas": [
+            "2026",
+            "12"
+        ]
+    },
+    {
+        "id": "G3_T3_05",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "AGORA"
+        ],
+        "contexto": "Inserindo a data e hora atual do sistema em um relatório.",
+        "enunciado": "Preencha a sintaxe vazia da função.",
+        "estrutura": "=AGORA(____)",
+        "lacunas_esperadas": [
+            ""
+        ]
+    },
+    {
+        "id": "G3_T3_06",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "MÊS"
+        ],
+        "contexto": "A data do check-in está em C5. Precisamos extrair o mês.",
+        "enunciado": "Informe o nome da função.",
+        "estrutura": "=____(C5)",
+        "lacunas_esperadas": [
+            "MÊS"
+        ]
+    },
+    {
+        "id": "G3_T3_07",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "DIATRABALHO"
+        ],
+        "contexto": "Prazo de entrega é de 10 dias úteis a partir de hoje (A1).",
+        "enunciado": "Complete a fórmula de projeção de data.",
+        "estrutura": "=DIATRABALHO(A1; ____)",
+        "lacunas_esperadas": [
+            "10"
+        ]
+    },
+    {
+        "id": "G3_T3_08",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "HOJE"
+        ],
+        "contexto": "Teste lógico: se a data de vencimento (A1) for menor que hoje, retorna 'Atrasado'.",
+        "enunciado": "Insira a função que pega a data atual.",
+        "estrutura": "=SE(A1 < HOJE(____); \"Atrasado\"; \"No Prazo\")",
+        "lacunas_esperadas": [
+            ""
+        ]
+    },
+    {
+        "id": "G3_T3_09",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "DATAM"
+        ],
+        "contexto": "Renovação exata de licença 6 meses após a compra (A1).",
+        "enunciado": "Complete a fórmula.",
+        "estrutura": "=DATAM(____; ____)",
+        "lacunas_esperadas": [
+            "A1",
+            "6"
+        ]
+    },
+    {
+        "id": "G3_T4_01",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "HOJE"
+        ],
+        "contexto": "Apenas um atalho dinâmico para carregar a data atual ao abrir a planilha.",
+        "enunciado": "Escreva a fórmula completa que retorna APENAS a data atual do sistema (sem as horas).",
+        "respostas_aceitas": [
+            "(?i)=hoje\\(\\s*\\)"
+        ],
+        "dica_validacao": "Não coloque argumentos dentro dos parênteses."
+    },
+    {
+        "id": "G3_T4_02",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DATADIF"
+        ],
+        "contexto": "Data de Início em A2 e Data Final em B2.",
+        "enunciado": "Escreva a fórmula do DATADIF para calcular a diferença em ANOS entre as duas datas.",
+        "respostas_aceitas": [
+            "(?i)=datadif\\(\\s*A2\\s*;\\s*B2\\s*;\\s*\"y\"\\s*\\)"
+        ],
+        "dica_validacao": "Argumentos: Início, Fim, 'Unidade'."
+    },
+    {
+        "id": "G3_T4_03",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "ANO"
+        ],
+        "contexto": "Filtragem de transações. Data está na célula C5.",
+        "enunciado": "Escreva a fórmula para extrair apenas o ano com 4 dígitos da célula C5.",
+        "respostas_aceitas": [
+            "(?i)=ano\\(\\s*C5\\s*\\)"
+        ],
+        "dica_validacao": "Nome da função e referência da célula."
+    },
+    {
+        "id": "G3_T4_04",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DIASTRABALHOTOTAL"
+        ],
+        "contexto": "Contagem de dias para produzir um relatório. Pedido em A1, Entrega em B1.",
+        "enunciado": "Escreva a fórmula para contar a quantidade de dias úteis entre A1 e B1 (considere que não há feriados cadastrados).",
+        "respostas_aceitas": [
+            "(?i)=diastrabalhototal\\(\\s*A1\\s*;\\s*B1\\s*\\)"
+        ],
+        "dica_validacao": "Ordem dos argumentos: Data Inicial, Data Final."
+    },
+    {
+        "id": "G3_T4_05",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "FIMMÊS"
+        ],
+        "contexto": "Data atual na célula A1.",
+        "enunciado": "Escreva a fórmula para encontrar o último dia do próprio mês referente à data em A1.",
+        "respostas_aceitas": [
+            "(?i)=fimm[eê]s\\(\\s*A1\\s*;\\s*0\\s*\\)"
+        ],
+        "dica_validacao": "Como é do mesmo mês, os meses a pular equivalem a zero."
+    },
+    {
+        "id": "G3_T4_06",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DATA"
+        ],
+        "contexto": "Montagem estática.",
+        "enunciado": "Escreva a fórmula para criar a data 31 de dezembro de 2025 usando a função de montagem (não digite a data pura).",
+        "respostas_aceitas": [
+            "(?i)=data\\(\\s*2025\\s*;\\s*12\\s*;\\s*31\\s*\\)"
+        ],
+        "dica_validacao": "A ordem é estrita: Ano, Mês, Dia."
+    },
+    {
+        "id": "G3_T4_07",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "AGORA"
+        ],
+        "contexto": "Registro de log de acesso do usuário.",
+        "enunciado": "Escreva a fórmula que preenche a célula simultaneamente com a data e a HORA atuais.",
+        "respostas_aceitas": [
+            "(?i)=agora\\(\\s*\\)"
+        ],
+        "dica_validacao": "Função sem argumentos."
+    },
+    {
+        "id": "G3_T4_08",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DIATRABALHO"
+        ],
+        "contexto": "Projeção de pagamento bancário. O boleto foi gerado hoje (célula A1). O prazo para compensação é de 3 dias úteis.",
+        "enunciado": "Escreva a fórmula que projeta qual será a data exata da compensação.",
+        "respostas_aceitas": [
+            "(?i)=diatrabalho\\(\\s*A1\\s*;\\s*3\\s*\\)"
+        ],
+        "dica_validacao": "Argumentos: Data Inicial, Dias a Somar."
+    },
+    {
+        "id": "G3_T4_09",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DATAM"
+        ],
+        "contexto": "Contrato de aluguel assinado em A1 com reajuste previsto para 12 meses depois.",
+        "enunciado": "Escreva a fórmula para calcular a data exata em que o reajuste entrará em vigor (preservando o dia do mês).",
+        "respostas_aceitas": [
+            "(?i)=datam\\(\\s*A1\\s*;\\s*12\\s*\\)"
+        ],
+        "dica_validacao": "Argumentos: Data Inicial, Meses a Avançar."
+    },
+    {
+        "id": "G3_T1_D01",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DIASTRABALHOTOTAL"
+        ],
+        "contexto": "SLA de chamados de Active Directory (base `chamados_ti_agosto.xlsx`). A coluna C tem a 'Data de Abertura' e a D a 'Data de Fechamento'. A aba 'Feriados' (A2:A15) contém as datas sem expediente.",
+        "enunciado": "Calcule a média de dias úteis reais gastos para resolver os chamados. Dica: Calcule o SLA de cada linha primeiro, referenciando a matriz de feriados travada.",
+        "dica": "A função DIASTRABALHOTOTAL recebe um terceiro argumento opcional para descontar feriados específicos da contagem.",
+        "arquivo_download": "chamados_ti_agosto.xlsx",
+        "resultado_esperado": "4,2"
+    },
+    {
+        "id": "G3_T1_D02",
+        "grupo": 3,
+        "tipo": 1,
+        "tags": [
+            "DATADIF",
+            "HOJE"
+        ],
+        "contexto": "Auditoria de validades de produtos na despensa (base `compras_atacado.xlsx`). Coluna E possui a 'Data de Fabricação'.",
+        "enunciado": "Alguns lotes de Doce de Leite e Paçoca possuem exatamente a mesma regra: vencem após 18 meses completos de fabricação. Descubra quantos produtos JÁ passaram de 18 meses considerando a data de HOJE().",
+        "dica": "Use a função DATADIF(inicial; final; \"M\") para descobrir o número inteiro de meses decorridos entre duas datas.",
+        "arquivo_download": "compras_atacado.xlsx",
+        "resultado_esperado": "3"
+    },
+    {
+        "id": "G3_T2_D01",
+        "grupo": 3,
+        "tipo": 2,
+        "tags": [
+            "FIMMÊS",
+            "DATAM"
+        ],
+        "contexto": "Para automatizar a emissão de faturas no final do mês da locação do Airbnb. A data de check-in está na célula B2 (15/02/2026).",
+        "enunciado": "Qual a principal diferença prática entre `=DATAM(B2; 1)` e `=FIMMÊS(B2; 1)`?",
+        "alternativas": [
+            "DATAM retorna o mesmo dia no mês seguinte (15/03/2026), enquanto FIMMÊS retorna o último dia do mês seguinte (31/03/2026).",
+            "FIMMÊS só avança meses, enquanto DATAM permite recuar meses usando números negativos.",
+            "DATAM conta apenas dias úteis, enquanto FIMMÊS inclui finais de semana.",
+            "Não há diferença, ambas são funções voláteis de arredondamento de calendário."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "DATAM (Data Mês) preserva o número do dia, deslocando apenas a competência."
+    },
+    {
+        "id": "G3_T3_D01",
+        "grupo": 3,
+        "tipo": 3,
+        "tags": [
+            "DATA",
+            "ANO",
+            "MÊS"
+        ],
+        "contexto": "Um sistema legado de RH exporta a data de admissão quebrada: Ano em A2, Mês em B2, mas o Dia é sempre o último dia daquele mês.",
+        "enunciado": "Preencha a fórmula combinando DATA e FIMMÊS para montar a data real de início. (Dia base 1 para poder avançar).",
+        "estrutura": "=FIMMÊS(____(A2; B2; 1); ____)",
+        "lacunas_esperadas": [
+            "DATA",
+            "0"
+        ]
+    },
+    {
+        "id": "G3_T4_D01",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DIATRABALHO"
+        ],
+        "contexto": "Agendamento da emissão de documentos na UAI São João del Rei. A data de solicitação está em A5. O prazo de entrega é de 15 dias ÚTEIS. Feriados estão catalogados no intervalo J1:J10.",
+        "enunciado": "Escreva a fórmula completa para calcular a data prevista de entrega, travando corretamente o intervalo de feriados.",
+        "respostas_aceitas": [
+            "(?i)=diatrabalho\\(\\s*A5\\s*;\\s*15\\s*;\\s*\\$?J\\$?1:\\$?J\\$?10\\s*\\)"
+        ],
+        "dica_validacao": "O terceiro argumento do DIATRABALHO é a matriz de feriados."
+    },
+    {
+        "id": "G3_T4_D02",
+        "grupo": 3,
+        "tipo": 4,
+        "tags": [
+            "DATADIF",
+            "HOJE"
+        ],
+        "contexto": "Cálculo de tempo de casa de um colaborador na matriz do Proesc. A admissão está em H2.",
+        "enunciado": "Escreva a fórmula usando DATADIF para calcular o número absoluto de ANOS COMPLETOS de trabalho deste colaborador até o dia de HOJE.",
+        "respostas_aceitas": [
+            "(?i)=datadif\\(\\s*H2\\s*;\\s*hoje\\(\\)\\s*;\\s*\"Y\"\\s*\\)"
+        ],
+        "dica_validacao": "Na função DATADIF, o argumento 'Y' (entre aspas) extrai os anos completos."
+    }
+]

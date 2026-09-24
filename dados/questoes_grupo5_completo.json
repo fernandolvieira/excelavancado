@@ -1,0 +1,630 @@
+[
+    {
+        "id": "G5_T1_01",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "ARRUMAR"
+        ],
+        "contexto": "Ao importar a lista de alunos do sistema Proesc, muitos nomes vieram com espaços extras acidentais no início, no meio e no fim (ex: '  Fernando   Vieira ').",
+        "enunciado": "Aplique a função de limpeza de texto na coluna A e identifique qual é o comprimento exato (número de caracteres) do nome na célula A15 após a limpeza.",
+        "dica": "Use a função ARRUMAR em conjunto com NÚM.CARACT para descobrir o tamanho limpo.",
+        "arquivo_download": "lista_alunos_proesc.xlsx",
+        "resultado_esperado": "15"
+    },
+    {
+        "id": "G5_T1_02",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "SUBSTITUIR"
+        ],
+        "contexto": "Na sua planilha de hóspedes do Airbnb no Rio de Janeiro, os CPFs na Coluna B estão com pontuação (ex: 123.456.789-00). Você precisa deles apenas com números para o sistema da portaria.",
+        "enunciado": "Use a função SUBSTITUIR duas vezes (aninhada) para remover os pontos ('.') e os traços ('-'). Qual é o CPF limpo gerado para o hóspede da linha 8?",
+        "dica": "Substitua o caractere indesejado por um texto vazio \"\".",
+        "arquivo_download": "hospedes_airbnb_rj.xlsx",
+        "resultado_esperado": "09876543211"
+    },
+    {
+        "id": "G5_T1_03",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "UNIRTEXTO"
+        ],
+        "contexto": "Você está montando um kit de peças (SSD 1TB, Processador Ryzen, Fonte ATX) compradas na Shopee. Os itens estão separados nas colunas C, D e E.",
+        "enunciado": "Crie uma string única juntando as 3 colunas, separadas por uma vírgula e um espaço (', '), ignorando as colunas vazias. Qual o texto resultante da linha 3?",
+        "dica": "O segundo argumento do UNIRTEXTO deve ser VERDADEIRO para ignorar vazios.",
+        "arquivo_download": "pedidos_hardware_shopee.xlsx",
+        "resultado_esperado": "Memória RAM 32GB, Placa Mãe AM5"
+    },
+    {
+        "id": "G5_T1_04",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "TEXTO"
+        ],
+        "contexto": "No dashboard de métricas da Malibu Barbearia, você tem as datas exatas dos cortes na Coluna A, mas precisa saber o dia da semana (ex: 'segunda-feira') para um gráfico.",
+        "enunciado": "Formate a data da célula A20 para retornar o nome completo do dia da semana em texto. Qual foi o dia retornado?",
+        "dica": "Use a máscara \"dddd\" dentro da função TEXTO.",
+        "arquivo_download": "cortes_malibu_datas.xlsx",
+        "resultado_esperado": "sábado"
+    },
+    {
+        "id": "G5_T1_05",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "LOCALIZAR"
+        ],
+        "contexto": "Lidando com os e-mails institucionais do MentorWeb, você precisa separar o nome de usuário do domínio.",
+        "enunciado": "Descubra a posição numérica exata onde o caractere '@' aparece no e-mail 'coordenacao.pedagogica@escola.edu.br' na célula B5.",
+        "dica": "LOCALIZAR retorna um número correspondente à posição do caractere buscado.",
+        "arquivo_download": "emails_mentorweb.xlsx",
+        "resultado_esperado": "23"
+    },
+    {
+        "id": "G5_T1_06",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "EXT.TEXTO"
+        ],
+        "contexto": "Auditoria de logs da plataforma TryHackMe. Os tokens de sessão possuem 15 caracteres, mas a chave de identificação do servidor são sempre os 4 caracteres a partir da 6ª posição.",
+        "enunciado": "Extraia a chave de identificação do token 'THM-99X5-SECURE' localizado na célula D2.",
+        "dica": "Os argumentos são: texto original, número inicial e quantidade de caracteres.",
+        "arquivo_download": "logs_tryhackme.xlsx",
+        "resultado_esperado": "99X5"
+    },
+    {
+        "id": "G5_T1_07",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "&",
+            "\"\""
+        ],
+        "contexto": "Sistema de envio de mensagens para clientes do app Garupa. Coluna A: Nome (ex: 'Carlos'). Coluna B: Destino (ex: 'Centro').",
+        "enunciado": "Use o operador '&' para criar exatamente a frase: 'Olá Carlos, sua corrida para Centro está confirmada!'. Qual o resultado da linha 12?",
+        "dica": "Lembre-se de adicionar os espaços e as pontuações dentro das aspas duplas.",
+        "arquivo_download": "mensagens_garupa.xlsx",
+        "resultado_esperado": "Olá Maria, sua corrida para Matriz está confirmada!"
+    },
+    {
+        "id": "G5_T1_08",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "PROCURAR"
+        ],
+        "contexto": "Você está buscando cupons de desconto case-sensitive do Mercado Livre. O código 'DESC50' é válido, mas 'desc50' não.",
+        "enunciado": "Use a função PROCURAR para encontrar se há a letra 'D' maiúscula na string 'cupom_desc50_válido' (célula F2). O que a função retorna?",
+        "dica": "Diferente de LOCALIZAR, a função PROCURAR diferencia maiúsculas de minúsculas. Se não achar, ela retorna um erro.",
+        "arquivo_download": "cupons_mercado_livre.xlsx",
+        "resultado_esperado": "#VALOR!"
+    },
+    {
+        "id": "G5_T1_09",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "CONCATENAR"
+        ],
+        "contexto": "Você comprou kits mensais do Clube do Malte. A Coluna A tem a 'Marca' (Spaten, Eisenbahn) e a Coluna B tem o 'Estilo' (Pilsen, IPA).",
+        "enunciado": "Use CONCATENAR para criar o nome do produto no formato 'Marca - Estilo'. Qual o texto gerado na linha 5?",
+        "dica": "Insira \" - \" como argumento no meio da junção.",
+        "arquivo_download": "cervejas_clube_malte.xlsx",
+        "resultado_esperado": "Eisenbahn - Pale Ale"
+    },
+    {
+        "id": "G5_T2_01",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "LOCALIZAR",
+            "PROCURAR"
+        ],
+        "contexto": "Durante uma análise de senhas vazadas em um laboratório de cibersegurança, você precisa encontrar caracteres específicos.",
+        "enunciado": "Qual é a principal diferença de comportamento entre as funções LOCALIZAR e PROCURAR?",
+        "alternativas": [
+            "PROCURAR diferencia maiúsculas de minúsculas (case-sensitive); LOCALIZAR não.",
+            "LOCALIZAR aceita números; PROCURAR aceita apenas texto.",
+            "PROCURAR retorna a palavra inteira; LOCALIZAR retorna apenas o caractere.",
+            "LOCALIZAR pesquisa da direita para a esquerda; PROCURAR da esquerda para a direita."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "PROCURAR (Find) é exato com capitalização. LOCALIZAR (Search) ignora se é A ou a."
+    },
+    {
+        "id": "G5_T2_02",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "UNIRTEXTO",
+            "CONCATENAR"
+        ],
+        "contexto": "Você tem uma lista de 50 e-mails na coluna A e quer juntá-los separados por ponto e vírgula (;).",
+        "enunciado": "Por que UNIRTEXTO é extremamente superior a CONCATENAR nesta situação?",
+        "alternativas": [
+            "Porque permite definir um delimitador único e seleciona intervalos inteiros (A1:A50) de uma vez.",
+            "Porque UNIRTEXTO comprime o texto e deixa o arquivo do Excel mais leve.",
+            "Porque CONCATENAR não aceita o caractere de ponto e vírgula (;).",
+            "Porque UNIRTEXTO traduz o texto automaticamente."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Com CONCATENAR, você teria que clicar célula por célula e adicionar \";\" entre cada uma."
+    },
+    {
+        "id": "G5_T2_03",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "ARRUMAR"
+        ],
+        "contexto": "Higienização de base de dados do Cliente Oculto.",
+        "enunciado": "Ao usar a função ARRUMAR (TRIM) no texto ' Loja   Matriz ' (com vários espaços soltos), qual será o resultado exato?",
+        "alternativas": [
+            "'Loja Matriz' (remove espaços no início/fim e deixa apenas um entre as palavras)",
+            "'LojaMatriz' (remove todos os espaços do texto)",
+            "' Loja Matriz ' (corrige apenas o espaço central)",
+            "'loja matriz' (além dos espaços, deixa tudo em minúsculo)"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função remove TODOS os espaços no começo e no fim, mas garante que sobre exatamente UM espaço entre as palavras internas."
+    },
+    {
+        "id": "G5_T2_04",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "TEXTO"
+        ],
+        "contexto": "Formatação de CEPs para impressão de etiquetas de entrega.",
+        "enunciado": "Se a célula B2 possui o número 36200000, o que a fórmula =TEXTO(B2; \"00000-000\") fará?",
+        "alternativas": [
+            "Transformará o número no texto '36200-000', preservando a máscara do CEP.",
+            "Somará o valor matemático com a máscara, gerando erro.",
+            "Substituirá os zeros originais pelos hifens.",
+            "Retornará a palavra 'CEP Válido'."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função TEXTO aplica formatos customizados (como datas, moedas ou máscaras de CEP) e converte o resultado em String."
+    },
+    {
+        "id": "G5_T2_05",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "&"
+        ],
+        "contexto": "Montagem rápida de strings sem usar funções.",
+        "enunciado": "Qual é a função do operador comercial (&) no Excel?",
+        "alternativas": [
+            "Ele concatena (junta) valores de células e textos literais.",
+            "Ele realiza uma validação lógica E (AND).",
+            "Ele soma os valores absolutos de duas células.",
+            "Ele busca uma referência externa em outra planilha."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O '&' é o atalho rápido e operador padrão de concatenação no Excel."
+    },
+    {
+        "id": "G5_T2_06",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "SUBSTITUIR"
+        ],
+        "contexto": "Alteração em massa de links e domínios.",
+        "enunciado": "O que a fórmula =SUBSTITUIR(\"www.site.com.br\"; \".\"; \"-\") irá retornar?",
+        "alternativas": [
+            "www-site-com-br",
+            "www.site-com.br (substitui apenas o último)",
+            "www-site.com.br (substitui apenas o primeiro)",
+            "O erro #NOME?"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função SUBSTITUIR, por padrão, altera TODAS as ocorrências do texto antigo pelo novo (a menos que você especifique a instância no 4º argumento)."
+    },
+    {
+        "id": "G5_T2_07",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "EXT.TEXTO"
+        ],
+        "contexto": "Lendo códigos seriais de consoles PS5.",
+        "enunciado": "Para a fórmula =EXT.TEXTO(A1; 3; 5), o que os números 3 e 5 representam respectivamente?",
+        "alternativas": [
+            "O caractere inicial de partida e a quantidade de caracteres a extrair.",
+            "A quantidade de caracteres a extrair e o limite máximo do texto.",
+            "O número da linha e da coluna de onde o texto será extraído.",
+            "O tamanho mínimo e máximo que o texto final deve ter."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Argumento 2 é o [núm_inicial] e o Argumento 3 é o [núm_caract]."
+    },
+    {
+        "id": "G5_T2_08",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "LOCALIZAR",
+            "EXT.TEXTO"
+        ],
+        "contexto": "Isolamento dinâmico de strings.",
+        "enunciado": "Por que é muito comum usar LOCALIZAR aninhada dentro de EXT.TEXTO (ex: =EXT.TEXTO(A1; LOCALIZAR(\"-\"; A1)+1; 10))?",
+        "alternativas": [
+            "Porque os textos têm tamanhos variados, e o LOCALIZAR diz exatamente onde o texto alvo começa.",
+            "Para evitar que o Excel retorne erro #DIV/0! em células de texto.",
+            "Porque EXT.TEXTO só funciona com números se não houver a função LOCALIZAR.",
+            "Para converter o texto resultante em formato de data."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Ao buscar o \"@\" num email, a posição varia. O LOCALIZAR cria um ponto de partida dinâmico para a extração."
+    },
+    {
+        "id": "G5_T2_09",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "\"\""
+        ],
+        "contexto": "No meio de uma fórmula condicional você usou =SE(A1=\"Pago\"; \"OK\"; \"\").",
+        "enunciado": "O que as aspas duplas vazias (\"\") instruem o Excel a fazer?",
+        "alternativas": [
+            "Retornar uma célula visualmente vazia/em branco.",
+            "Apagar a fórmula inteira.",
+            "Inserir o número zero (0).",
+            "Mostrar a palavra 'Falso'."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "As aspas vazias são usadas para injetar uma 'string vazia', deixando a célula limpa."
+    },
+    {
+        "id": "G5_T3_01",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "UNIRTEXTO"
+        ],
+        "contexto": "Agrupando nomes do grupo com vírgula e espaço (\", \"), ignorando os vazios.",
+        "enunciado": "Complete os argumentos.",
+        "estrutura": "=UNIRTEXTO(____; VERDADEIRO; A1:A5)",
+        "lacunas_esperadas": [
+            "\", \""
+        ]
+    },
+    {
+        "id": "G5_T3_02",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "SUBSTITUIR"
+        ],
+        "contexto": "Removendo espaços em branco dentro do código de rastreio da Shopee (B2).",
+        "enunciado": "Troque o espaço por texto vazio.",
+        "estrutura": "=SUBSTITUIR(B2; \" \"; ____)",
+        "lacunas_esperadas": [
+            "\"\""
+        ]
+    },
+    {
+        "id": "G5_T3_03",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "ARRUMAR"
+        ],
+        "contexto": "Limpando os excessos de espaço da digitação desleixada na célula A1.",
+        "enunciado": "Preencha a função.",
+        "estrutura": "=____(A1)",
+        "lacunas_esperadas": [
+            "ARRUMAR"
+        ]
+    },
+    {
+        "id": "G5_T3_04",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "EXT.TEXTO"
+        ],
+        "contexto": "Extraindo 4 números do ano no meio de um código serial 'XX-2026-YY' em C2.",
+        "enunciado": "O ano começa na posição 4. Complete os numéricos.",
+        "estrutura": "=EXT.TEXTO(C2; ____; ____)",
+        "lacunas_esperadas": [
+            "4",
+            "4"
+        ]
+    },
+    {
+        "id": "G5_T3_05",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "TEXTO"
+        ],
+        "contexto": "Formatando a célula G5 que tem a data de hoje para mostrar o nome do mês ('Agosto').",
+        "enunciado": "Complete a máscara.",
+        "estrutura": "=TEXTO(G5; \"____\")",
+        "lacunas_esperadas": [
+            "mmmm"
+        ]
+    },
+    {
+        "id": "G5_T3_06",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "&"
+        ],
+        "contexto": "Juntando a palavra 'Nota: ' com a célula H1.",
+        "enunciado": "Qual operador de texto está faltando?",
+        "estrutura": "=\"Nota: \" ____ H1",
+        "lacunas_esperadas": [
+            "&"
+        ]
+    },
+    {
+        "id": "G5_T3_07",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "LOCALIZAR"
+        ],
+        "contexto": "Achando a posição do underline '_' num nome de arquivo (A5).",
+        "enunciado": "Preencha o primeiro argumento em formato de texto.",
+        "estrutura": "=LOCALIZAR(____; A5)",
+        "lacunas_esperadas": [
+            "\"_\""
+        ]
+    },
+    {
+        "id": "G5_T3_08",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "CONCATENAR"
+        ],
+        "contexto": "Juntando nome (A1) e sobrenome (B1) com um espaço no meio.",
+        "enunciado": "Complete o espaço literal.",
+        "estrutura": "=CONCATENAR(A1; ____; B1)",
+        "lacunas_esperadas": [
+            "\" \""
+        ]
+    },
+    {
+        "id": "G5_T3_09",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "PROCURAR"
+        ],
+        "contexto": "Buscando a posição exata de um 'A' MAIÚSCULO em uma senha forte (B2).",
+        "enunciado": "Insira o nome da função que respeita Case-Sensitive.",
+        "estrutura": "=____(\"A\"; B2)",
+        "lacunas_esperadas": [
+            "PROCURAR"
+        ]
+    },
+    {
+        "id": "G5_T4_01",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "UNIRTEXTO"
+        ],
+        "contexto": "Listagem de habilidades no currículo. Range A1:A4.",
+        "enunciado": "Escreva a função UNIRTEXTO para juntar as habilidades com um delimitador de traço \"-\" e ignorando células vazias (VERDADEIRO).",
+        "respostas_aceitas": [
+            "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*verdadeiro\\s*;\\s*A1:A4\\s*\\)",
+            "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*1\\s*;\\s*A1:A4\\s*\\)"
+        ],
+        "dica_validacao": "=UNIRTEXTO(\"delimitador\"; ignorar_vazio; intervalo)"
+    },
+    {
+        "id": "G5_T4_02",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "SUBSTITUIR"
+        ],
+        "contexto": "Número de telefone na célula B5 com formato '(32) 99999-9999'. Você quer tirar os parênteses '(' apenas.",
+        "enunciado": "Escreva a fórmula SUBSTITUIR para trocar o '(' por texto vazio.",
+        "respostas_aceitas": [
+            "(?i)=substituir\\(\\s*B5\\s*;\\s*\"\\(\"\\s*;\\s*\"\"\\s*\\)"
+        ],
+        "dica_validacao": "=SUBSTITUIR(texto; texto_antigo; novo_texto)"
+    },
+    {
+        "id": "G5_T4_03",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "&",
+            "\"\""
+        ],
+        "contexto": "Célula C1 tem a cidade 'São João del Rei' e C2 tem o estado 'MG'.",
+        "enunciado": "Usando APENAS o operador '&', junte as células adicionando um hífen e espaço no meio. Ex: 'São João del Rei - MG'.",
+        "respostas_aceitas": [
+            "(?i)=C1\\s*&\\s*\"\\s*-\\s*\"\\s*&\\s*C2"
+        ],
+        "dica_validacao": "Célula1 & \" - \" & Célula2"
+    },
+    {
+        "id": "G5_T4_04",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "EXT.TEXTO"
+        ],
+        "contexto": "O código do pedido está em H10 (ex: 'BR-4455-RJ').",
+        "enunciado": "Escreva a fórmula EXT.TEXTO para puxar os 4 números do meio (que começam na 4ª posição).",
+        "respostas_aceitas": [
+            "(?i)=ext\\.texto\\(\\s*H10\\s*;\\s*4\\s*;\\s*4\\s*\\)"
+        ],
+        "dica_validacao": "Argumentos: célula, posição_inicial, tamanho."
+    },
+    {
+        "id": "G5_T4_05",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "TEXTO"
+        ],
+        "contexto": "O valor da corrida da 99 está em D5 como número cru (ex: 25,5).",
+        "enunciado": "Escreva a fórmula TEXTO para converter para moeda: \"R$ 0,00\".",
+        "respostas_aceitas": [
+            "(?i)=texto\\(\\s*D5\\s*;\\s*\"R\\$\\s*0,00\"\\s*\\)"
+        ],
+        "dica_validacao": "A máscara de formatação monetária deve estar entre aspas."
+    },
+    {
+        "id": "G5_T4_06",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "LOCALIZAR"
+        ],
+        "contexto": "Você quer achar a hashtag '#' dentro da string na célula J2.",
+        "enunciado": "Escreva a fórmula LOCALIZAR para encontrar a hashtag em J2.",
+        "respostas_aceitas": [
+            "(?i)=localizar\\(\\s*\"#\"\\s*;\\s*J2\\s*\\)"
+        ],
+        "dica_validacao": "O texto procurado vem primeiro."
+    },
+    {
+        "id": "G5_T4_07",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "CONCATENAR"
+        ],
+        "contexto": "Básico. Células A1, A2 e A3.",
+        "enunciado": "Escreva a fórmula CONCATENAR para juntar A1, A2 e A3 sequencialmente sem nenhum espaço entre elas.",
+        "respostas_aceitas": [
+            "(?i)=concatenar\\(\\s*A1\\s*;\\s*A2\\s*;\\s*A3\\s*\\)"
+        ],
+        "dica_validacao": "Apenas separe as células por ponto e vírgula."
+    },
+    {
+        "id": "G5_T4_08",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "ARRUMAR"
+        ],
+        "contexto": "A descrição do chamado técnico (G5) do usuário veio cheia de quebras de linha e espaços indesejados.",
+        "enunciado": "Escreva a fórmula de limpeza de texto para envelopar (corrigir) a célula G5.",
+        "respostas_aceitas": [
+            "(?i)=arrumar\\(\\s*G5\\s*\\)"
+        ],
+        "dica_validacao": "Função com um único argumento."
+    },
+    {
+        "id": "G5_T4_09",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "PROCURAR"
+        ],
+        "contexto": "Log de acesso ao sistema do banco de dados (B2). Você quer checar onde a palavra 'ERROR' (tudo maiúsculo) aparece.",
+        "enunciado": "Escreva a fórmula PROCURAR para a string 'ERROR' na célula B2.",
+        "respostas_aceitas": [
+            "(?i)=procurar\\(\\s*\"ERROR\"\\s*;\\s*B2\\s*\\)"
+        ],
+        "dica_validacao": "Use aspas no 'ERROR'."
+    },
+    {
+        "id": "G5_T1_D01",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "EXT.TEXTO",
+            "LOCALIZAR"
+        ],
+        "contexto": "Extração de URLs de notas fiscais da Shopee (base `pedidos_hardware_shopee.xlsx`). Na coluna A, temos strings poluídas: `[ID:948] Fatura: shopee.com.br/nf/19283 - Entregue`.",
+        "enunciado": "Usando as funções de texto de forma aninhada, extraia apenas o trecho do link 'shopee.com.br/nf/19283' na primeira linha e aplique para todas. Quantos caracteres tem a URL da linha 8?",
+        "dica": "Use o LOCALIZAR para encontrar onde o 'shopee' começa e outro LOCALIZAR para achar o ' -' e limitar a extração.",
+        "arquivo_download": "pedidos_hardware_shopee.xlsx",
+        "resultado_esperado": "22"
+    },
+    {
+        "id": "G5_T1_D02",
+        "grupo": 5,
+        "tipo": 1,
+        "tags": [
+            "SUBSTITUIR"
+        ],
+        "contexto": "Higienização de logs no Active Directory (base `logs_violacao_azure.xlsx`). Os IPs de acesso (Coluna B) estão registrados no formato de array JSON: `[\"192.168.0.1\"]`.",
+        "enunciado": "Aninhe três funções SUBSTITUIR na mesma fórmula para limpar a célula e deixar apenas o IP puro (192.168.0.1), removendo os colchetes e as aspas duplas. Qual IP limpo aparece na linha 42?",
+        "dica": "Lembre-se que para substituir uma aspa dupla dentro da fórmula, você deve usar `CARACT(34)` ou inserir quatro aspas consecutivas `\"\"\"\"`.",
+        "arquivo_download": "logs_violacao_azure.xlsx",
+        "resultado_esperado": "10.0.0.155"
+    },
+    {
+        "id": "G5_T2_D01",
+        "grupo": 5,
+        "tipo": 2,
+        "tags": [
+            "LOCALIZAR",
+            "PROCURAR"
+        ],
+        "contexto": "Você precisa descobrir em qual posição da célula a flag de segurança 'Admin' aparece, mas o sistema acusa diferenciação entre 'admin' (usuário comum) e 'Admin' (privilegiado).",
+        "enunciado": "Qual a diferença comportamental fundamental entre `=LOCALIZAR(\"Admin\"; A2)` e `=PROCURAR(\"Admin\"; A2)` no Excel?",
+        "alternativas": [
+            "PROCURAR diferencia maiúsculas de minúsculas (Case Sensitive), enquanto LOCALIZAR ignora essa diferença.",
+            "LOCALIZAR aceita caracteres curinga, PROCURAR diferencia maiúsculas de minúsculas, mas ambas não falham em arrays.",
+            "PROCURAR busca da direita para a esquerda, LOCALIZAR busca da esquerda para a direita.",
+            "Não há diferença, elas são traduções distintas da mesma função matriz americana FIND."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Quando o caso (maiúscula/minúscula) importa estritamente na auditoria, usa-se PROCURAR."
+    },
+    {
+        "id": "G5_T3_D01",
+        "grupo": 5,
+        "tipo": 3,
+        "tags": [
+            "UNIRTEXTO"
+        ],
+        "contexto": "Criando a lista de degustação no Clube do Malte. A1 a A5 contêm nomes, mas A3 e A4 desistiram (estão em branco).",
+        "enunciado": "Complete a fórmula para unir os nomes com vírgula e espaço, ignorando automaticamente as células em branco do intervalo.",
+        "estrutura": "=UNIRTEXTO(\"____ \"; ____; A1:A5)",
+        "lacunas_esperadas": [
+            ",",
+            "VERDADEIRO"
+        ]
+    },
+    {
+        "id": "G5_T4_D01",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "TEXTO",
+            "&"
+        ],
+        "contexto": "Painel financeiro de reservas de Airbnb. A célula C10 tem o valor bruto (ex: 1500) e B10 tem a Data do Check-in (ex: 45310).",
+        "enunciado": "Escreva a fórmula usando concatenador e a função TEXTO para gerar exatamente a frase: 'Receita de 1500,00 no mês de Janeiro'.",
+        "respostas_aceitas": [
+            "(?i)=\"Receita de \"\\s*&\\s*texto\\(\\s*C10\\s*;\\s*\"0,00\"\\s*\\)\\s*&\\s*\" no m[eê]s de \"\\s*&\\s*texto\\(\\s*B10\\s*;\\s*\"mmmm\"\\s*\\)"
+        ],
+        "dica_validacao": "Use 'mmmm' no formato da função TEXTO para retornar o mês por extenso."
+    },
+    {
+        "id": "G5_T4_D02",
+        "grupo": 5,
+        "tipo": 4,
+        "tags": [
+            "EXT.TEXTO"
+        ],
+        "contexto": "Cortando texto na ausência da função DIREITA. A célula A1 possui a string 'CHASSI-998877'.",
+        "enunciado": "Escreva a fórmula utilizando EXT.TEXTO para pegar todo o texto a partir do 8º caractere até o infinito (use o macete de indicar um número altíssimo de caracteres para compensar o final).",
+        "respostas_aceitas": [
+            "(?i)=ext\\.texto\\(\\s*A1\\s*;\\s*8\\s*;\\s*999(9*)\\s*\\)"
+        ],
+        "dica_validacao": "Como terceiro argumento (num_caract), usar um número alto como 999 resolve a falta de conhecimento do limite final da string."
+    }
+]

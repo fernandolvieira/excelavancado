@@ -1,0 +1,637 @@
+[
+    {
+        "id": "G4_T1_01",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Você está montando um orçamento de hardware. A planilha 'Catálogo' possui o Código do Produto na coluna A e o Preço na coluna D (4ª coluna).",
+        "enunciado": "Use o PROCV para encontrar o preço exato do 'Processador AMD Ryzen 9 9950X3D' cujo código (célula B2) é 'AMD-9950'.",
+        "dica": "Como você quer o preço exato, o quarto argumento deve ser FALSO ou 0.",
+        "arquivo_download": "catalogo_hardware.xlsx",
+        "resultado_esperado": "4250,00"
+    },
+    {
+        "id": "G4_T1_02",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "No Diário Eletrônico, a aba 'Conceitos' converte notas numéricas (0 a 100) em letras (A, B, C, D). A tabela de conversão está em ordem crescente (0=D, 60=C, 75=B, 90=A).",
+        "enunciado": "Use PROCV com correspondência APROXIMADA para descobrir o conceito de um aluno que tirou 82 na célula C5.",
+        "dica": "O quarto argumento do PROCV deve ser VERDADEIRO (ou 1) para buscas por faixas de valores.",
+        "arquivo_download": "diario_notas_conceito.xlsx",
+        "resultado_esperado": "B"
+    },
+    {
+        "id": "G4_T1_03",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "No cadastro de usuários do Proesc, o 'Nome' está na Coluna B e a 'Matrícula' está na Coluna A. O PROCV não consegue buscar da direita para a esquerda.",
+        "enunciado": "Use ÍNDICE e CORRESP para encontrar a Matrícula (Coluna A) do usuário 'Fernando Vieira' (célula F2).",
+        "dica": "ÍNDICE pede o intervalo de retorno (Matrícula). CORRESP descobre em qual linha o nome está.",
+        "arquivo_download": "cadastro_proesc.xlsx",
+        "resultado_esperado": "MAT-202645"
+    },
+    {
+        "id": "G4_T1_04",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "PROCH"
+        ],
+        "contexto": "O painel de metas da Barbearia Malibu está disposto horizontalmente. A linha 1 contém os meses (Jan, Fev, Mar...) e a linha 3 contém a Meta de Cortes.",
+        "enunciado": "Use o PROCH para encontrar a meta estipulada para 'Agosto' (célula B10).",
+        "dica": "PROCH funciona como o PROCV, mas procura o valor na primeira LINHA e retorna o dado de uma linha inferior.",
+        "arquivo_download": "metas_barbearia.xlsx",
+        "resultado_esperado": "450"
+    },
+    {
+        "id": "G4_T1_05",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "DESLOC"
+        ],
+        "contexto": "Você quer criar um totalizador dinâmico das receitas do seu Airbnb que sempre some apenas os últimos 3 meses lançados em uma coluna que cresce todo mês (Coluna B).",
+        "enunciado": "A partir da célula B1 (Cabeçalho), desloque até a última linha preenchida e inclua uma altura de -3 para somar os últimos 3 meses.",
+        "dica": "Use CONT.VALORES para descobrir quantas linhas pular no argumento 'linhas' do DESLOC.",
+        "arquivo_download": "receitas_airbnb_dinamico.xlsx",
+        "resultado_esperado": "8400,00"
+    },
+    {
+        "id": "G4_T1_06",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "INDIRETO"
+        ],
+        "contexto": "Você tem 12 planilhas, uma para cada mês (nomeadas 'Jan', 'Fev', etc). Na célula A2 do resumo, você digita o nome do mês.",
+        "enunciado": "Use a função INDIRETO para buscar o valor da célula D10 da aba cujo nome foi digitado em A2.",
+        "dica": "Você precisará concatenar o valor de A2 com a exclamação e a célula: INDIRETO(A2 & \"!D10\").",
+        "arquivo_download": "resumo_anual_abas.xlsx",
+        "resultado_esperado": "1250,50"
+    },
+    {
+        "id": "G4_T1_07",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Tabela de fretes bidimensional do Mercado Livre. As linhas (A2:A10) têm o Estado (UF) e as colunas (B1:F1) têm o Peso do pacote.",
+        "enunciado": "Cruze os dados para achar o frete de um pacote para 'MG' (célula H1) com peso 'Até 5kg' (célula H2).",
+        "dica": "Você precisará de dois CORRESPs dentro do ÍNDICE: um para a linha (Estado) e outro para a coluna (Peso).",
+        "arquivo_download": "tabela_fretes_ml.xlsx",
+        "resultado_esperado": "45,90"
+    },
+    {
+        "id": "G4_T1_08",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Listagem de peças compradas (SSDs, Fontes ATX, RAM). Você precisa cruzar o código da peça da Planilha1 com a tabela de fornecedores da Planilha2.",
+        "enunciado": "Traga o nome do fornecedor (3ª coluna da tabela da Planilha2) para o código 'ATX-650W'.",
+        "dica": "Não se esqueça de travar a matriz da tabela (F4) caso vá arrastar a fórmula.",
+        "arquivo_download": "fornecedores_hardware.xlsx",
+        "resultado_esperado": "Kabum"
+    },
+    {
+        "id": "G4_T1_09",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "DESLOC"
+        ],
+        "contexto": "Extração de logs de violação de dados do Azure. A tabela possui colunas a cada hora.",
+        "enunciado": "A partir da célula A1, desloque 5 linhas para baixo e 3 colunas para a direita. Qual o valor retornado?",
+        "dica": "Apenas use =DESLOC(A1; 5; 3). O Excel retornará o valor da célula destino.",
+        "arquivo_download": "logs_violacao_azure.xlsx",
+        "resultado_esperado": "IP_Bloqueado"
+    },
+    {
+        "id": "G4_T2_01",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Você está buscando a matrícula de um aluno pelo nome usando PROCV, mas a fórmula =PROCV(\"Fernando\"; A1:D100; 2) está retornando dados de outra pessoa.",
+        "enunciado": "Qual é a causa mais provável deste erro, considerando que o nome 'Fernando' existe na base?",
+        "alternativas": [
+            "O último argumento ([procurar_intervalo]) foi omitido, e a base não está ordenada alfabeticamente.",
+            "PROCV não aceita textos entre aspas no primeiro argumento.",
+            "A coluna 2 não pode conter dados de texto.",
+            "A base A1:D100 é muito grande e a função atingiu o limite de linhas."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Se omitido, o PROCV assume VERDADEIRO (correspondência aproximada), o que exige dados ordenados."
+    },
+    {
+        "id": "G4_T2_02",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Muitos analistas de dados afirmam que a combinação ÍNDICE+CORRESP é superior ao PROCV.",
+        "enunciado": "Qual das alternativas abaixo representa uma vantagem real do ÍNDICE+CORRESP sobre o PROCV?",
+        "alternativas": [
+            "Permite buscar valores à esquerda da coluna de pesquisa.",
+            "Consome menos memória RAM, não importando o tamanho da base.",
+            "Não exige que você digite os nomes das funções (são automáticas).",
+            "Ignora automaticamente células com erro #VALOR!."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "O PROCV obriga que o valor procurado esteja na 1ª coluna à esquerda da matriz. ÍNDICE e CORRESP separam a coluna de busca da coluna de retorno."
+    },
+    {
+        "id": "G4_T2_03",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "INDIRETO"
+        ],
+        "contexto": "Construindo um dashboard para visualização de gastos.",
+        "enunciado": "Qual é a principal função da fórmula INDIRETO no Excel?",
+        "alternativas": [
+            "Transformar uma string de texto em uma referência de célula ou intervalo válido.",
+            "Ocultar planilhas e células para que outros usuários não vejam.",
+            "Fazer cálculos matemáticos indiretos sem usar o sinal de igual (=).",
+            "Buscar dados na internet e trazer para a planilha."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "INDIRETO(\"A1\") entende que você quer acessar a célula A1, mesmo que a coordenada seja um texto."
+    },
+    {
+        "id": "G4_T2_04",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "CORRESP"
+        ],
+        "contexto": "Procurando a posição de um item no estoque.",
+        "enunciado": "O que a função =CORRESP(\"Teclado Dell\"; A1:A50; 0) retorna exatamente?",
+        "alternativas": [
+            "O número da posição (linha/coluna) onde o texto 'Teclado Dell' foi encontrado.",
+            "O valor da célula ao lado do texto 'Teclado Dell'.",
+            "VERDADEIRO se o texto existir, FALSO se não existir.",
+            "O texto 'Teclado Dell' formatado."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "CORRESP não retorna o conteúdo da célula, mas sim a posição relativa (ex: 5º item da lista)."
+    },
+    {
+        "id": "G4_T2_05",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "PROCH"
+        ],
+        "contexto": "Tabelas horizontais.",
+        "enunciado": "Se a sua tabela matriz tiver cabeçalhos na coluna A e os dados se estenderem para a direita (colunas B, C, D...), qual função de busca primária deve ser usada?",
+        "alternativas": [
+            "PROCH",
+            "PROCV",
+            "DESLOC",
+            "INDIRETO"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "PROCH significa 'Procura Horizontal'. Ele busca na primeira linha e retorna dados nas linhas abaixo."
+    },
+    {
+        "id": "G4_T2_06",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "DESLOC"
+        ],
+        "contexto": "Você tem =DESLOC(A1; 2; 3).",
+        "enunciado": "Qual será a célula final retornada por essa função?",
+        "alternativas": [
+            "D3",
+            "C2",
+            "B4",
+            "E3"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A partir de A1: desce 2 linhas (chega na linha 3) e move 3 colunas para a direita (B, C, D). Logo, D3."
+    },
+    {
+        "id": "G4_T2_07",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Busca de clientes no sistema.",
+        "enunciado": "O que significa o erro #N/D frequentemente retornado pela função PROCV?",
+        "alternativas": [
+            "Não Disponível. O valor procurado não foi encontrado na 1ª coluna da matriz.",
+            "Não Divisível. Houve uma tentativa de divisão por zero na busca.",
+            "Nome Desconhecido. O nome da função foi digitado errado (ex: PRCOV).",
+            "Nenhuma Data. O Excel esperava uma data e recebeu texto."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "#N/D (Not Available) ocorre quando o termo de busca não existe no intervalo."
+    },
+    {
+        "id": "G4_T2_08",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "ÍNDICE"
+        ],
+        "contexto": "A estrutura base do ÍNDICE.",
+        "enunciado": "Na função =ÍNDICE(Matriz; Núm_linha; [Núm_coluna]), se a sua 'Matriz' for apenas uma coluna (ex: B2:B10), o que acontece com o argumento [Núm_coluna]?",
+        "alternativas": [
+            "Ele se torna opcional e pode ser omitido.",
+            "Deve ser preenchido obrigatoriamente com 1.",
+            "Deve ser preenchido obrigatoriamente com 0.",
+            "A função ÍNDICE não funciona em matrizes de uma única coluna."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Quando a matriz é unidimensional, o Excel já sabe qual coluna usar, exigindo apenas o número da linha."
+    },
+    {
+        "id": "G4_T2_09",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "INDIRETO",
+            "PROCV"
+        ],
+        "contexto": "Validação de dados condicional.",
+        "enunciado": "Por que INDIRETO é tão usado em listas suspensas dependentes (Data Validation)?",
+        "alternativas": [
+            "Porque ele converte o texto selecionado na primeira lista no nome de um intervalo nomeado para a segunda lista.",
+            "Porque ele trava a formatação das células.",
+            "Porque ele é a única função que lê dados de outras pastas de trabalho fechadas.",
+            "Porque ele aumenta a velocidade de processamento da planilha."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Se você escolhe 'Carros' na Lista 1, INDIRETO('Carros') chama o intervalo nomeado chamado Carros para a Lista 2."
+    },
+    {
+        "id": "G4_T3_01",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Buscando o preço (coluna 3) de uma camisa (A2) na matriz F:H. Exigindo correspondência exata.",
+        "enunciado": "Preencha as lacunas da função PROCV.",
+        "estrutura": "=PROCV(A2; F:H; ____; ____)",
+        "lacunas_esperadas": [
+            "3",
+            "FALSO"
+        ]
+    },
+    {
+        "id": "G4_T3_02",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "CORRESP"
+        ],
+        "contexto": "Descobrindo em qual linha está a 'Heineken' na coluna A. Busca exata.",
+        "enunciado": "Complete a sintaxe do CORRESP.",
+        "estrutura": "=CORRESP(\"Heineken\"; ____; ____)",
+        "lacunas_esperadas": [
+            "A:A",
+            "0"
+        ]
+    },
+    {
+        "id": "G4_T3_03",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Retornar o Endereço (coluna C) com base no nome procurado na coluna B.",
+        "enunciado": "A função CORRESP vai dentro do ÍNDICE.",
+        "estrutura": "=ÍNDICE(____; CORRESP(____; B:B; 0))",
+        "lacunas_esperadas": [
+            "C:C",
+            "A2"
+        ]
+    },
+    {
+        "id": "G4_T3_04",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "INDIRETO"
+        ],
+        "contexto": "O usuário digitou 'Fevereiro' na célula A1. Você quer somar a coluna B da aba Fevereiro.",
+        "enunciado": "Use INDIRETO para concatenar o nome da aba com o intervalo.",
+        "estrutura": "=SOMA(INDIRETO(____ & \"!B:B\"))",
+        "lacunas_esperadas": [
+            "A1"
+        ]
+    },
+    {
+        "id": "G4_T3_05",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "DESLOC"
+        ],
+        "contexto": "Você quer pegar o valor 2 linhas abaixo e 1 coluna à direita de C5.",
+        "enunciado": "Preencha a célula base e as coordenadas.",
+        "estrutura": "=DESLOC(____; ____; 1)",
+        "lacunas_esperadas": [
+            "C5",
+            "2"
+        ]
+    },
+    {
+        "id": "G4_T3_06",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "PROCH"
+        ],
+        "contexto": "Buscando o imposto para o mês em B1. A matriz vai de A1 a M5. A taxa está na linha 4.",
+        "enunciado": "Complete os argumentos.",
+        "estrutura": "=PROCH(B1; A1:M5; ____; FALSO)",
+        "lacunas_esperadas": [
+            "4"
+        ]
+    },
+    {
+        "id": "G4_T3_07",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Busca aproximada de bônus por vendas (A2) na matriz TabelaBonus (que está ordenada).",
+        "enunciado": "O último argumento deve permitir aproximação.",
+        "estrutura": "=PROCV(A2; TabelaBonus; 2; ____)",
+        "lacunas_esperadas": [
+            "VERDADEIRO"
+        ]
+    },
+    {
+        "id": "G4_T3_08",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "ÍNDICE"
+        ],
+        "contexto": "Tabela bidimensional de Notas. Tabela em B2:G20. Você já achou as posições: linha 5, coluna 3.",
+        "enunciado": "Puxe o valor usando ÍNDICE de forma estática.",
+        "estrutura": "=ÍNDICE(B2:G20; ____; ____)",
+        "lacunas_esperadas": [
+            "5",
+            "3"
+        ]
+    },
+    {
+        "id": "G4_T3_09",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "DESLOC"
+        ],
+        "contexto": "Criar um intervalo que sempre pega os últimos 5 valores de uma lista que cresce na coluna A (onde CONT.VALORES(A:A) diz o total).",
+        "enunciado": "A altura do intervalo final será determinada pelo 4º argumento.",
+        "estrutura": "=SOMA(DESLOC(A1; CONT.VALORES(A:A)-____; 0; ____))",
+        "lacunas_esperadas": [
+            "5",
+            "5"
+        ]
+    },
+    {
+        "id": "G4_T4_01",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Busca de telefone. O nome está em A2. A matriz de contatos está em D:F. O telefone é a 3ª coluna.",
+        "enunciado": "Escreva a fórmula do PROCV para busca EXATA do nome em A2 na matriz D:F.",
+        "respostas_aceitas": [
+            "(?i)=procv\\(\\s*A2\\s*;\\s*D:F\\s*;\\s*3\\s*;\\s*(falso|0)\\s*\\)"
+        ],
+        "dica_validacao": "Estrutura: valor procurado, matriz, índice, exato(0 ou falso)."
+    },
+    {
+        "id": "G4_T4_02",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "CORRESP"
+        ],
+        "contexto": "Verificar a posição do produto 'SSD 1TB' (célula G1) na lista da coluna A.",
+        "enunciado": "Escreva a fórmula do CORRESP para achar a posição exata de G1 na coluna A.",
+        "respostas_aceitas": [
+            "(?i)=corresp\\(\\s*G1\\s*;\\s*A:A\\s*;\\s*0\\s*\\)"
+        ],
+        "dica_validacao": "O tipo de correspondência deve ser 0 (exato)."
+    },
+    {
+        "id": "G4_T4_03",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Busca à esquerda. O nome da loja está em H2. O CNPJ (o que queremos) está na coluna A e o Nome da loja na coluna B.",
+        "enunciado": "Escreva a fórmula ÍNDICE+CORRESP para buscar o CNPJ na coluna A correspondente à loja procurada na coluna B.",
+        "respostas_aceitas": [
+            "(?i)=[íi]ndice\\(\\s*A:A\\s*;\\s*corresp\\(\\s*H2\\s*;\\s*B:B\\s*;\\s*0\\s*\\)\\s*\\)"
+        ],
+        "dica_validacao": "ÍNDICE(MatrizRetorno; CORRESP(ValorProcurado; MatrizBusca; 0))"
+    },
+    {
+        "id": "G4_T4_04",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "INDIRETO"
+        ],
+        "contexto": "A célula D5 contém o texto 'G10'. Você quer buscar o valor da célula G10 usando a referência em D5.",
+        "enunciado": "Escreva a fórmula com INDIRETO para acessar o valor de G10 através da D5.",
+        "respostas_aceitas": [
+            "(?i)=indireto\\(\\s*D5\\s*\\)"
+        ],
+        "dica_validacao": "Basta passar a referência que contém o texto da coordenada."
+    },
+    {
+        "id": "G4_T4_05",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "PROCH"
+        ],
+        "contexto": "O código do mês está em C1. A tabela de metas está horizontalmente no intervalo H1:S5. O valor que você quer está na linha 5.",
+        "enunciado": "Escreva a fórmula PROCH para achar a meta de forma exata.",
+        "respostas_aceitas": [
+            "(?i)=proch\\(\\s*C1\\s*;\\s*H1:S5\\s*;\\s*5\\s*;\\s*(falso|0)\\s*\\)"
+        ],
+        "dica_validacao": "=PROCH(valor; matriz; num_linha; 0)"
+    },
+    {
+        "id": "G4_T4_06",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "DESLOC"
+        ],
+        "contexto": "A partir da célula B2, você quer retornar o valor que está 3 linhas abaixo e 2 colunas à direita.",
+        "enunciado": "Escreva a fórmula usando DESLOC.",
+        "respostas_aceitas": [
+            "(?i)=desloc\\(\\s*B2\\s*;\\s*3\\s*;\\s*2\\s*\\)"
+        ],
+        "dica_validacao": "Omita a altura e largura, não são necessários aqui."
+    },
+    {
+        "id": "G4_T4_07",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Tabela de descontos por volume. Coluna J = Volume, Coluna K = Desconto. O volume da compra está em A2.",
+        "enunciado": "Escreva a fórmula PROCV para busca APROXIMADA na matriz J:K. Retorne o Desconto (coluna 2).",
+        "respostas_aceitas": [
+            "(?i)=procv\\(\\s*A2\\s*;\\s*J:K\\s*;\\s*2\\s*;\\s*(verdadeiro|1)?\\s*\\)"
+        ],
+        "dica_validacao": "Pode usar VERDADEIRO, 1, ou até omitir o 4º argumento (embora declará-lo seja boa prática)."
+    },
+    {
+        "id": "G4_T4_08",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "ÍNDICE"
+        ],
+        "contexto": "Você quer pegar estaticamente a célula na intersecção da 4ª linha e 2ª coluna da matriz A1:E10.",
+        "enunciado": "Escreva a fórmula ÍNDICE de forma direta, com números absolutos.",
+        "respostas_aceitas": [
+            "(?i)=[íi]ndice\\(\\s*A1:E10\\s*;\\s*4\\s*;\\s*2\\s*\\)"
+        ],
+        "dica_validacao": "=ÍNDICE(matriz; linha; coluna)"
+    },
+    {
+        "id": "G4_T4_09",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Buscando o Status (Coluna F) do pedido 'PED-500' (na célula Z1). Os códigos do pedido estão na Coluna D.",
+        "enunciado": "Escreva a fórmula combinada de ÍNDICE+CORRESP para esta busca bidirecional exata.",
+        "respostas_aceitas": [
+            "(?i)=[íi]ndice\\(\\s*F:F\\s*;\\s*corresp\\(\\s*Z1\\s*;\\s*D:D\\s*;\\s*0\\s*\\)\\s*\\)"
+        ],
+        "dica_validacao": "Retorno é F:F, busca é em D:D com valor Z1."
+    },
+    {
+        "id": "G4_T1_D01",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Catálogo de fornecedores de Camisetas G3 (base `fornecedores_hardware.xlsx` - adaptada para confecção). Você precisa cruzar dados com dois critérios: A linha deve corresponder ao 'Fornecedor' (A2) e a coluna deve corresponder à 'Cor' (B2).",
+        "enunciado": "Utilize ÍNDICE e dois CORRESPs (um para a linha, outro para a coluna) para descobrir o preço exato da camiseta 'Preta' do fornecedor 'Malha Forte'.",
+        "dica": "A sintaxe mestre é =ÍNDICE(matriz_total; CORRESP(linha); CORRESP(coluna)).",
+        "arquivo_download": "fornecedores_hardware.xlsx",
+        "resultado_esperado": "42,90"
+    },
+    {
+        "id": "G4_T1_D02",
+        "grupo": 4,
+        "tipo": 1,
+        "tags": [
+            "DESLOC",
+            "SOMA"
+        ],
+        "contexto": "Dashboard de fluxo de caixa do Mercado Livre e Shopee (base `fluxo_caixa_compras.xlsx`). A coluna C possui os gastos mensais desde janeiro de 2023 até a linha 50.",
+        "enunciado": "Crie uma fórmula dinâmica utilizando SOMA e DESLOC que some sempre os ÚLTIMOS 3 MESES registrados na coluna C, independentemente de quantas linhas novas forem adicionadas. Qual o valor retornado?",
+        "dica": "Use CONT.NÚM(C:C) no argumento 'linhas' do DESLOC para empurrar o início do intervalo para o final da base, ajustando a 'altura' para 3.",
+        "arquivo_download": "fluxo_caixa_compras.xlsx",
+        "resultado_esperado": "3510,00"
+    },
+    {
+        "id": "G4_T2_D01",
+        "grupo": 4,
+        "tipo": 2,
+        "tags": [
+            "INDIRETO",
+            "PROCV"
+        ],
+        "contexto": "Você consolidou o balanço anual da Power Fitness. Em vez de criar 12 PROCVs manuais, a célula A1 tem o nome do mês ('Janeiro', 'Fevereiro'). A fórmula `=PROCV(\"Whey\"; INDIRETO(\"'\" & A1 & \"'!A:F\"); 2; FALSO)` busca o valor automaticamente na aba correspondente.",
+        "enunciado": "Qual é a principal desvantagem arquitetural do uso intensivo da função INDIRETO em dashboards pesados de Excel?",
+        "alternativas": [
+            "Ela é uma função volátil: o Excel recalcula todas as células com INDIRETO toda vez que qualquer alteração é feita na planilha, causando lentidão.",
+            "Ela não aceita espaços nos nomes das abas de planilhas.",
+            "Ela impede o uso de tabelas dinâmicas vinculadas.",
+            "Ela corrompe as referências quando o arquivo é exportado para PDF."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Funções voláteis (HOJE, AGORA, DESLOC, INDIRETO) forçam o recálculo do processador e exigem cuidado em bases gigantes."
+    },
+    {
+        "id": "G4_T3_D01",
+        "grupo": 4,
+        "tipo": 3,
+        "tags": [
+            "PROCV"
+        ],
+        "contexto": "Avaliando bônus por pontos no TryHackMe. O usuário fez 850 pontos (A2). A tabela de prêmios (D2:E6) exige 0, 500, 1000, 1500 pontos. Ele deve receber o prêmio da faixa de 500.",
+        "enunciado": "Complete o PROCV para buscar valores APROXIMADOS (buscando o maior valor menor ou igual a A2).",
+        "estrutura": "=PROCV(A2; D2:E6; 2; ____)",
+        "lacunas_esperadas": [
+            "VERDADEIRO"
+        ]
+    },
+    {
+        "id": "G4_T4_D01",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "ÍNDICE",
+            "CORRESP"
+        ],
+        "contexto": "Buscando à esquerda. A coluna E contém o 'ID do Processador' e a coluna C contém o 'Nome do Produto' (ex: Ryzen 9). O ID procurado está em A1.",
+        "enunciado": "Escreva a fórmula usando ÍNDICE e CORRESP para retornar o Nome do Produto (C:C) baseado no ID exato (E:E).",
+        "respostas_aceitas": [
+            "(?i)=[íi]ndice\\(\\s*C:C\\s*;\\s*corresp\\(\\s*A1\\s*;\\s*E:E\\s*;\\s*0\\s*\\)\\s*\\)"
+        ],
+        "dica_validacao": "A função ÍNDICE pede primeiro a matriz de onde sairá a resposta (C:C)."
+    },
+    {
+        "id": "G4_T4_D02",
+        "grupo": 4,
+        "tipo": 4,
+        "tags": [
+            "PROCH",
+            "CORRESP"
+        ],
+        "contexto": "No cabeçalho da linha 1 temos os meses. Nas linhas de 2 a 10 temos as despesas de condomínio do Airbnb. Célula K1 = 'Agosto'.",
+        "enunciado": "Escreva a fórmula usando PROCH para buscar 'Agosto' na linha 1 e retornar o valor correspondente à 'Taxa Extra', que sempre está localizada estaticamente na linha 5 da matriz A1:M10.",
+        "respostas_aceitas": [
+            "(?i)=proch\\(\\s*K1\\s*;\\s*A1:M10\\s*;\\s*5\\s*;\\s*(falso|0)\\s*\\)"
+        ],
+        "dica_validacao": "No PROCH o 'núm_índice_lin' indica de qual linha o valor deve ser extraído."
+    }
+]

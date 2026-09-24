@@ -1,0 +1,645 @@
+[
+    {
+        "id": "G1_T1_01",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Em uma planilha de gestão do Diário Eletrônico, a coluna A contém o Nome do Aluno, a coluna B a Média Final e a coluna C o Percentual de Frequência.",
+        "enunciado": "Descubra quantos alunos estão elegíveis para o certificado. Calcule o número exato de alunos com Média Final >= 90 E Frequência >= 85%.",
+        "dica": "Utilize uma função que conta com múltiplos critérios.",
+        "arquivo_download": "base_diario_eletronico.xlsx",
+        "resultado_esperado": "42"
+    },
+    {
+        "id": "G1_T1_02",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Você gerencia reservas do seu Airbnb no Rio de Janeiro. Coluna C: Status ('Confirmado', 'Cancelado'). Coluna D: Mês. Coluna F: Valor da Reserva.",
+        "enunciado": "Calcule a receita total (soma) das reservas com status 'Confirmado' do mês de 'Fevereiro'.",
+        "dica": "O intervalo de soma deve ser o primeiro argumento.",
+        "arquivo_download": "base_reservas_rj.xlsx",
+        "resultado_esperado": "4500"
+    },
+    {
+        "id": "G1_T1_03",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SE",
+            "SEERRO"
+        ],
+        "contexto": "Controle de estoque de hardware (Processadores, RAM, SSDs). Custo médio = Custo Total (E) / Quantidade (F). Algumas peças têm Quantidade = 0.",
+        "enunciado": "Calcule o custo médio na primeira linha e arraste. Aplique a correção de erro para retornar 0 nas divisões por zero e informe o somatório total.",
+        "dica": "O tratamento de erros evita que o somatório final quebre.",
+        "arquivo_download": "estoque_hardware.xlsx",
+        "resultado_esperado": "12450"
+    },
+    {
+        "id": "G1_T1_04",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Planilha de compras mensais de cerveja artesanal e comercial. Coluna A: Marca. Coluna B: Tipo (Pilsen, IPA). Coluna C: Valor Gasto.",
+        "enunciado": "Calcule o total gasto exclusivamente com a marca 'Spaten' onde o tipo seja 'Pilsen'.",
+        "dica": "Dois pares de intervalos e critérios são necessários no SOMASES.",
+        "arquivo_download": "compras_cerveja.xlsx",
+        "resultado_esperado": "345"
+    },
+    {
+        "id": "G1_T1_05",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Log de acessos da plataforma TryHackMe. Coluna B: Status de Conexão ('Sucesso', 'Falha'). Coluna C: Endereço IP ('Interno', 'Externo').",
+        "enunciado": "Conte quantas vezes houve 'Falha' de conexão originada de IP 'Externo'.",
+        "dica": "Use CONT.SES para sobrepor as duas condições.",
+        "arquivo_download": "logs_ciberseguranca.xlsx",
+        "resultado_esperado": "128"
+    },
+    {
+        "id": "G1_T1_06",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SE",
+            "E"
+        ],
+        "contexto": "Gestão de catraca da Power Fitness. Coluna B: Mensalidade ('Paga', 'Atrasada'). Coluna C: Exame Médico ('Válido', 'Vencido').",
+        "enunciado": "Crie uma coluna de 'Acesso' que retorna 'Liberado' somente se a Mensalidade estiver 'Paga' E o Exame 'Válido'. Qual o total de alunos liberados?",
+        "dica": "Use SE aninhado com E, depois some ou conte os 'Liberados'.",
+        "arquivo_download": "acesso_academia.xlsx",
+        "resultado_esperado": "115"
+    },
+    {
+        "id": "G1_T1_07",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Controle de despesas de corrida por aplicativo (Move SJ, Garupa, 99). Coluna C: App. Coluna E: Motivo ('Trabalho', 'Pessoal'). Coluna F: Valor.",
+        "enunciado": "Some o valor gasto usando o app 'Move SJ' apenas para o motivo 'Trabalho'.",
+        "dica": "Filtre por duas condições textuais.",
+        "arquivo_download": "gastos_mobilidade.xlsx",
+        "resultado_esperado": "420"
+    },
+    {
+        "id": "G1_T1_08",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Lista de compras de atacado (Lysoform, Omo, Papel Toalha). Coluna C: Categoria ('Limpeza'). Coluna D: Quantidade Comprada.",
+        "enunciado": "Conte quantos pedidos da categoria 'Limpeza' tiveram Quantidade Comprada maior que 10 unidades.",
+        "dica": "O critério matemático deve estar entre aspas: \">10\".",
+        "arquivo_download": "compras_atacado.xlsx",
+        "resultado_esperado": "18"
+    },
+    {
+        "id": "G1_T1_09",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SE",
+            "OU"
+        ],
+        "contexto": "Gestão de barbearia (Malibu). Coluna D: Serviço ('Cabelo', 'Barba', 'Combo'). Coluna E: Dia da Semana.",
+        "enunciado": "Crie a regra de desconto: se for 'Combo' OU dia 'Terça-feira', retorna '10% OFF', senão 'Sem Desconto'. Quantos cortes tiveram desconto?",
+        "dica": "A função OU deve ser o teste lógico do SE.",
+        "arquivo_download": "agenda_barbearia.xlsx",
+        "resultado_esperado": "54"
+    },
+    {
+        "id": "G1_T2_01",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "SE",
+            "E"
+        ],
+        "contexto": "Uma plataforma de cliente oculto avalia lojas locais. Fotos enviadas (B2 = 'Sim') e pontuação (C2) > 70.",
+        "enunciado": "Qual fórmula retorna 'Aprovado' se ambas condições forem atendidas, e 'Pendente' caso contrário?",
+        "alternativas": [
+            "=SE(E(B2=\"Sim\"; C2>70); \"Aprovado\"; \"Pendente\")",
+            "=SE(OU(B2=\"Sim\"; C2>70); \"Aprovado\"; \"Pendente\")",
+            "=E(SE(B2=\"Sim\"; \"Aprovado\"); SE(C2>70; \"Aprovado\"; \"Pendente\"))",
+            "=SE(B2=\"Sim\" E C2>70; \"Aprovado\"; \"Pendente\")"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função E deve estar dentro do teste lógico da função SE."
+    },
+    {
+        "id": "G1_T2_02",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Você montou uma fórmula para somar o faturamento de vendas de jogos de PS5, mas ela retorna #VALOR!.",
+        "enunciado": "Fórmula: =SOMASES(C2:C100; A2:A100; \"Ação\"; B2:B50; \">150\"). Qual é o erro?",
+        "alternativas": [
+            "Intervalos de critérios com tamanhos diferentes (linhas 100 vs 50).",
+            "O critério \">150\" não pode ter aspas.",
+            "SOMASES não aceita texto como critério.",
+            "O intervalo de soma deve ser o último."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "Todos os intervalos devem ter a mesma dimensão."
+    },
+    {
+        "id": "G1_T2_03",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "OU"
+        ],
+        "contexto": "Um provedor de cloud aplica desconto se o uso for de madrugada OU se o cliente tiver o plano Pro 5 TB.",
+        "enunciado": "Para ser VERDADEIRO basta que uma condição seja cumprida. Qual função utilizar?",
+        "alternativas": [
+            "OU",
+            "E",
+            "SE",
+            "SOMASES"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função OU exige apenas um critério verdadeiro."
+    },
+    {
+        "id": "G1_T2_04",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "SEERRO"
+        ],
+        "contexto": "Ao buscar o nome de um aluno no MentorWeb com PROCV, quando a matrícula não existe, o Excel mostra #N/D.",
+        "enunciado": "Qual função envelopa o PROCV para trocar o erro #N/D pela frase 'Não Matriculado'?",
+        "alternativas": [
+            "=SEERRO(PROCV(...); \"Não Matriculado\")",
+            "=SE(ERRO(PROCV(...)); \"Não Matriculado\")",
+            "=PROCV(..., SEERRO(\"Não Matriculado\"))",
+            "=SE.ERRO.N/D(PROCV(...); \"Não Matriculado\")"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "SEERRO é a função nativa padrão para este tratamento."
+    },
+    {
+        "id": "G1_T2_05",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Verificando o estoque de camisetas G3.",
+        "enunciado": "Qual a sintaxe correta para contar camisetas da Cor 'Preta' (Coluna B) e Tamanho 'G3' (Coluna C)?",
+        "alternativas": [
+            "=CONT.SES(B:B; \"Preta\"; C:C; \"G3\")",
+            "=CONT.SES(B:B= \"Preta\" E C:C= \"G3\")",
+            "=CONT.SES(B:B; C:C; \"Preta\"; \"G3\")",
+            "=CONT.SES(B:B&\"Preta\"; C:C&\"G3\")"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A estrutura é sempre Intervalo1; Critério1; Intervalo2; Critério2."
+    },
+    {
+        "id": "G1_T2_06",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "SE"
+        ],
+        "contexto": "O professor de comunicação visual quer aplicar a regra de notas: >=60 Aprovado, senão Reprovado.",
+        "enunciado": "Na célula D2 está a nota 85. Qual fórmula avalia corretamente?",
+        "alternativas": [
+            "=SE(D2>=60; \"Aprovado\"; \"Reprovado\")",
+            "=SE(D2>60; \"Reprovado\"; \"Aprovado\")",
+            "=SE(D2<=60; \"Aprovado\"; \"Reprovado\")",
+            "=SE(\"Aprovado\"; D2>=60; \"Reprovado\")"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A ordem correta é: Teste Lógico, Valor se Verdadeiro, Valor se Falso."
+    },
+    {
+        "id": "G1_T2_07",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Na contabilidade, precisamos somar faturas pagas.",
+        "enunciado": "Em SOMASES, onde deve ser posicionado o intervalo contendo os valores que serão efetivamente somados?",
+        "alternativas": [
+            "É obrigatoriamente o primeiro argumento.",
+            "É obrigatoriamente o último argumento.",
+            "Pode ser em qualquer posição, desde que sinalizado com $.",
+            "A função SOMASES não possui intervalo de soma."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "No SOMASES, o intervalo de soma vem sempre em primeiro lugar."
+    },
+    {
+        "id": "G1_T2_08",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "E"
+        ],
+        "contexto": "Avaliando se um roteador Wi-Fi suporta a rede.",
+        "enunciado": "A função =E(VERDADEIRO; FALSO; VERDADEIRO) retornará qual resultado?",
+        "alternativas": [
+            "FALSO",
+            "VERDADEIRO",
+            "ERRO",
+            "NULO"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função E só retorna VERDADEIRO se TODOS os argumentos forem verdadeiros."
+    },
+    {
+        "id": "G1_T2_09",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "OU"
+        ],
+        "contexto": "Avaliando a compra de um SSD M.2 ou SATA.",
+        "enunciado": "A função =OU(FALSO; FALSO; VERDADEIRO) retornará qual resultado?",
+        "alternativas": [
+            "VERDADEIRO",
+            "FALSO",
+            "ERRO",
+            "NULO"
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função OU retorna VERDADEIRO se pelo menos um argumento for verdadeiro."
+    },
+    {
+        "id": "G1_T3_01",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "SEERRO"
+        ],
+        "contexto": "Dashboard de notas gerando erro '#N/D' quando não encontra dados.",
+        "enunciado": "Complete para que, em caso de erro, a célula fique vazia.",
+        "estrutura": "=____(PROCV(A2; Dados!A:F; 3; FALSO); ____)",
+        "lacunas_esperadas": [
+            "SEERRO",
+            "\"\""
+        ]
+    },
+    {
+        "id": "G1_T3_02",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Contando compras de 'Papel Toalha' na categoria 'Limpeza'.",
+        "enunciado": "Preencha com os critérios corretos.",
+        "estrutura": "=CONT.SES(A:A; ____; B:B; ____)",
+        "lacunas_esperadas": [
+            "\"Papel Toalha\"",
+            "\"Limpeza\""
+        ]
+    },
+    {
+        "id": "G1_T3_03",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "SE",
+            "E"
+        ],
+        "contexto": "Manutenção de hardware: garantia 'Ativa' (B2) e dano não pode ser 'Físico' (C2).",
+        "enunciado": "Estruture a regra de negócio.",
+        "estrutura": "=SE(____(B2=\"Ativa\"; C2<>____); \"Aprovar\"; \"Negar\")",
+        "lacunas_esperadas": [
+            "E",
+            "\"Físico\""
+        ]
+    },
+    {
+        "id": "G1_T3_04",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Soma da receita (C:C) do Airbnb se o bairro (B:B) for 'Ipanema'.",
+        "enunciado": "Complete a fórmula.",
+        "estrutura": "=SOMASES(____; B:B; ____)",
+        "lacunas_esperadas": [
+            "C:C",
+            "\"Ipanema\""
+        ]
+    },
+    {
+        "id": "G1_T3_05",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "SE"
+        ],
+        "contexto": "Se a média (A1) for >= 70, retorna 'Aprovado', senão 'Recuperação'.",
+        "enunciado": "Complete a função SE.",
+        "estrutura": "=SE(A1>=70; ____; ____)",
+        "lacunas_esperadas": [
+            "\"Aprovado\"",
+            "\"Recuperação\""
+        ]
+    },
+    {
+        "id": "G1_T3_06",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "OU"
+        ],
+        "contexto": "Frete grátis se o valor (B1) for maior que 200 OU cliente for 'VIP' (C1).",
+        "enunciado": "Preencha a função lógica.",
+        "estrutura": "=SE(____(B1>200; C1=\"VIP\"); \"Grátis\"; \"Cobrar\")",
+        "lacunas_esperadas": [
+            "OU"
+        ]
+    },
+    {
+        "id": "G1_T3_07",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Somar quantidade vendida (D:D) de doces se o tipo (C:C) for 'Paçoca' e a filial (E:E) for 'Matriz'.",
+        "enunciado": "Complete a sequência do SOMASES.",
+        "estrutura": "=SOMASES(D:D; C:C; ____; ____; \"Matriz\")",
+        "lacunas_esperadas": [
+            "\"Paçoca\"",
+            "E:E"
+        ]
+    },
+    {
+        "id": "G1_T3_08",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Contar reservas do app '99' na data de 'Hoje' (A1). O app está na coluna B e a data na D.",
+        "enunciado": "Preencha os argumentos.",
+        "estrutura": "=CONT.SES(____; \"99\"; D:D; ____)",
+        "lacunas_esperadas": [
+            "B:B",
+            "A1"
+        ]
+    },
+    {
+        "id": "G1_T3_09",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "SEERRO"
+        ],
+        "contexto": "Evitando erro ao dividir Valor Total (B2) por Quantidade (C2).",
+        "enunciado": "Se der erro, retornar 0.",
+        "estrutura": "=SEERRO(B2/____; ____)",
+        "lacunas_esperadas": [
+            "C2",
+            "0"
+        ]
+    },
+    {
+        "id": "G1_T4_01",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SE",
+            "OU"
+        ],
+        "contexto": "Gestão de matrículas. D5 = 'Situação Financeira', E5 = 'Status de Documentação'.",
+        "enunciado": "Escreva a fórmula com SE e OU para retornar 'Bloqueado' se houver 'Inadimplência' em D5 ou 'Pendente' em E5. Senão, 'Liberado'.",
+        "respostas_aceitas": [
+            "(?i)=se\\(\\s*ou\\(\\s*D5\\s*=\\s*\"Inadimpl[eê]ncia\"\\s*;\\s*E5\\s*=\\s*\"Pendente\"\\s*\\)\\s*;\\s*\"Bloqueado\"\\s*;\\s*\"Liberado\"\\s*\\)",
+            "(?i)=se\\(\\s*ou\\(\\s*E5\\s*=\\s*\"Pendente\"\\s*;\\s*D5\\s*=\\s*\"Inadimpl[eê]ncia\"\\s*\\)\\s*;\\s*\"Bloqueado\"\\s*;\\s*\"Liberado\"\\s*\\)"
+        ],
+        "dica_validacao": "A estrutura é =SE(OU(...); \"Verdadeiro\"; \"Falso\")"
+    },
+    {
+        "id": "G1_T4_02",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Vendas de camisetas Plus Size. Tamanho na coluna B, valor na coluna C.",
+        "enunciado": "Escreva o SOMASES para somar valores da coluna C apenas onde B for 'G3'.",
+        "respostas_aceitas": [
+            "(?i)=somases\\(\\s*C:C\\s*;\\s*B:B\\s*;\\s*\"G3\"\\s*\\)"
+        ],
+        "dica_validacao": "O intervalo de soma vem primeiro."
+    },
+    {
+        "id": "G1_T4_03",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SE"
+        ],
+        "contexto": "Classificação de cliente oculto (nota G10). Como SES foi vetada, use SEs aninhados.",
+        "enunciado": "Retorne 'Excelente' se >= 90, 'Bom' se >= 70, e 'Ruim' se < 70.",
+        "respostas_aceitas": [
+            "(?i)=se\\(\\s*G10\\s*>=\\s*90\\s*;\\s*\"Excelente\"\\s*;\\s*se\\(\\s*G10\\s*>=\\s*70\\s*;\\s*\"Bom\"\\s*;\\s*\"Ruim\"\\s*\\)\\s*\\)",
+            "(?i)=se\\(\\s*G10\\s*<\\s*70\\s*;\\s*\"Ruim\"\\s*;\\s*se\\(\\s*G10\\s*>=\\s*90\\s*;\\s*\"Excelente\"\\s*;\\s*\"Bom\"\\s*\\)\\s*\\)"
+        ],
+        "dica_validacao": "Aninhe um SE dentro do argumento 'Falso'."
+    },
+    {
+        "id": "G1_T4_04",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Log de firewalls. Coluna F: Ação ('Bloqueado'). Coluna G: Porta (ex: 80).",
+        "enunciado": "Escreva a fórmula para contar registros onde a Ação seja 'Bloqueado' E a Porta seja 80.",
+        "respostas_aceitas": [
+            "(?i)=cont\\.ses\\(\\s*F:F\\s*;\\s*\"Bloqueado\"\\s*;\\s*G:G\\s*;\\s*80\\s*\\)",
+            "(?i)=cont\\.ses\\(\\s*G:G\\s*;\\s*80\\s*;\\s*F:F\\s*;\\s*\"Bloqueado\"\\s*\\)"
+        ],
+        "dica_validacao": "O critério numérico (80) não precisa obrigatoriamente de aspas neste caso."
+    },
+    {
+        "id": "G1_T4_05",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "E"
+        ],
+        "contexto": "Auditoria de login corporativo no Active Directory.",
+        "enunciado": "Escreva uma função =E() que verifica se a Conta Ativa (B2) é 'Sim' E se possui Token MFA (C2) = 'Ativo'.",
+        "respostas_aceitas": [
+            "(?i)=e\\(\\s*B2\\s*=\\s*\"Sim\"\\s*;\\s*C2\\s*=\\s*\"Ativo\"\\s*\\)",
+            "(?i)=e\\(\\s*C2\\s*=\\s*\"Ativo\"\\s*;\\s*B2\\s*=\\s*\"Sim\"\\s*\\)"
+        ],
+        "dica_validacao": "Apenas construa o teste lógico com =E(condição1; condição2)."
+    },
+    {
+        "id": "G1_T4_06",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "OU"
+        ],
+        "contexto": "Identificando peças compatíveis para upgrade. Soquete da Placa-mãe (A5).",
+        "enunciado": "Escreva a função =OU() que verifica se o soquete em A5 é 'AM4' ou 'AM5'.",
+        "respostas_aceitas": [
+            "(?i)=ou\\(\\s*A5\\s*=\\s*\"AM4\"\\s*;\\s*A5\\s*=\\s*\"AM5\"\\s*\\)",
+            "(?i)=ou\\(\\s*A5\\s*=\\s*\"AM5\"\\s*;\\s*A5\\s*=\\s*\"AM4\"\\s*\\)"
+        ],
+        "dica_validacao": "Teste a mesma célula (A5) para as duas condições diferentes."
+    },
+    {
+        "id": "G1_T4_07",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SEERRO"
+        ],
+        "contexto": "Custo de API do Gemini em B10. Às vezes, o retorno da API falha gerando #VALOR!.",
+        "enunciado": "Escreva a fórmula para envelopar a célula B10. Se houver erro, retorne a palavra 'Falha'.",
+        "respostas_aceitas": [
+            "(?i)=seerro\\(\\s*B10\\s*;\\s*\"Falha\"\\s*\\)"
+        ],
+        "dica_validacao": "=SEERRO(valor; valor_se_erro)"
+    },
+    {
+        "id": "G1_T4_08",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Compra de doces e confeitaria. Soma do peso total (D:D) de produtos cuja Categoria (B:B) seja 'Doce de Leite' e o Fornecedor (C:C) seja 'Atacadão'.",
+        "enunciado": "Escreva a fórmula do SOMASES para este cenário.",
+        "respostas_aceitas": [
+            "(?i)=somases\\(\\s*D:D\\s*;\\s*B:B\\s*;\\s*\"Doce de Leite\"\\s*;\\s*C:C\\s*;\\s*\"Atacadão\"\\s*\\)",
+            "(?i)=somases\\(\\s*D:D\\s*;\\s*C:C\\s*;\\s*\"Atacadão\"\\s*;\\s*B:B\\s*;\\s*\"Doce de Leite\"\\s*\\)"
+        ],
+        "dica_validacao": "D:D (Soma) no início, seguido dos pares de critérios."
+    },
+    {
+        "id": "G1_T4_09",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SE"
+        ],
+        "contexto": "Manutenção elétrica. Teste de voltagem de chuveiro (H2).",
+        "enunciado": "Escreva a fórmula: se H2 for igual a 220, retorne 'Compatível', senão 'Incompatível'.",
+        "respostas_aceitas": [
+            "(?i)=se\\(\\s*H2\\s*=\\s*220\\s*;\\s*\"Compat[íi]vel\"\\s*;\\s*\"Incompat[íi]vel\"\\s*\\)"
+        ],
+        "dica_validacao": "Números (220) não levam aspas."
+    },
+    {
+        "id": "G1_T1_D01",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SOMASES",
+            "E"
+        ],
+        "contexto": "Análise de logs de rede no Azure (base `logs_azure_banda.xlsx`). A coluna B contém a 'Data/Hora', a coluna C o 'IP de Origem', a coluna D o 'Protocolo' (ex: TCP, UDP) e a coluna E o 'Tráfego (MB)'.",
+        "enunciado": "Calcule o tráfego total de todos os IPs da sub-rede '192.168.1.*' (onde o último octeto varia) utilizando o protocolo 'TCP', especificamente para os acessos realizados no dia atual.",
+        "dica": "Você precisará combinar o uso de caracteres curinga (*) no critério de IP e a função HOJE() dentro do argumento do SOMASES.",
+        "arquivo_download": "logs_azure_banda.xlsx",
+        "resultado_esperado": "1845"
+    },
+    {
+        "id": "G1_T1_D02",
+        "grupo": 1,
+        "tipo": 1,
+        "tags": [
+            "SE",
+            "OU",
+            "E"
+        ],
+        "contexto": "Matriz de atualização de hardware. Coluna C: 'Geração Ryzen' (ex: 5000, 7000, 9000). Coluna D: 'Tipo de Placa-Mãe' (AM4, AM5). Coluna E: 'Orçamento Aprovado' (Sim, Não).",
+        "enunciado": "Crie uma coluna de 'Ação' que retorne 'Comprar 9950X3D' SE o orçamento estiver 'Sim' E (a placa for 'AM5' OU a geração for '7000'). Caso contrário, retorne 'Aguardar'. Quantas linhas retornaram 'Comprar 9950X3D'?",
+        "dica": "A função E exige que todas as suas condições sejam verdadeiras, mas uma dessas condições pode ser uma função OU.",
+        "arquivo_download": "pedidos_hardware.xlsx",
+        "resultado_esperado": "12"
+    },
+    {
+        "id": "G1_T2_D01",
+        "grupo": 1,
+        "tipo": 2,
+        "tags": [
+            "SE",
+            "SEERRO"
+        ],
+        "contexto": "Auditoria de um dashboard do Proesc que calcula a taxa de evasão escolar (Alunos Evadidos / Total de Alunos). Como em algumas turmas o Total de Alunos está vazio (0), a fórmula base quebra.",
+        "enunciado": "Um analista tentou resolver o erro com: `=SE(C2=0; 0; SEERRO(B2/C2; \"Erro Crítico\"))`. Por que essa fórmula é redundante e qual é a estrutura avançada mais eficiente?",
+        "alternativas": [
+            "A função SEERRO(B2/C2; 0) já trata a divisão por zero nativamente, tornando o SE(C2=0...) inútil.",
+            "A função SEERRO não captura o erro #DIV/0!, portanto a fórmula do analista é a única correta.",
+            "O erro ocorre porque B2 deve ser validado com E(B2>0; C2>0) antes do SEERRO.",
+            "Divisões por zero retornam #N/D, não #DIV/0!, logo deve-se usar SE.NÃO.DISP."
+        ],
+        "resposta_correta": 0,
+        "dica_erro": "A função SEERRO já avalia qualquer tipo de erro de cálculo, incluindo divisões por zero, limpando a necessidade de validações com SE."
+    },
+    {
+        "id": "G1_T3_D01",
+        "grupo": 1,
+        "tipo": 3,
+        "tags": [
+            "CONT.SES"
+        ],
+        "contexto": "Filtro de segurança na plataforma TryHackMe. Coluna A: 'Usuário', Coluna B: 'Tentativas de Login', Coluna C: 'Status'. Queremos contar usuários com mais de 5 tentativas que NÃO estejam com status 'Bloqueado'.",
+        "enunciado": "Preencha a lacuna com o operador lógico correto para exclusão ('diferente de').",
+        "estrutura": "=CONT.SES(B:B; \">5\"; C:C; \"____Bloqueado\")",
+        "lacunas_esperadas": [
+            "<>"
+        ]
+    },
+    {
+        "id": "G1_T4_D01",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SE",
+            "OU",
+            "E"
+        ],
+        "contexto": "Regra de precificação dinâmica no Airbnb RJ. B2 = Mês (ex: Janeiro), C2 = Número de Hóspedes, D2 = Avaliação do Hóspede (0 a 5).",
+        "enunciado": "Escreva uma fórmula que retorne 'Taxa Extra' se (o Mês for Janeiro OU Fevereiro) E o Número de Hóspedes for maior que 4. Caso contrário, retorne 'Padrão'.",
+        "respostas_aceitas": [
+            "(?i)=se\\(\\s*e\\(\\s*ou\\(\\s*B2\\s*=\\s*\"Janeiro\"\\s*;\\s*B2\\s*=\\s*\"Fevereiro\"\\s*\\)\\s*;\\s*C2\\s*>\\s*4\\s*\\)\\s*;\\s*\"Taxa Extra\"\\s*;\\s*\"Padr[aã]o\"\\s*\\)"
+        ],
+        "dica_validacao": "A função E deve abraçar a função OU e o teste de hóspedes."
+    },
+    {
+        "id": "G1_T4_D02",
+        "grupo": 1,
+        "tipo": 4,
+        "tags": [
+            "SOMASES"
+        ],
+        "contexto": "Análise de faturamento do Clube do Malte. Coluna C possui as vendas. Coluna B os nomes das cervejas.",
+        "enunciado": "Usando SOMASES, some a coluna C apenas onde o nome na coluna B comece com a palavra 'Spaten', independentemente do que vier depois no nome do produto.",
+        "respostas_aceitas": [
+            "(?i)=somases\\(\\s*C:C\\s*;\\s*B:B\\s*;\\s*\"Spaten\\*\"\\s*\\)"
+        ],
+        "dica_validacao": "Utilize o caractere curinga de texto (*) logo após a palavra desejada dentro das aspas."
+    }
+]
