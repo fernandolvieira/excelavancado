@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação - Excel Avançado EAD</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <!-- TELA 1: IDENTIFICAÇÃO -->
+    <div id="tela-login" class="container ativa">
+        <h2>Avaliação Prática - Excel Avançado</h2>
+        <p>A prova é composta por 5 Módulos. Você passará por todos eles sequencialmente a partir do módulo escolhido.</p>
+        <form id="form-login">
+            <input type="text" id="aluno-nome" placeholder="Seu Nome Completo" required>
+            <input type="tel" id="aluno-telefone" placeholder="Seu Telefone (WhatsApp)" required>
+            
+            <label class="check-container">
+                <input type="checkbox" id="aluno-whatsapp"> Quero ser adicionado ao grupo de WhatsApp da turma
+            </label>
+
+            <select id="modulo-selecionado" required>
+                <option value="1" selected>Iniciar pelo Módulo 1 (Fórmulas Condicionais)</option>
+                <option value="2">Iniciar pelo Módulo 2 (Funções Financeiras e Estatísticas)</option>
+                <option value="3">Iniciar pelo Módulo 3 (Datas e Horas)</option>
+                <option value="4">Iniciar pelo Módulo 4 (Pesquisa e Referência)</option>
+                <option value="5">Iniciar pelo Módulo 5 (Manipulação de Texto)</option>
+            </select>
+
+            <button type="submit" id="btn-iniciar">Começar Avaliação</button>
+        </form>
+    </div>
+
+    <!-- TELA 2: ÁREA DE PROVA -->
+    <div id="tela-prova" class="container oculta">
+        <div class="cabecalho-prova">
+            <span id="contador-questao">Questão 1 de 12</span>
+            <span id="indicador-grupo" style="color: #107c41; font-weight: bold;">Módulo 1</span>
+            <span id="cronometro">00:00</span>
+        </div>
+        <div id="area-questao"></div>
+        <div id="feedback-erro" class="oculta"></div>
+        <div class="controles-prova">
+            <button id="btn-pular" class="btn-secundario">Pular Questão</button>
+            <button id="btn-confirmar" class="btn-primario">Confirmar Resposta</button>
+        </div>
+    </div>
+
+    <!-- TELA 3: DASHBOARD DO ALUNO -->
+    <div id="tela-dashboard" class="container oculta">
+        <h2 id="titulo-dashboard">Diagnóstico do Módulo</h2>
+        <div class="resumo-dash">
+            <p>Sua Nota: <strong id="nota-final">--</strong>/<span id="nota-maxima">12</span></p>
+            <p>Tempo de Resolução: <strong id="tempo-final">--</strong></p>
+        </div>
+        <div class="graficos">
+            <canvas id="grafico-desempenho"></canvas>
+        </div>
+        <div id="area-reforco">
+            <h3>Fórmulas que exigem revisão:</h3>
+            <ul id="lista-tags-erro"></ul>
+        </div>
+        
+        <!-- Botão Dinâmico (Avançar Grupo ou PDF) -->
+        <button id="btn-acao-dashboard" class="btn-primario" style="margin-top: 20px;">Avançar para o Próximo Módulo</button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

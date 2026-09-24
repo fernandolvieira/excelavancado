@@ -1,0 +1,234 @@
+/* --- RESET E GERAL --- */
+* { 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: #f4f7f6; 
+    color: #333; 
+    display: flex; 
+    justify-content: center; 
+    padding: 20px; 
+    margin: 0;
+}
+
+.container { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    width: 100%; 
+    max-width: 800px; 
+}
+
+/* --- CONTROLE DE TELAS --- */
+.oculta { display: none !important; }
+.ativa { display: block; }
+
+/* --- TIPOGRAFIA --- */
+h2 { 
+    color: #107c41; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px; 
+    margin-top: 0;
+}
+
+h3 {
+    color: #333;
+    margin-top: 25px;
+}
+
+/* --- FORMULÁRIOS E INPUTS --- */
+input[type="text"], 
+input[type="tel"], 
+select { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 10px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="tel"]:focus {
+    border-color: #107c41;
+    outline: none;
+}
+
+.input-lacuna {
+    border: 2px solid #107c41 !important;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #107c41;
+    background-color: #f8f9fa;
+}
+
+/* --- CHECKBOX DO WHATSAPP --- */
+.check-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.check-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+/* --- BOTÕES --- */
+button { 
+    padding: 14px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 100%; 
+    margin-top: 10px; 
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-primario { 
+    background-color: #107c41; /* Verde Excel */
+    color: white; 
+}
+
+.btn-primario:hover { 
+    background-color: #0b5c30; 
+}
+
+.btn-secundario { 
+    background-color: #dc3545; /* Vermelho Pular/Aviso */
+    color: white; 
+}
+
+.btn-secundario:hover {
+    background-color: #b02a37;
+}
+
+.controles-prova { 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 15px;
+    margin-top: 25px; 
+}
+
+/* Ajusta botões Pular e Confirmar para ficarem lado a lado */
+#btn-pular, #btn-confirmar {
+    margin-top: 0;
+    width: 50%;
+}
+
+/* --- ÁREA DE PROVA --- */
+.cabecalho-prova { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    font-weight: bold; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 15px; 
+    margin-bottom: 25px; 
+    font-size: 18px;
+}
+
+#indicador-grupo {
+    text-transform: uppercase;
+    color: #107c41;
+    background: #e6f2eb;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+#cronometro {
+    font-family: monospace;
+    font-size: 20px;
+    color: #555;
+}
+
+.contexto { 
+    background: #e9ecef; 
+    padding: 15px; 
+    border-radius: 4px; 
+    margin-bottom: 15px; 
+    font-style: italic; 
+    border-left: 4px solid #107c41;
+}
+
+#feedback-erro { 
+    color: #842029; 
+    background: #f8d7da; 
+    padding: 15px; 
+    border-radius: 4px; 
+    margin-top: 20px; 
+    border: 1px solid #f5c2c7;
+    font-size: 15px;
+}
+
+/* Opções de Múltipla Escolha */
+#opcoes-t2 label:hover {
+    background-color: #e2e6ea !important;
+    border-color: #dae0e5 !important;
+}
+
+/* --- DASHBOARD --- */
+.resumo-dash { 
+    background: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 6px; 
+    text-align: center; 
+    font-size: 18px; 
+    margin-bottom: 25px;
+    border: 1px solid #dee2e6;
+}
+
+.resumo-dash p { margin: 10px 0; }
+
+.resumo-dash strong { 
+    color: #107c41; 
+    font-size: 26px; 
+}
+
+.graficos { 
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0 auto 30px auto; 
+    height: 300px; 
+}
+
+#area-reforco ul { 
+    list-style-type: none; 
+    padding: 0; 
+}
+
+#area-reforco li { 
+    background: #fff3cd; 
+    padding: 12px; 
+    margin-bottom: 8px; 
+    border-left: 4px solid #ffc107; 
+    border-radius: 4px; 
+    color: #664d03;
+    font-size: 15px;
+}
+
+#btn-acao-dashboard {
+    margin-top: 30px;
+    padding: 16px;
+    font-size: 18px;
+}

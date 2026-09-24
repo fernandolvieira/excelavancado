@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Analítico - Professor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; padding: 20px; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .box { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        h1, h2, h3 { color: #1a73e8; margin-top: 0; }
+        .login-box { text-align: center; max-width: 400px; margin: 100px auto; }
+        input, select { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; width: 100%; box-sizing: border-box; margin-bottom: 10px; }
+        button { background-color: #1a73e8; color: #fff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background-color: #1557b0; }
+        .oculto { display: none; }
+        
+        .grid-dash { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card-stat { background: #e8f0fe; padding: 20px; border-radius: 8px; text-align: center; }
+        .card-stat span { display: block; font-size: 32px; font-weight: bold; color: #1a73e8; }
+        
+        .aluno-detalhe { background: #fff3e0; padding: 15px; border-radius: 8px; border-left: 5px solid #ff9800; margin-top: 15px; }
+        .aluno-detalhe span { font-weight: bold; color: #d32f2f; }
+    </style>
+</head>
+<body>
+
+<div class="box login-box" id="tela-acesso">
+    <h2>Acesso Restrito</h2>
+    <p>Insira a senha do professor.</p>
+    <input type="password" id="senha" placeholder="Senha...">
+    <button onclick="autenticar()">Acessar Dashboard</button>
+</div>
+
+<div class="container oculto" id="tela-dashboard">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h1>Análise de Desempenho da Turma</h1>
+        <button onclick="carregarDados()" style="width: auto;">🔄 Atualizar Dados</button>
+    </div>
+
+    <!-- Visão Geral -->
+    <div class="grid-dash">
+        <div class="box">
+            <h2>Visão Geral da Turma</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px;">
+                <div class="card-stat">Total de Alunos<span id="stat-alunos">0</span></div>
+                <div class="card-stat">Provas Concluídas<span id="stat-concluidas">0</span></div>
+            </div>
+            <canvas id="graficoModulos" height="200"></canvas>
+        </div>
+
+        <div class="box">
+            <h2>🔥 Funções com Maior Dificuldade</h2>
+            <p style="font-size: 14px; color: #666;">Top comandos que a turma mais errou ou pulou.</p>
+            <canvas id="graficoErros" height="250"></canvas>
+        </div>
+    </div>
+
+    <!-- Análise Individual -->
+    <div class="box">
+        <h2>Análise Individual de Aluno</h2>
+        <select id="seletor-aluno" onchange="mostrarAluno()"></select>
+        <div id="painel-aluno" class="aluno-detalhe oculto">
+            <h3 id="aluno-nome"></h3>
+            <p><strong>Desempenho por Módulo:</strong></p>
+            <ul id="aluno-notas"></ul>
+            <p><strong>Gargalos Críticos (Erros):</strong> <span id="aluno-erros"></span></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbyg2-R64OfUeSZy_Cs04Ek97oYeQQ52R9SCgMY9HaYgF9X5CldDkOa7erKKQT7-ZUxAcQ/exec";
+    const SENHA_PROFESSOR = "conectaexelavancado";
+    
+    let dadosBrutos = [];
+    let graficoModulosInst = null;
+    let graficoErrosInst = null;
+
+    function autenticar() {
+        if (document.getElementById('senha').value === SENHA_PROFESSOR) {
+            document.getElementById('tela-acesso').classList.add('oculto');
+            document.getElementById('tela-dashboard').classList.remove('oculto');
+            carregarDados();
+        } else {
+            alert("Senha incorreta.");
+        }
+    }
+
+    // A MÁGICA DO JSONP (Fura o bloqueio CORS)
+    function carregarDados() {
+        document.getElementById('stat-alunos').textContent = "...";
+        document.getElementById('stat-concluidas').textContent = "...";
+        
+        const script = document.createElement('script');
+        // Adiciona um timestamp para evitar cache e o parâmetro callback
+        script.src = `${API_URL}?callback=processarDados&t=${new Date().getTime()}`;
+        document.body.appendChild(script);
+        
+        // Limpa o script do HTML após a execução
+        script.onload = () => script.remove();
+    }
+
+    // Função engatilhada automaticamente quando o Google responde
+    function processarDados(dados) {
+        if(!dados || dados.length < 2) {
+            alert("Não há dados de respostas suficientes na planilha.");
+            return;
+        }
+        
+        // Remove cabeçalho
+        dados.shift();
+        dadosBrutos = dados;
+        
+        gerarInteligenciaTurma();
+        popularSeletorAlunos();
+    }
+
+    function gerarInteligenciaTurma() {
+        let alunosUnicos = new Set();
+        let concluidas = 0;
+        let somaNotasModulo = { "Módulo 1": [], "Módulo 2": [], "Módulo 3": [], "Módulo 4": [], "Módulo 5": [] };
+        let contagemErros = {};
+
+        dadosBrutos.forEach(linha => {
+            const nome = linha[1];
+            const fase = linha[4];
+            const nota = parseInt(linha[5]) || 0;
+            const erros = linha[7] ? linha[7].split(', ') : [];
+
+            if (nome) alunosUnicos.add(nome);
+            if (fase === "Resultado Final Consolidado") concluidas++;
+
+            // Mapeia notas médias por módulo
+            if (somaNotasModulo[fase]) {
+                somaNotasModulo[fase].push(nota);
+            }
+
+            // Conta a frequência dos erros (Ignorando os acertos perfeitos)
+            if(fase !== "0 - Login (Iniciou a Prova)" && linha[7] !== "Nenhum") {
+                erros.forEach(err => {
+                    if (err.trim() !== "") {
+                        contagemErros[err] = (contagemErros[err] || 0) + 1;
+                    }
+                });
+            }
+        });
+
+        // Atualiza Cards
+        document.getElementById('stat-alunos').textContent = alunosUnicos.size;
+        document.getElementById('stat-concluidas').textContent = concluidas;
+
+        // Prepara dados Gráfico Módulos (Média)
+        const labelsModulos = Object.keys(somaNotasModulo);
+        const mediasModulos = labelsModulos.map(m => {
+            let notas = somaNotasModulo[m];
+            if (notas.length === 0) return 0;
+            let soma = notas.reduce((a, b) => a + b, 0);
+            return (soma / notas.length).toFixed(1);
+        });
+
+        if(graficoModulosInst) graficoModulosInst.destroy();
+        graficoModulosInst = new Chart(document.getElementById('graficoModulos'), {
+            type: 'bar',
+            data: {
+                labels: labelsModulos,
+                datasets: [{
+                    label: 'Média de Acertos (Máx 14)',
+                    data: mediasModulos,
+                    backgroundColor: '#4285f4'
+                }]
+            },
+            options: { scales: { y: { beginAtZero: true, max: 14 } } }
+        });
+
+        // Prepara dados Gráfico Erros (Top 5)
+        const sortedErros = Object.entries(contagemErros).sort((a, b) => b[1] - a[1]).slice(0, 6);
+        
+        if(graficoErrosInst) graficoErrosInst.destroy();
+        graficoErrosInst = new Chart(document.getElementById('graficoErros'), {
+            type: 'bar',
+            data: {
+                labels: sortedErros.map(e => e[0]),
+                datasets: [{
+                    label: 'Vezes que a turma errou',
+                    data: sortedErros.map(e => e[1]),
+                    backgroundColor: '#ea4335'
+                }]
+            },
+            options: { indexAxis: 'y', scales: { x: { beginAtZero: true } } }
+        });
+    }
+
+    function popularSeletorAlunos() {
+        const seletor = document.getElementById('seletor-aluno');
+        seletor.innerHTML = '<option value="">-- Selecione um aluno --</option>';
+        
+        let alunos = [...new Set(dadosBrutos.map(l => l[1]).filter(n => n))].sort();
+        alunos.forEach(nome => {
+            let opt = document.createElement('option');
+            opt.value = nome;
+            opt.textContent = nome;
+            seletor.appendChild(opt);
+        });
+    }
+
+    function mostrarAluno() {
+        const nomeAlvo = document.getElementById('seletor-aluno').value;
+        const painel = document.getElementById('painel-aluno');
+        
+        if (!nomeAlvo) {
+            painel.classList.add('oculto');
+            return;
+        }
+
+        document.getElementById('aluno-nome').textContent = nomeAlvo;
+        const listaNotas = document.getElementById('aluno-notas');
+        listaNotas.innerHTML = '';
+        
+        let errosAluno = new Set();
+
+        dadosBrutos.forEach(linha => {
+            if (linha[1] === nomeAlvo) {
+                const fase = linha[4];
+                const nota = linha[5];
+                const erros = linha[7];
+
+                if (fase.includes("Módulo")) {
+                    let li = document.createElement('li');
+                    li.textContent = `${fase}: ${nota} acertos`;
+                    listaNotas.appendChild(li);
+                }
+                
+                if (erros && erros !== "Nenhum") {
+                    erros.split(', ').forEach(e => errosAluno.add(e));
+                }
+            }
+        });
+
+        document.getElementById('aluno-erros').textContent = errosAluno.size > 0 
+            ? Array.from(errosAluno).join(', ') 
+            : "Nenhuma dificuldade registrada.";
+
+        painel.classList.remove('oculto');
+    }
+</script>
+
+</body>
+</html>
