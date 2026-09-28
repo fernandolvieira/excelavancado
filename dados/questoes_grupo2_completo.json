@@ -6,7 +6,7 @@
         "tags": [
             "PGTO"
         ],
-        "contexto": "Você está simulando o financiamento de novos equipamentos de TI (laptops e servidores) para a instituição de ensino. O valor total do projeto é de R$ 85.000,00 (célula B1), com uma taxa de juros anual de 15% (célula B2) e prazo de 48 meses (célula B3).",
+        "contexto": "Você está simulando o financiamento de novos equipamentos de TI (laptops e servidores) para a instituição de ensino. O valor total do projeto é de R$ 85.000,00 (célula B2), com uma taxa de juros anual de 15% (célula B3) e prazo de 48 meses (célula B4).",
         "enunciado": "Calcule o valor exato da parcela mensal deste financiamento. Lembre-se de ajustar a taxa de juros para o período mensal.",
         "dica": "A taxa informada é anual, mas os pagamentos são mensais. Divida a taxa por 12.",
         "arquivo_download": "simulador_financiamento_ti.xlsx",
@@ -288,11 +288,11 @@
         "tags": [
             "PGTO"
         ],
-        "contexto": "Parcela de empréstimo. Valor presente em A1, taxa de juros MENSAL em A2, e o prazo em ANOS em A3.",
+        "contexto": "Parcela de empréstimo. Valor presente em A2, taxa de juros MENSAL em A3, e o prazo em ANOS em A4.",
         "enunciado": "Complete a função PGTO adaptando os anos para meses.",
-        "estrutura": "=PGTO(____; A3 * ____; A1)",
+        "estrutura": "=PGTO(____; A4 * ____; A2)",
         "lacunas_esperadas": [
-            "A2",
+            "A3",
             "12"
         ]
     },
@@ -391,11 +391,11 @@
         "tags": [
             "PGTO"
         ],
-        "contexto": "Cálculo de parcela com Taxa (A1), Nper (A2) e VP (B1).",
+        "contexto": "Cálculo de parcela com Taxa (A2), Nper (A3) e VP (B2).",
         "enunciado": "Complete com o argumento do Valor Presente.",
-        "estrutura": "=PGTO(A1; A2; ____)",
+        "estrutura": "=PGTO(A2; A3; ____)",
         "lacunas_esperadas": [
-            "B1"
+            "B2"
         ]
     },
     {
@@ -435,11 +435,11 @@
         "tags": [
             "PGTO"
         ],
-        "contexto": "Financiamento de curso. Taxa de 2% ao mês (F1), Prazo de 12 meses (F2) e Valor de R$ 2.000,00 (F3).",
+        "contexto": "Financiamento de curso. Taxa de 2% ao mês (F2), Prazo de 12 meses (F3) e Valor de R$ 2.000,00 (F4).",
         "enunciado": "Escreva a fórmula completa. Adicione um sinal de menos na frente do valor do empréstimo para o resultado final ficar positivo.",
         "respostas_aceitas": [
-            "(?i)=pgto\\(\\s*F1\\s*;\\s*F2\\s*;\\s*-F3\\s*\\)",
-            "(?i)=-pgto\\(\\s*F1\\s*;\\s*F2\\s*;\\s*F3\\s*\\)"
+            "(?i)=pgto\\(\\s*F2\\s*;\\s*F3\\s*;\\s*-F4\\s*\\)",
+            "(?i)=-pgto\\(\\s*F2\\s*;\\s*F3\\s*;\\s*F4\\s*\\)"
         ],
         "dica_validacao": "Ordem: Taxa, Nper, VP."
     },
@@ -612,11 +612,11 @@
         "tags": [
             "PGTO"
         ],
-        "contexto": "Um novo equipamento de ginástica para a Power Fitness custa R$ 12.000,00 (B1). O prazo é de 5 ANOS (B2), com pagamentos TRIMESTRAIS. A taxa informada é de 3% ao TRIMESTRE (B3).",
-        "enunciado": "Escreva a fórmula do PGTO. Atenção à unidade de tempo de B2 e B3. O resultado final deve ser um valor positivo.",
+        "contexto": "Um novo equipamento de ginástica para a Power Fitness custa R$ 12.000,00 (B2). O prazo é de 5 ANOS (B3), com pagamentos TRIMESTRAIS. A taxa informada é de 3% ao TRIMESTRE (B4).",
+        "enunciado": "Escreva a fórmula do PGTO. Atenção à unidade de tempo de B3 e B4. O resultado final deve ser um valor positivo.",
         "respostas_aceitas": [
-            "(?i)=-pgto\\(\\s*B3\\s*;\\s*B2\\*4\\s*;\\s*B1\\s*\\)",
-            "(?i)=pgto\\(\\s*B3\\s*;\\s*B2\\*4\\s*;\\s*-B1\\s*\\)"
+            "(?i)=-pgto\\(\\s*B4\\s*;\\s*B3\\*4\\s*;\\s*B2\\s*\\)",
+            "(?i)=pgto\\(\\s*B4\\s*;\\s*B3\\*4\\s*;\\s*-B2\\s*\\)"
         ],
         "dica_validacao": "Como os pagamentos e a taxa são trimestrais, multiplique os anos por 4 para descobrir o total de parcelas (nper)."
     },
