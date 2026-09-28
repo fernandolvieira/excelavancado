@@ -235,7 +235,7 @@
             "EXT.TEXTO"
         ],
         "contexto": "Lendo códigos seriais de consoles PS5.",
-        "enunciado": "Para a fórmula =EXT.TEXTO(A1; 3; 5), o que os números 3 e 5 representam respectivamente?",
+        "enunciado": "Para a fórmula =EXT.TEXTO(A2; 3; 5), o que os números 3 e 5 representam respectivamente?",
         "alternativas": [
             "O caractere inicial de partida e a quantidade de caracteres a extrair.",
             "A quantidade de caracteres a extrair e o limite máximo do texto.",
@@ -254,7 +254,7 @@
             "EXT.TEXTO"
         ],
         "contexto": "Isolamento dinâmico de strings.",
-        "enunciado": "Por que é muito comum usar LOCALIZAR aninhada dentro de EXT.TEXTO (ex: =EXT.TEXTO(A1; LOCALIZAR(\"-\"; A1)+1; 10))?",
+        "enunciado": "Por que é muito comum usar LOCALIZAR aninhada dentro de EXT.TEXTO (ex: =EXT.TEXTO(A2; LOCALIZAR(\"-\"; A2)+1; 10))?",
         "alternativas": [
             "Porque os textos têm tamanhos variados, e o LOCALIZAR diz exatamente onde o texto alvo começa.",
             "Para evitar que o Excel retorne erro #DIV/0! em células de texto.",
@@ -271,7 +271,7 @@
         "tags": [
             "\"\""
         ],
-        "contexto": "No meio de uma fórmula condicional você usou =SE(A1=\"Pago\"; \"OK\"; \"\").",
+        "contexto": "No meio de uma fórmula condicional você usou =SE(A2=\"Pago\"; \"OK\"; \"\").",
         "enunciado": "O que as aspas duplas vazias (\"\") instruem o Excel a fazer?",
         "alternativas": [
             "Retornar uma célula visualmente vazia/em branco.",
@@ -317,9 +317,9 @@
         "tags": [
             "ARRUMAR"
         ],
-        "contexto": "Limpando os excessos de espaço da digitação desleixada na célula A1.",
+        "contexto": "Limpando os excessos de espaço da digitação desleixada na célula A2.",
         "enunciado": "Preencha a função.",
-        "estrutura": "=____(A1)",
+        "estrutura": "=____(A2)",
         "lacunas_esperadas": [
             "ARRUMAR"
         ]
@@ -388,9 +388,9 @@
         "tags": [
             "CONCATENAR"
         ],
-        "contexto": "Juntando nome (A1) e sobrenome (B1) com um espaço no meio.",
+        "contexto": "Juntando nome (A2) e sobrenome (B2) com um espaço no meio.",
         "enunciado": "Complete o espaço literal.",
-        "estrutura": "=CONCATENAR(A1; ____; B1)",
+        "estrutura": "=CONCATENAR(A2; ____; B2)",
         "lacunas_esperadas": [
             "\" \""
         ]
@@ -416,11 +416,11 @@
         "tags": [
             "UNIRTEXTO"
         ],
-        "contexto": "Listagem de habilidades no currículo. Range A1:A4.",
+        "contexto": "Listagem de habilidades no currículo. Range A2:A5.",
         "enunciado": "Escreva a função UNIRTEXTO para juntar as habilidades com um delimitador de traço \"-\" e ignorando células vazias (VERDADEIRO).",
         "respostas_aceitas": [
-            "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*verdadeiro\\s*;\\s*A1:A4\\s*\\)",
-            "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*1\\s*;\\s*A1:A4\\s*\\)"
+            "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*verdadeiro\\s*;\\s*A2:A5\\s*\\)",
+            "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*1\\s*;\\s*A2:A5\\s*\\)"
         ],
         "dica_validacao": "=UNIRTEXTO(\"delimitador\"; ignorar_vazio; intervalo)"
     },
@@ -446,10 +446,10 @@
             "&",
             "\"\""
         ],
-        "contexto": "Célula C1 tem a cidade 'São João del Rei' e C2 tem o estado 'MG'.",
+        "contexto": "Célula C2 tem a cidade 'São João del Rei' e C3 tem o estado 'MG'.",
         "enunciado": "Usando APENAS o operador '&', junte as células adicionando um hífen e espaço no meio. Ex: 'São João del Rei - MG'.",
         "respostas_aceitas": [
-            "(?i)=C1\\s*&\\s*\"\\s*-\\s*\"\\s*&\\s*C2"
+            "(?i)=C2\\s*&\\s*\"\\s*-\\s*\"\\s*&\\s*C3"
         ],
         "dica_validacao": "Célula1 & \" - \" & Célula2"
     },
@@ -502,10 +502,10 @@
         "tags": [
             "CONCATENAR"
         ],
-        "contexto": "Básico. Células A1, A2 e A3.",
-        "enunciado": "Escreva a fórmula CONCATENAR para juntar A1, A2 e A3 sequencialmente sem nenhum espaço entre elas.",
+        "contexto": "Básico. Células A2, A3 e A4.",
+        "enunciado": "Escreva a fórmula CONCATENAR para juntar A2, A3 e A4 sequencialmente sem nenhum espaço entre elas.",
         "respostas_aceitas": [
-            "(?i)=concatenar\\(\\s*A1\\s*;\\s*A2\\s*;\\s*A3\\s*\\)"
+            "(?i)=concatenar\\(\\s*A2\\s*;\\s*A3\\s*;\\s*A4\\s*\\)"
         ],
         "dica_validacao": "Apenas separe as células por ponto e vírgula."
     },
@@ -590,9 +590,9 @@
         "tags": [
             "UNIRTEXTO"
         ],
-        "contexto": "Criando a lista de degustação no Clube do Malte. A1 a A5 contêm nomes, mas A3 e A4 desistiram (estão em branco).",
+        "contexto": "Criando a lista de degustação no Clube do Malte. A2 a A6 contêm nomes, mas A4 e A5 desistiram (estão em branco).",
         "enunciado": "Complete a fórmula para unir os nomes com vírgula e espaço, ignorando automaticamente as células em branco do intervalo.",
-        "estrutura": "=UNIRTEXTO(\"____ \"; ____; A1:A5)",
+        "estrutura": "=UNIRTEXTO(\"____ \"; ____; A2:A6)",
         "lacunas_esperadas": [
             ",",
             "VERDADEIRO"
@@ -620,10 +620,10 @@
         "tags": [
             "EXT.TEXTO"
         ],
-        "contexto": "Cortando texto na ausência da função DIREITA. A célula A1 possui a string 'CHASSI-998877'.",
+        "contexto": "Cortando texto na ausência da função DIREITA. A célula A2 possui a string 'CHASSI-998877'.",
         "enunciado": "Escreva a fórmula utilizando EXT.TEXTO para pegar todo o texto a partir do 8º caractere até o infinito (use o macete de indicar um número altíssimo de caracteres para compensar o final).",
         "respostas_aceitas": [
-            "(?i)=ext\\.texto\\(\\s*A1\\s*;\\s*8\\s*;\\s*999(9*)\\s*\\)"
+            "(?i)=ext\\.texto\\(\\s*A2\\s*;\\s*8\\s*;\\s*999(9*)\\s*\\)"
         ],
         "dica_validacao": "Como terceiro argumento (num_caract), usar um número alto como 999 resolve a falta de conhecimento do limite final da string."
     }
