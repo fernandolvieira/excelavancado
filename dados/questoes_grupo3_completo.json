@@ -146,12 +146,12 @@
             "DATADIF"
         ],
         "contexto": "A função DATADIF é considerada 'oculta' no Excel (não aparece no autopreencher), mas é amplamente usada.",
-        "enunciado": "Se você deseja saber os ANOS completos entre A1 (início) e B1 (fim), qual é a sintaxe correta?",
+        "enunciado": "Se você deseja saber os ANOS completos entre A2 (início) e B2 (fim), qual é a sintaxe correta?",
         "alternativas": [
-            "O argumento deve ser 'Y' (Year) entre aspas duplas. A data inicial deve vir antes da final.",
-            "=DATADIF(A1; B1; \"ANOS\")",
-            "=DATADIF(A1; B1; Y)",
-            "=DATADIF(B1; A1; \"Y\")"
+            "=DATADIF(A2; B2; \"Y\")",
+            "=DATADIF(A2; B2; \"ANOS\")",
+            "=DATADIF(A2; B2; Y)",
+            "=DATADIF(B2; A2; \"Y\")"
         ],
         "resposta_correta": 0,
         "dica_erro": "O argumento deve ser 'Y' (Year) entre aspas duplas. A data inicial deve vir antes da final."
@@ -182,12 +182,12 @@
         "tags": [
             "FIMMÊS"
         ],
-        "contexto": "Você precisa descobrir o último dia do mês atual de uma data informada na célula A1.",
-        "enunciado": "O que acontece se você usar a função =FIMMÊS(A1; 0)?",
+        "contexto": "Você precisa descobrir o último dia do mês atual de uma data informada na célula A2.",
+        "enunciado": "O que acontece se você usar a função =FIMMÊS(A2; 0)?",
         "alternativas": [
-            "Retorna o último dia do mês da própria data em A1.",
+            "Retorna o último dia do mês da própria data em A2.",
             "Retorna erro, o argumento não pode ser 0.",
-            "Retorna o primeiro dia do mês de A1.",
+            "Retorna o primeiro dia do mês de A2.",
             "Retorna o último dia do ano em curso."
         ],
         "resposta_correta": 0,
@@ -236,7 +236,7 @@
         "tags": [
             "DATADIF"
         ],
-        "contexto": "Você tentou calcular a diferença entre 10/05/2026 (B1) e 01/05/2026 (A1) usando =DATADIF(B1; A1; \"D\").",
+        "contexto": "Você tentou calcular a diferença entre 10/05/2026 (B2) e 01/05/2026 (A2) usando =DATADIF(B2; A2; \"D\").",
         "enunciado": "O resultado foi o erro #NÚM!. Por que isso ocorreu?",
         "alternativas": [
             "A data inicial informada na função é maior que a data final.",
@@ -255,7 +255,7 @@
             "DATAM",
             "FIMMÊS"
         ],
-        "contexto": "Duas faturas foram emitidas em 31/01/2026. A Fatura A vence com DATAM(A1; 1) e a Fatura B com FIMMÊS(A1; 1).",
+        "contexto": "Duas faturas foram emitidas em 31/01/2026. A Fatura A vence com DATAM(A2; 1) e a Fatura B com FIMMÊS(A2; 1).",
         "enunciado": "Quais serão os vencimentos em fevereiro (mês que vai até dia 28)?",
         "alternativas": [
             "Ambas vencem em 28/02/2026.",
@@ -274,8 +274,8 @@
             "ANO",
             "MÊS"
         ],
-        "contexto": "Você tem a data 15/08/2026 em A1.",
-        "enunciado": "O que a fórmula =MÊS(A1) & \"/\" & ANO(A1) vai retornar?",
+        "contexto": "Você tem a data 15/08/2026 em A2.",
+        "enunciado": "O que a fórmula =MÊS(A2) & \"/\" & ANO(A2) vai retornar?",
         "alternativas": [
             "O texto '8/2026'",
             "A data formatada 01/08/2026",
@@ -292,9 +292,9 @@
         "tags": [
             "DATADIF"
         ],
-        "contexto": "Calculando a idade de alguém (Data Nascimento em A1, Hoje em B1).",
+        "contexto": "Calculando a idade de alguém (Data Nascimento em A2, Hoje em B2).",
         "enunciado": "Complete com a unidade correta para anos.",
-        "estrutura": "=DATADIF(A1; B1; \"____\")",
+        "estrutura": "=DATADIF(A2; B2; \"____\")",
         "lacunas_esperadas": [
             "Y"
         ]
@@ -321,11 +321,11 @@
         "tags": [
             "FIMMÊS"
         ],
-        "contexto": "Fatura vence no último dia do PRÓXIMO mês em relação à emissão (A1).",
+        "contexto": "Fatura vence no último dia do PRÓXIMO mês em relação à emissão (A2).",
         "enunciado": "Complete a função FIMMÊS.",
         "estrutura": "=FIMMÊS(____; ____)",
         "lacunas_esperadas": [
-            "A1",
+            "A2",
             "1"
         ]
     },
@@ -379,9 +379,9 @@
         "tags": [
             "DIATRABALHO"
         ],
-        "contexto": "Prazo de entrega é de 10 dias úteis a partir de hoje (A1).",
+        "contexto": "Prazo de entrega é de 10 dias úteis a partir de hoje (A2).",
         "enunciado": "Complete a fórmula de projeção de data.",
-        "estrutura": "=DIATRABALHO(A1; ____)",
+        "estrutura": "=DIATRABALHO(A2; ____)",
         "lacunas_esperadas": [
             "10"
         ]
@@ -393,9 +393,9 @@
         "tags": [
             "HOJE"
         ],
-        "contexto": "Teste lógico: se a data de vencimento (A1) for menor que hoje, retorna 'Atrasado'.",
+        "contexto": "Teste lógico: se a data de vencimento (A2) for menor que hoje, retorna 'Atrasado'.",
         "enunciado": "Insira a função que pega a data atual.",
-        "estrutura": "=SE(A1 < HOJE(____); \"Atrasado\"; \"No Prazo\")",
+        "estrutura": "=SE(A2 < HOJE(____); \"Atrasado\"; \"No Prazo\")",
         "lacunas_esperadas": [
             ""
         ]
@@ -407,11 +407,11 @@
         "tags": [
             "DATAM"
         ],
-        "contexto": "Renovação exata de licença 6 meses após a compra (A1).",
+        "contexto": "Renovação exata de licença 6 meses após a compra (A2).",
         "enunciado": "Complete a fórmula.",
         "estrutura": "=DATAM(____; ____)",
         "lacunas_esperadas": [
-            "A1",
+            "A2",
             "6"
         ]
     },
@@ -464,10 +464,10 @@
         "tags": [
             "DIATRABALHOTOTAL"
         ],
-        "contexto": "Contagem de dias para produzir um relatório. Pedido em A1, Entrega em B1.",
-        "enunciado": "Escreva a fórmula para contar a quantidade de dias úteis entre A1 e B1 (considere que não há feriados cadastrados).",
+        "contexto": "Contagem de dias para produzir um relatório. Pedido em A2, Entrega em B2.",
+        "enunciado": "Escreva a fórmula para contar a quantidade de dias úteis entre A2 e B2 (considere que não há feriados cadastrados).",
         "respostas_aceitas": [
-            "(?i)=diatrabalhototal\\(\\s*A1\\s*;\\s*B1\\s*\\)"
+            "(?i)=diatrabalhototal\\(\\s*A2\\s*;\\s*B2\\s*\\)"
         ],
         "dica_validacao": "Ordem dos argumentos: Data Inicial, Data Final."
     },
@@ -478,10 +478,10 @@
         "tags": [
             "FIMMÊS"
         ],
-        "contexto": "Data atual na célula A1.",
-        "enunciado": "Escreva a fórmula para encontrar o último dia do próprio mês referente à data em A1.",
+        "contexto": "Data atual na célula A2.",
+        "enunciado": "Escreva a fórmula para encontrar o último dia do próprio mês referente à data em A2.",
         "respostas_aceitas": [
-            "(?i)=fimm[eê]s\\(\\s*A1\\s*;\\s*0\\s*\\)"
+            "(?i)=fimm[eê]s\\(\\s*A2\\s*;\\s*0\\s*\\)"
         ],
         "dica_validacao": "Como é do mesmo mês, os meses a pular equivalem a zero."
     },
@@ -520,10 +520,10 @@
         "tags": [
             "DIATRABALHO"
         ],
-        "contexto": "Projeção de pagamento bancário. O boleto foi gerado hoje (célula A1). O prazo para compensação é de 3 dias úteis.",
+        "contexto": "Projeção de pagamento bancário. O boleto foi gerado hoje (célula A2). O prazo para compensação é de 3 dias úteis.",
         "enunciado": "Escreva a fórmula que projeta qual será a data exata da compensação.",
         "respostas_aceitas": [
-            "(?i)=diatrabalho\\(\\s*A1\\s*;\\s*3\\s*\\)"
+            "(?i)=diatrabalho\\(\\s*A2\\s*;\\s*3\\s*\\)"
         ],
         "dica_validacao": "Argumentos: Data Inicial, Dias a Somar."
     },
@@ -534,10 +534,10 @@
         "tags": [
             "DATAM"
         ],
-        "contexto": "Contrato de aluguel assinado em A1 com reajuste previsto para 12 meses depois.",
+        "contexto": "Contrato de aluguel assinado em A2 com reajuste previsto para 12 meses depois.",
         "enunciado": "Escreva a fórmula para calcular a data exata em que o reajuste entrará em vigor (preservando o dia do mês).",
         "respostas_aceitas": [
-            "(?i)=datam\\(\\s*A1\\s*;\\s*12\\s*\\)"
+            "(?i)=datam\\(\\s*A2\\s*;\\s*12\\s*\\)"
         ],
         "dica_validacao": "Argumentos: Data Inicial, Meses a Avançar."
     },
@@ -611,10 +611,10 @@
         "tags": [
             "DIATRABALHO"
         ],
-        "contexto": "Agendamento da emissão de documentos na UAI São João del Rei. A data de solicitação está em A5. O prazo de entrega é de 15 dias ÚTEIS. Feriados estão catalogados no intervalo J1:J10.",
+        "contexto": "Agendamento da emissão de documentos na UAI São João del Rei. A data de solicitação está em A5. O prazo de entrega é de 15 dias ÚTEIS. Feriados estão catalogados no intervalo J2:J11.",
         "enunciado": "Escreva a fórmula completa para calcular a data prevista de entrega, travando corretamente o intervalo de feriados.",
         "respostas_aceitas": [
-            "(?i)=diatrabalho\\(\\s*A5\\s*;\\s*15\\s*;\\s*\\$?J\\$?1:\\$?J\\$?10\\s*\\)"
+            "(?i)=diatrabalho\\(\\s*A5\\s*;\\s*15\\s*;\\s*\\$?J\\$?2:\\$?J\\$?11\\s*\\)"
         ],
         "dica_validacao": "O terceiro argumento do DIATRABALHO é a matriz de feriados."
     },
