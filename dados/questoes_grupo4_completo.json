@@ -87,7 +87,7 @@
             "CORRESP"
         ],
         "contexto": "Tabela de fretes bidimensional do Mercado Livre. As linhas (A2:A10) têm o Estado (UF) e as colunas (B1:F1) têm o Peso do pacote.",
-        "enunciado": "Cruze os dados para achar o frete de um pacote para 'MG' (célula H1) com peso 'Até 5kg' (célula H2).",
+        "enunciado": "Cruze os dados para achar o frete de um pacote para 'MG' (célula H2) com peso 'Até 5kg' (célula H3).",
         "dica": "Você precisará de dois CORRESPs dentro do ÍNDICE: um para a linha (Estado) e outro para a coluna (Peso).",
         "arquivo_download": "tabela_fretes_ml.xlsx",
         "resultado_esperado": "45,90"
@@ -125,13 +125,13 @@
         "tags": [
             "PROCV"
         ],
-        "contexto": "Você está buscando a matrícula de um aluno pelo nome usando PROCV, mas a fórmula =PROCV(\"Fernando\"; A1:D100; 2) está retornando dados de outra pessoa.",
+        "contexto": "Você está buscando a matrícula de um aluno pelo nome usando PROCV, mas a fórmula =PROCV(\"Fernando\"; A2:D100; 2) está retornando dados de outra pessoa.",
         "enunciado": "Qual é a causa mais provável deste erro, considerando que o nome 'Fernando' existe na base?",
         "alternativas": [
             "O último argumento ([procurar_intervalo]) foi omitido, e a base não está ordenada alfabeticamente.",
             "PROCV não aceita textos entre aspas no primeiro argumento.",
             "A coluna 2 não pode conter dados de texto.",
-            "A base A1:D100 é muito grande e a função atingiu o limite de linhas."
+            "A base A2:D100 é muito grande e a função atingiu o limite de linhas."
         ],
         "resposta_correta": 0,
         "dica_erro": "Se omitido, o PROCV assume VERDADEIRO (correspondência aproximada), o que exige dados ordenados."
@@ -181,7 +181,7 @@
             "CORRESP"
         ],
         "contexto": "Procurando a posição de um item no estoque.",
-        "enunciado": "O que a função =CORRESP(\"Teclado Dell\"; A1:A50; 0) retorna exatamente?",
+        "enunciado": "O que a função =CORRESP(\"Teclado Dell\"; A2:A50; 0) retorna exatamente?",
         "alternativas": [
             "O número da posição (linha/coluna) onde o texto 'Teclado Dell' foi encontrado.",
             "O valor da célula ao lado do texto 'Teclado Dell'.",
@@ -335,11 +335,11 @@
         "tags": [
             "INDIRETO"
         ],
-        "contexto": "O usuário digitou 'Fevereiro' na célula A1. Você quer somar a coluna B da aba Fevereiro.",
+        "contexto": "O usuário digitou 'Fevereiro' na célula A2. Você quer somar a coluna B da aba Fevereiro.",
         "enunciado": "Use INDIRETO para concatenar o nome da aba com o intervalo.",
         "estrutura": "=SOMA(INDIRETO(____ & \"!B:B\"))",
         "lacunas_esperadas": [
-            "A1"
+            "A2"
         ]
     },
     {
@@ -364,9 +364,9 @@
         "tags": [
             "PROCH"
         ],
-        "contexto": "Buscando o imposto para o mês em B1. A matriz vai de A1 a M5. A taxa está na linha 4.",
+        "contexto": "Buscando o imposto para o mês em B7. A matriz vai de A1 a M5. A taxa está na linha 4.",
         "enunciado": "Complete os argumentos.",
-        "estrutura": "=PROCH(B1; A1:M5; ____; FALSO)",
+        "estrutura": "=PROCH(B7; A1:M5; ____; FALSO)",
         "lacunas_esperadas": [
             "4"
         ]
@@ -521,10 +521,10 @@
         "tags": [
             "ÍNDICE"
         ],
-        "contexto": "Você quer pegar estaticamente a célula na intersecção da 4ª linha e 2ª coluna da matriz A1:E10.",
+        "contexto": "Você quer pegar estaticamente a célula na intersecção da 4ª linha e 2ª coluna da matriz A2:E11.",
         "enunciado": "Escreva a fórmula ÍNDICE de forma direta, com números absolutos.",
         "respostas_aceitas": [
-            "(?i)=[íi]ndice\\(\\s*A1:E10\\s*;\\s*4\\s*;\\s*2\\s*\\)"
+            "(?i)=[íi]ndice\\(\\s*A2:E11\\s*;\\s*4\\s*;\\s*2\\s*\\)"
         ],
         "dica_validacao": "=ÍNDICE(matriz; linha; coluna)"
     },
@@ -579,7 +579,7 @@
             "INDIRETO",
             "PROCV"
         ],
-        "contexto": "Você consolidou o balanço anual da Power Fitness. Em vez de criar 12 PROCVs manuais, a célula A1 tem o nome do mês ('Janeiro', 'Fevereiro'). A fórmula `=PROCV(\"Whey\"; INDIRETO(\"'\" & A1 & \"'!A:F\"); 2; FALSO)` busca o valor automaticamente na aba correspondente.",
+        "contexto": "Você consolidou o balanço anual da Power Fitness. Em vez de criar 12 PROCVs manuais, a célula A2 tem o nome do mês ('Janeiro', 'Fevereiro'). A fórmula `=PROCV(\"Whey\"; INDIRETO(\"'\" & A2 & \"'!A:F\"); 2; FALSO)` busca o valor automaticamente na aba correspondente.",
         "enunciado": "Qual é a principal desvantagem arquitetural do uso intensivo da função INDIRETO em dashboards pesados de Excel?",
         "alternativas": [
             "Ela é uma função volátil: o Excel recalcula todas as células com INDIRETO toda vez que qualquer alteração é feita na planilha, causando lentidão.",
@@ -612,10 +612,10 @@
             "ÍNDICE",
             "CORRESP"
         ],
-        "contexto": "Buscando à esquerda. A coluna E contém o 'ID do Processador' e a coluna C contém o 'Nome do Produto' (ex: Ryzen 9). O ID procurado está em A1.",
+        "contexto": "Buscando à esquerda. A coluna E contém o 'ID do Processador' e a coluna C contém o 'Nome do Produto' (ex: Ryzen 9). O ID procurado está em A2.",
         "enunciado": "Escreva a fórmula usando ÍNDICE e CORRESP para retornar o Nome do Produto (C:C) baseado no ID exato (E:E).",
         "respostas_aceitas": [
-            "(?i)=[íi]ndice\\(\\s*C:C\\s*;\\s*corresp\\(\\s*A1\\s*;\\s*E:E\\s*;\\s*0\\s*\\)\\s*\\)"
+            "(?i)=[íi]ndice\\(\\s*C:C\\s*;\\s*corresp\\(\\s*A2\\s*;\\s*E:E\\s*;\\s*0\\s*\\)\\s*\\)"
         ],
         "dica_validacao": "A função ÍNDICE pede primeiro a matriz de onde sairá a resposta (C:C)."
     },
@@ -627,10 +627,10 @@
             "PROCH",
             "CORRESP"
         ],
-        "contexto": "No cabeçalho da linha 1 temos os meses. Nas linhas de 2 a 10 temos as despesas de condomínio do Airbnb. Célula K1 = 'Agosto'.",
+        "contexto": "No cabeçalho da linha 1 temos os meses. Nas linhas de 2 a 10 temos as despesas de condomínio do Airbnb. Célula Z2 = 'Agosto'.",
         "enunciado": "Escreva a fórmula usando PROCH para buscar 'Agosto' na linha 1 e retornar o valor correspondente à 'Taxa Extra', que sempre está localizada estaticamente na linha 5 da matriz A1:M10.",
         "respostas_aceitas": [
-            "(?i)=proch\\(\\s*K1\\s*;\\s*A1:M10\\s*;\\s*5\\s*;\\s*(falso|0)\\s*\\)"
+            "(?i)=proch\\(\\s*Z2\\s*;\\s*A1:M10\\s*;\\s*5\\s*;\\s*(falso|0)\\s*\\)"
         ],
         "dica_validacao": "No PROCH o 'núm_índice_lin' indica de qual linha o valor deve ser extraído."
     }
