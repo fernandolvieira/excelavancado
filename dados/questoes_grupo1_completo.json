@@ -291,6 +291,7 @@
         ],
         "contexto": "Dashboard de notas gerando erro '#N/D' quando não encontra dados.",
         "enunciado": "Complete para que, em caso de erro, a célula fique vazia.",
+        "dica": "Sintaxe: =SEERRO(valor; valor_se_erro)",
         "estrutura": "=____(PROCV(A2; Dados!A:F; 3; FALSO); ____)",
         "lacunas_esperadas": [
             "SEERRO",
@@ -306,6 +307,7 @@
         ],
         "contexto": "Contando compras de 'Papel Toalha' na categoria 'Limpeza'.",
         "enunciado": "Preencha com os critérios corretos.",
+        "dica": "Sintaxe: =CONT.SES(intervalo_critérios1; critérios1; ...)",
         "estrutura": "=CONT.SES(A:A; ____; B:B; ____)",
         "lacunas_esperadas": [
             "\"Papel Toalha\"",
@@ -322,6 +324,7 @@
         ],
         "contexto": "Manutenção de hardware: garantia 'Ativa' (B2) e dano não pode ser 'Físico' (C2).",
         "enunciado": "Estruture a regra de negócio.",
+        "dica": "Sintaxe: =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso) | =E(lógico1; [lógico2]; ...)",
         "estrutura": "=SE(____(B2=\"Ativa\"; C2<>____); \"Aprovar\"; \"Negar\")",
         "lacunas_esperadas": [
             "E",
@@ -337,6 +340,7 @@
         ],
         "contexto": "Soma da receita (C:C) do Airbnb se o bairro (B:B) for 'Ipanema'.",
         "enunciado": "Complete a fórmula.",
+        "dica": "Sintaxe: =SOMASES(intervalo_soma; intervalo_critérios1; critérios1; ...)",
         "estrutura": "=SOMASES(____; B:B; ____)",
         "lacunas_esperadas": [
             "C:C",
@@ -352,6 +356,7 @@
         ],
         "contexto": "Se a média (A2) for >= 70, retorna 'Aprovado', senão 'Recuperação'.",
         "enunciado": "Complete a função SE.",
+        "dica": "Sintaxe: =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso)",
         "estrutura": "=SE(A2>=70; ____; ____)",
         "lacunas_esperadas": [
             "\"Aprovado\"",
@@ -367,6 +372,7 @@
         ],
         "contexto": "Frete grátis se o valor (B2) for maior que 200 OU cliente for 'VIP' (C2).",
         "enunciado": "Preencha a função lógica.",
+        "dica": "Sintaxe: =OU(lógico1; [lógico2]; ...)",
         "estrutura": "=SE(____(B2>200; C2=\"VIP\"); \"Grátis\"; \"Cobrar\")",
         "lacunas_esperadas": [
             "OU"
@@ -381,6 +387,7 @@
         ],
         "contexto": "Somar quantidade vendida (D:D) de doces se o tipo (C:C) for 'Paçoca' e a filial (E:E) for 'Matriz'.",
         "enunciado": "Complete a sequência do SOMASES.",
+        "dica": "Sintaxe: =SOMASES(intervalo_soma; intervalo_critérios1; critérios1; ...)",
         "estrutura": "=SOMASES(D:D; C:C; ____; ____; \"Matriz\")",
         "lacunas_esperadas": [
             "\"Paçoca\"",
@@ -396,6 +403,7 @@
         ],
         "contexto": "Contar reservas do app '99' na data de 'Hoje' (A2). O app está na coluna B e a data na D.",
         "enunciado": "Preencha os argumentos.",
+        "dica": "Sintaxe: =CONT.SES(intervalo_critérios1; critérios1; ...)",
         "estrutura": "=CONT.SES(____; \"99\"; D:D; ____)",
         "lacunas_esperadas": [
             "B:B",
@@ -411,6 +419,7 @@
         ],
         "contexto": "Evitando erro ao dividir Valor Total (B2) por Quantidade (C2).",
         "enunciado": "Se der erro, retornar 0.",
+        "dica": "Sintaxe: =SEERRO(valor; valor_se_erro)",
         "estrutura": "=SEERRO(B2/____; ____)",
         "lacunas_esperadas": [
             "C2",
@@ -427,6 +436,7 @@
         ],
         "contexto": "Gestão de matrículas. D5 = 'Situação Financeira', E5 = 'Status de Documentação'.",
         "enunciado": "Escreva a fórmula com SE e OU para retornar 'Bloqueado' se houver 'Inadimplência' em D5 ou 'Pendente' em E5. Senão, 'Liberado'.",
+        "dica": "Sintaxe: =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso) | =OU(lógico1; [lógico2]; ...)",
         "respostas_aceitas": [
             "(?i)=se\\(\\s*ou\\(\\s*D5\\s*=\\s*\"Inadimpl[eê]ncia\"\\s*;\\s*E5\\s*=\\s*\"Pendente\"\\s*\\)\\s*;\\s*\"Bloqueado\"\\s*;\\s*\"Liberado\"\\s*\\)",
             "(?i)=se\\(\\s*ou\\(\\s*E5\\s*=\\s*\"Pendente\"\\s*;\\s*D5\\s*=\\s*\"Inadimpl[eê]ncia\"\\s*\\)\\s*;\\s*\"Bloqueado\"\\s*;\\s*\"Liberado\"\\s*\\)"
@@ -442,6 +452,7 @@
         ],
         "contexto": "Vendas de camisetas Plus Size. Tamanho na coluna B, valor na coluna C.",
         "enunciado": "Escreva o SOMASES para somar valores da coluna C apenas onde B for 'G3'.",
+        "dica": "Sintaxe: =SOMASES(intervalo_soma; intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=somases\\(\\s*C:C\\s*;\\s*B:B\\s*;\\s*\"G3\"\\s*\\)"
         ],
@@ -456,6 +467,7 @@
         ],
         "contexto": "Classificação de cliente oculto (nota G10). Como SES foi vetada, use SEs aninhados.",
         "enunciado": "Retorne 'Excelente' se >= 90, 'Bom' se >= 70, e 'Ruim' se < 70.",
+        "dica": "Sintaxe: =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso)",
         "respostas_aceitas": [
             "(?i)=se\\(\\s*G10\\s*>=\\s*90\\s*;\\s*\"Excelente\"\\s*;\\s*se\\(\\s*G10\\s*>=\\s*70\\s*;\\s*\"Bom\"\\s*;\\s*\"Ruim\"\\s*\\)\\s*\\)",
             "(?i)=se\\(\\s*G10\\s*<\\s*70\\s*;\\s*\"Ruim\"\\s*;\\s*se\\(\\s*G10\\s*>=\\s*90\\s*;\\s*\"Excelente\"\\s*;\\s*\"Bom\"\\s*\\)\\s*\\)"
@@ -471,6 +483,7 @@
         ],
         "contexto": "Log de firewalls. Coluna F: Ação ('Bloqueado'). Coluna G: Porta (ex: 80).",
         "enunciado": "Escreva a fórmula para contar registros onde a Ação seja 'Bloqueado' E a Porta seja 80.",
+        "dica": "Sintaxe: =CONT.SES(intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=cont\\.ses\\(\\s*F:F\\s*;\\s*\"Bloqueado\"\\s*;\\s*G:G\\s*;\\s*80\\s*\\)",
             "(?i)=cont\\.ses\\(\\s*G:G\\s*;\\s*80\\s*;\\s*F:F\\s*;\\s*\"Bloqueado\"\\s*\\)"
@@ -486,6 +499,7 @@
         ],
         "contexto": "Auditoria de login corporativo no Active Directory.",
         "enunciado": "Escreva uma função =E() que verifica se a Conta Ativa (B2) é 'Sim' E se possui Token MFA (C2) = 'Ativo'.",
+        "dica": "Sintaxe: =E(lógico1; [lógico2]; ...)",
         "respostas_aceitas": [
             "(?i)=e\\(\\s*B2\\s*=\\s*\"Sim\"\\s*;\\s*C2\\s*=\\s*\"Ativo\"\\s*\\)",
             "(?i)=e\\(\\s*C2\\s*=\\s*\"Ativo\"\\s*;\\s*B2\\s*=\\s*\"Sim\"\\s*\\)"
@@ -501,6 +515,7 @@
         ],
         "contexto": "Identificando peças compatíveis para upgrade. Soquete da Placa-mãe (A5).",
         "enunciado": "Escreva a função =OU() que verifica se o soquete em A5 é 'AM4' ou 'AM5'.",
+        "dica": "Sintaxe: =OU(lógico1; [lógico2]; ...)",
         "respostas_aceitas": [
             "(?i)=ou\\(\\s*A5\\s*=\\s*\"AM4\"\\s*;\\s*A5\\s*=\\s*\"AM5\"\\s*\\)",
             "(?i)=ou\\(\\s*A5\\s*=\\s*\"AM5\"\\s*;\\s*A5\\s*=\\s*\"AM4\"\\s*\\)"
@@ -516,6 +531,7 @@
         ],
         "contexto": "Custo de API do Gemini em B10. Às vezes, o retorno da API falha gerando #VALOR!.",
         "enunciado": "Escreva a fórmula para envelopar a célula B10. Se houver erro, retorne a palavra 'Falha'.",
+        "dica": "Sintaxe: =SEERRO(valor; valor_se_erro)",
         "respostas_aceitas": [
             "(?i)=seerro\\(\\s*B10\\s*;\\s*\"Falha\"\\s*\\)"
         ],
@@ -530,6 +546,7 @@
         ],
         "contexto": "Compra de doces e confeitaria. Soma do peso total (D:D) de produtos cuja Categoria (B:B) seja 'Doce de Leite' e o Fornecedor (C:C) seja 'Atacadão'.",
         "enunciado": "Escreva a fórmula do SOMASES para este cenário.",
+        "dica": "Sintaxe: =SOMASES(intervalo_soma; intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=somases\\(\\s*D:D\\s*;\\s*B:B\\s*;\\s*\"Doce de Leite\"\\s*;\\s*C:C\\s*;\\s*\"Atacadão\"\\s*\\)",
             "(?i)=somases\\(\\s*D:D\\s*;\\s*C:C\\s*;\\s*\"Atacadão\"\\s*;\\s*B:B\\s*;\\s*\"Doce de Leite\"\\s*\\)"
@@ -545,6 +562,7 @@
         ],
         "contexto": "Manutenção elétrica. Teste de voltagem de chuveiro (H2).",
         "enunciado": "Escreva a fórmula: se H2 for igual a 220, retorne 'Compatível', senão 'Incompatível'.",
+        "dica": "Sintaxe: =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso)",
         "respostas_aceitas": [
             "(?i)=se\\(\\s*H2\\s*=\\s*220\\s*;\\s*\"Compat[íi]vel\"\\s*;\\s*\"Incompat[íi]vel\"\\s*\\)"
         ],
@@ -607,6 +625,7 @@
         ],
         "contexto": "Filtro de segurança na plataforma TryHackMe. Coluna A: 'Usuário', Coluna B: 'Tentativas de Login', Coluna C: 'Status'. Queremos contar usuários com mais de 5 tentativas que NÃO estejam com status 'Bloqueado'.",
         "enunciado": "Preencha a lacuna com o operador lógico correto para exclusão ('diferente de').",
+        "dica": "Sintaxe: =CONT.SES(intervalo_critérios1; critérios1; ...)",
         "estrutura": "=CONT.SES(B:B; \">5\"; C:C; \"____Bloqueado\")",
         "lacunas_esperadas": [
             "<>"
@@ -623,6 +642,7 @@
         ],
         "contexto": "Regra de precificação dinâmica no Airbnb RJ. B2 = Mês (ex: Janeiro), C2 = Número de Hóspedes, D2 = Avaliação do Hóspede (0 a 5).",
         "enunciado": "Escreva uma fórmula que retorne 'Taxa Extra' se (o Mês for Janeiro OU Fevereiro) E o Número de Hóspedes for maior que 4. Caso contrário, retorne 'Padrão'.",
+        "dica": "Sintaxe: =SE(teste_lógico; valor_se_verdadeiro; valor_se_falso) | =E(lógico1; [lógico2]; ...)",
         "respostas_aceitas": [
             "(?i)=se\\(\\s*e\\(\\s*ou\\(\\s*B2\\s*=\\s*\"Janeiro\"\\s*;\\s*B2\\s*=\\s*\"Fevereiro\"\\s*\\)\\s*;\\s*C2\\s*>\\s*4\\s*\\)\\s*;\\s*\"Taxa Extra\"\\s*;\\s*\"Padr[aã]o\"\\s*\\)"
         ],
@@ -637,6 +657,7 @@
         ],
         "contexto": "Análise de faturamento do Clube do Malte. Coluna C possui as vendas. Coluna B os nomes das cervejas.",
         "enunciado": "Usando SOMASES, some a coluna C apenas onde o nome na coluna B comece com a palavra 'Spaten', independentemente do que vier depois no nome do produto.",
+        "dica": "Sintaxe: =SOMASES(intervalo_soma; intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=somases\\(\\s*C:C\\s*;\\s*B:B\\s*;\\s*\"Spaten\\*\"\\s*\\)"
         ],
