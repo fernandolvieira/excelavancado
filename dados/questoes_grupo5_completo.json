@@ -291,6 +291,7 @@
         ],
         "contexto": "Agrupando nomes do grupo com vírgula e espaço (\", \"), ignorando os vazios.",
         "enunciado": "Complete os argumentos.",
+        "dica": "Sintaxe: =UNIRTEXTO(delimitador; ignorar_vazio; texto1; ...)",
         "estrutura": "=UNIRTEXTO(____; VERDADEIRO; A1:A5)",
         "lacunas_esperadas": [
             "\", \""
@@ -305,6 +306,7 @@
         ],
         "contexto": "Removendo espaços em branco dentro do código de rastreio da Shopee (B2).",
         "enunciado": "Troque o espaço por texto vazio.",
+        "dica": "Sintaxe: =SUBSTITUIR(texto; texto_antigo; novo_texto; [núm_da_ocorrência])",
         "estrutura": "=SUBSTITUIR(B2; \" \"; ____)",
         "lacunas_esperadas": [
             "\"\""
@@ -319,6 +321,7 @@
         ],
         "contexto": "Limpando os excessos de espaço da digitação desleixada na célula A2.",
         "enunciado": "Preencha a função.",
+        "dica": "Sintaxe: =ARRUMAR(texto)",
         "estrutura": "=____(A2)",
         "lacunas_esperadas": [
             "ARRUMAR"
@@ -333,6 +336,7 @@
         ],
         "contexto": "Extraindo 4 números do ano no meio de um código serial 'XX-2026-YY' em C2.",
         "enunciado": "O ano começa na posição 4. Complete os numéricos.",
+        "dica": "Sintaxe: =EXT.TEXTO(texto; núm_inicial; núm_caract)",
         "estrutura": "=EXT.TEXTO(C2; ____; ____)",
         "lacunas_esperadas": [
             "4",
@@ -348,6 +352,7 @@
         ],
         "contexto": "Formatando a célula G5 que tem a data de hoje para mostrar o nome do mês ('Agosto').",
         "enunciado": "Complete a máscara.",
+        "dica": "Sintaxe: =TEXTO(valor; formato_texto)",
         "estrutura": "=TEXTO(G5; \"____\")",
         "lacunas_esperadas": [
             "mmmm"
@@ -362,6 +367,7 @@
         ],
         "contexto": "Juntando a palavra 'Nota: ' com a célula H1.",
         "enunciado": "Qual operador de texto está faltando?",
+        "dica": "Sintaxe: texto1 & texto2",
         "estrutura": "=\"Nota: \" ____ H1",
         "lacunas_esperadas": [
             "&"
@@ -376,6 +382,7 @@
         ],
         "contexto": "Achando a posição do underline '_' num nome de arquivo (A5).",
         "enunciado": "Preencha o primeiro argumento em formato de texto.",
+        "dica": "Sintaxe: =LOCALIZAR(texto_procurado; no_texto; [núm_inicial])",
         "estrutura": "=LOCALIZAR(____; A5)",
         "lacunas_esperadas": [
             "\"_\""
@@ -390,6 +397,7 @@
         ],
         "contexto": "Juntando nome (A2) e sobrenome (B2) com um espaço no meio.",
         "enunciado": "Complete o espaço literal.",
+        "dica": "Sintaxe: =CONCATENAR(texto1; [texto2]; ...)",
         "estrutura": "=CONCATENAR(A2; ____; B2)",
         "lacunas_esperadas": [
             "\" \""
@@ -404,6 +412,7 @@
         ],
         "contexto": "Buscando a posição exata de um 'A' MAIÚSCULO em uma senha forte (B2).",
         "enunciado": "Insira o nome da função que respeita Case-Sensitive.",
+        "dica": "Sintaxe: =PROCURAR(texto_procurado; no_texto; [núm_inicial])",
         "estrutura": "=____(\"A\"; B2)",
         "lacunas_esperadas": [
             "PROCURAR"
@@ -418,6 +427,7 @@
         ],
         "contexto": "Listagem de habilidades no currículo. Range A2:A5.",
         "enunciado": "Escreva a função UNIRTEXTO para juntar as habilidades com um delimitador de traço \"-\" e ignorando células vazias (VERDADEIRO).",
+        "dica": "Sintaxe: =UNIRTEXTO(delimitador; ignorar_vazio; texto1; ...)",
         "respostas_aceitas": [
             "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*verdadeiro\\s*;\\s*A2:A5\\s*\\)",
             "(?i)=unirtexto\\(\\s*\"-\"\\s*;\\s*1\\s*;\\s*A2:A5\\s*\\)"
@@ -433,6 +443,7 @@
         ],
         "contexto": "Número de telefone na célula B5 com formato '(32) 99999-9999'. Você quer tirar os parênteses '(' apenas.",
         "enunciado": "Escreva a fórmula SUBSTITUIR para trocar o '(' por texto vazio.",
+        "dica": "Sintaxe: =SUBSTITUIR(texto; texto_antigo; novo_texto; [núm_da_ocorrência])",
         "respostas_aceitas": [
             "(?i)=substituir\\(\\s*B5\\s*;\\s*\"\\(\"\\s*;\\s*\"\"\\s*\\)"
         ],
@@ -448,6 +459,7 @@
         ],
         "contexto": "Célula C2 tem a cidade 'São João del Rei' e C3 tem o estado 'MG'.",
         "enunciado": "Usando APENAS o operador '&', junte as células adicionando um hífen e espaço no meio. Ex: 'São João del Rei - MG'.",
+        "dica": "Sintaxe: Uso do concatenador: texto1 & texto2",
         "respostas_aceitas": [
             "(?i)=C2\\s*&\\s*\"\\s*-\\s*\"\\s*&\\s*C3"
         ],
@@ -462,6 +474,7 @@
         ],
         "contexto": "O código do pedido está em H10 (ex: 'BR-4455-RJ').",
         "enunciado": "Escreva a fórmula EXT.TEXTO para puxar os 4 números do meio (que começam na 4ª posição).",
+        "dica": "Sintaxe: =EXT.TEXTO(texto; núm_inicial; núm_caract)",
         "respostas_aceitas": [
             "(?i)=ext\\.texto\\(\\s*H10\\s*;\\s*4\\s*;\\s*4\\s*\\)"
         ],
@@ -476,6 +489,7 @@
         ],
         "contexto": "O valor da corrida da 99 está em D5 como número cru (ex: 25,5).",
         "enunciado": "Escreva a fórmula TEXTO para converter para moeda: \"R$ 0,00\".",
+        "dica": "Sintaxe: =TEXTO(valor; formato_texto)",
         "respostas_aceitas": [
             "(?i)=texto\\(\\s*D5\\s*;\\s*\"R\\$\\s*0,00\"\\s*\\)"
         ],
@@ -490,6 +504,7 @@
         ],
         "contexto": "Você quer achar a hashtag '#' dentro da string na célula J2.",
         "enunciado": "Escreva a fórmula LOCALIZAR para encontrar a hashtag em J2.",
+        "dica": "Sintaxe: =LOCALIZAR(texto_procurado; no_texto; [núm_inicial])",
         "respostas_aceitas": [
             "(?i)=localizar\\(\\s*\"#\"\\s*;\\s*J2\\s*\\)"
         ],
@@ -504,6 +519,7 @@
         ],
         "contexto": "Básico. Células A2, A3 e A4.",
         "enunciado": "Escreva a fórmula CONCATENAR para juntar A2, A3 e A4 sequencialmente sem nenhum espaço entre elas.",
+        "dica": "Sintaxe: =CONCATENAR(texto1; [texto2]; ...)",
         "respostas_aceitas": [
             "(?i)=concatenar\\(\\s*A2\\s*;\\s*A3\\s*;\\s*A4\\s*\\)"
         ],
@@ -518,6 +534,7 @@
         ],
         "contexto": "A descrição do chamado técnico (G5) do usuário veio cheia de quebras de linha e espaços indesejados.",
         "enunciado": "Escreva a fórmula de limpeza de texto para envelopar (corrigir) a célula G5.",
+        "dica": "Sintaxe: =ARRUMAR(texto)",
         "respostas_aceitas": [
             "(?i)=arrumar\\(\\s*G5\\s*\\)"
         ],
@@ -532,6 +549,7 @@
         ],
         "contexto": "Log de acesso ao sistema do banco de dados (B2). Você quer checar onde a palavra 'ERROR' (tudo maiúsculo) aparece.",
         "enunciado": "Escreva a fórmula PROCURAR para a string 'ERROR' na célula B2.",
+        "dica": "Sintaxe: =PROCURAR(texto_procurado; no_texto; [núm_inicial])",
         "respostas_aceitas": [
             "(?i)=procurar\\(\\s*\"ERROR\"\\s*;\\s*B2\\s*\\)"
         ],
@@ -592,6 +610,7 @@
         ],
         "contexto": "Criando a lista de degustação no Clube do Malte. A2 a A6 contêm nomes, mas A4 e A5 desistiram (estão em branco).",
         "enunciado": "Complete a fórmula para unir os nomes com vírgula e espaço, ignorando automaticamente as células em branco do intervalo.",
+        "dica": "Sintaxe: =UNIRTEXTO(delimitador; ignorar_vazio; texto1; ...)",
         "estrutura": "=UNIRTEXTO(\"____ \"; ____; A2:A6)",
         "lacunas_esperadas": [
             ",",
@@ -608,6 +627,7 @@
         ],
         "contexto": "Painel financeiro de reservas de Airbnb. A célula C10 tem o valor bruto (ex: 1500) e B10 tem a Data do Check-in (ex: 45310).",
         "enunciado": "Escreva a fórmula usando concatenador e a função TEXTO para gerar exatamente a frase: 'Receita de 1500,00 no mês de Janeiro'.",
+        "dica": "Sintaxe: =TEXTO(valor; formato_texto) | Uso do concatenador: texto1 & texto2",
         "respostas_aceitas": [
             "(?i)=\"Receita de \"\\s*&\\s*texto\\(\\s*C10\\s*;\\s*\"0,00\"\\s*\\)\\s*&\\s*\" no m[eê]s de \"\\s*&\\s*texto\\(\\s*B10\\s*;\\s*\"mmmm\"\\s*\\)"
         ],
@@ -622,6 +642,7 @@
         ],
         "contexto": "Cortando texto na ausência da função DIREITA. A célula A2 possui a string 'CHASSI-998877'.",
         "enunciado": "Escreva a fórmula utilizando EXT.TEXTO para pegar todo o texto a partir do 8º caractere até o infinito (use o macete de indicar um número altíssimo de caracteres para compensar o final).",
+        "dica": "Sintaxe: =EXT.TEXTO(texto; núm_inicial; núm_caract)",
         "respostas_aceitas": [
             "(?i)=ext\\.texto\\(\\s*A2\\s*;\\s*8\\s*;\\s*999(9*)\\s*\\)"
         ],
