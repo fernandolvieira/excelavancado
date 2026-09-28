@@ -290,6 +290,7 @@
         ],
         "contexto": "Parcela de empréstimo. Valor presente em A2, taxa de juros MENSAL em A3, e o prazo em ANOS em A4.",
         "enunciado": "Complete a função PGTO adaptando os anos para meses.",
+        "dica": "Sintaxe: =PGTO(taxa; nper; vp; [vf]; [tipo])",
         "estrutura": "=PGTO(____; A4 * ____; A2)",
         "lacunas_esperadas": [
             "A3",
@@ -305,6 +306,7 @@
         ],
         "contexto": "Buscando o segundo orçamento mais barato na coluna D.",
         "enunciado": "Preencha para retornar o 2º menor valor.",
+        "dica": "Sintaxe: =MENOR(matriz; k)",
         "estrutura": "=MENOR(____; ____)",
         "lacunas_esperadas": [
             "D:D",
@@ -320,6 +322,7 @@
         ],
         "contexto": "Ticket médio de compras de camisas G3 (coluna C) com valor maior que zero (coluna F).",
         "enunciado": "Complete os critérios da média.",
+        "dica": "Sintaxe: =MÉDIASES(intervalo_média; intervalo_critérios1; critérios1; ...)",
         "estrutura": "=MÉDIASES(F:F; ____; \"G3\"; F:F; ____)",
         "lacunas_esperadas": [
             "C:C",
@@ -335,6 +338,7 @@
         ],
         "contexto": "Descobrindo o 3º maior faturamento diário na coluna B.",
         "enunciado": "Complete a fórmula.",
+        "dica": "Sintaxe: =MAIOR(matriz; k)",
         "estrutura": "=MAIOR(____; ____)",
         "lacunas_esperadas": [
             "B:B",
@@ -350,6 +354,7 @@
         ],
         "contexto": "Ranking de tempos de corrida da Garupa (Coluna C). O menor tempo deve ser o 1º lugar.",
         "enunciado": "Preencha o último argumento para ordenar em formato crescente.",
+        "dica": "Sintaxe: =ORDEM(núm; ref; [ordem])",
         "estrutura": "=ORDEM(C2; C$2:C$50; ____)",
         "lacunas_esperadas": [
             "1"
@@ -364,6 +369,7 @@
         ],
         "contexto": "Somando gastos de Janeiro (coluna C) e Março (coluna E) simultaneamente.",
         "enunciado": "Complete a função SOMA para colunas separadas.",
+        "dica": "Sintaxe: =SOMA(núm1; [núm2]; ...)",
         "estrutura": "=SOMA(____; ____)",
         "lacunas_esperadas": [
             "C:C",
@@ -379,6 +385,7 @@
         ],
         "contexto": "Cálculo simples da nota geral na coluna D.",
         "enunciado": "Insira o nome da função correta.",
+        "dica": "Sintaxe: =MÉDIA(núm1; [núm2]; ...)",
         "estrutura": "=____(D:D)",
         "lacunas_esperadas": [
             "MÉDIA"
@@ -393,6 +400,7 @@
         ],
         "contexto": "Cálculo de parcela com Taxa (A2), Nper (A3) e VP (B2).",
         "enunciado": "Complete com o argumento do Valor Presente.",
+        "dica": "Sintaxe: =PGTO(taxa; nper; vp; [vf]; [tipo])",
         "estrutura": "=PGTO(A2; A3; ____)",
         "lacunas_esperadas": [
             "B2"
@@ -407,6 +415,7 @@
         ],
         "contexto": "Média de avaliações (D:D) exclusivamente do motorista 'João' (C:C).",
         "enunciado": "Preencha o intervalo e o critério.",
+        "dica": "Sintaxe: =MÉDIASES(intervalo_média; intervalo_critérios1; critérios1; ...)",
         "estrutura": "=MÉDIASES(____; C:C; ____)",
         "lacunas_esperadas": [
             "D:D",
@@ -422,6 +431,7 @@
         ],
         "contexto": "Placar de equipe de vendas. A pontuação atual está em D5 e todas as pontuações em D$2:D$100.",
         "enunciado": "Escreva a fórmula usando ORDEM para calcular a posição deste vendedor do maior para o menor (decrescente).",
+        "dica": "Sintaxe: =ORDEM(núm; ref; [ordem])",
         "respostas_aceitas": [
             "(?i)=ordem\\(\\s*D5\\s*;\\s*D\\$2:D\\$100\\s*(;\\s*0)?\\s*\\)",
             "(?i)=ordem\\.eq\\(\\s*D5\\s*;\\s*D\\$2:D\\$100\\s*(;\\s*0)?\\s*\\)"
@@ -437,6 +447,7 @@
         ],
         "contexto": "Financiamento de curso. Taxa de 2% ao mês (F2), Prazo de 12 meses (F3) e Valor de R$ 2.000,00 (F4).",
         "enunciado": "Escreva a fórmula completa. Adicione um sinal de menos na frente do valor do empréstimo para o resultado final ficar positivo.",
+        "dica": "Sintaxe: =PGTO(taxa; nper; vp; [vf]; [tipo])",
         "respostas_aceitas": [
             "(?i)=pgto\\(\\s*F2\\s*;\\s*F3\\s*;\\s*-F4\\s*\\)",
             "(?i)=-pgto\\(\\s*F2\\s*;\\s*F3\\s*;\\s*F4\\s*\\)"
@@ -452,6 +463,7 @@
         ],
         "contexto": "Métricas de suporte de TI. Coluna E: Tempo (horas). Coluna F: Urgência. Coluna G: Técnico.",
         "enunciado": "Escreva a fórmula para calcular o tempo médio de resolução (E) da urgência 'Alta' (F) atendida pelo técnico 'Carlos' (G).",
+        "dica": "Sintaxe: =MÉDIASES(intervalo_média; intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=m[eé]diases\\(\\s*E:E\\s*;\\s*F:F\\s*;\\s*\"Alta\"\\s*;\\s*G:G\\s*;\\s*\"Carlos\"\\s*\\)",
             "(?i)=m[eé]diases\\(\\s*E:E\\s*;\\s*G:G\\s*;\\s*\"Carlos\"\\s*;\\s*F:F\\s*;\\s*\"Alta\"\\s*\\)"
@@ -467,6 +479,7 @@
         ],
         "contexto": "Inventário de supermercado. A coluna E possui a quantidade em quilos de todas as caixas de paçoca vendidas.",
         "enunciado": "Escreva a fórmula simples para somar completamente a coluna E.",
+        "dica": "Sintaxe: =SOMA(núm1; [núm2]; ...)",
         "respostas_aceitas": [
             "(?i)=soma\\(\\s*E:E\\s*\\)"
         ],
@@ -481,6 +494,7 @@
         ],
         "contexto": "Análise de limites de crédito (Coluna F).",
         "enunciado": "Escreva a fórmula para descobrir o 2º maior limite de crédito da coluna F.",
+        "dica": "Sintaxe: =MAIOR(matriz; k)",
         "respostas_aceitas": [
             "(?i)=maior\\(\\s*F:F\\s*;\\s*2\\s*\\)"
         ],
@@ -495,6 +509,7 @@
         ],
         "contexto": "Tempos de resposta de SLA de chamados técnicos (Coluna H).",
         "enunciado": "Escreva a fórmula para encontrar o 5º tempo mais rápido (menor) da coluna H.",
+        "dica": "Sintaxe: =MENOR(matriz; k)",
         "respostas_aceitas": [
             "(?i)=menor\\(\\s*H:H\\s*;\\s*5\\s*\\)"
         ],
@@ -509,6 +524,7 @@
         ],
         "contexto": "Benchmark de placa de vídeo. Coluna B contém os frames por segundo (FPS) registrados a cada minuto.",
         "enunciado": "Escreva a fórmula para calcular a média de FPS da coluna B inteira.",
+        "dica": "Sintaxe: =MÉDIA(núm1; [núm2]; ...)",
         "respostas_aceitas": [
             "(?i)=m[eé]dia\\(\\s*B:B\\s*\\)"
         ],
@@ -523,6 +539,7 @@
         ],
         "contexto": "Olimpíada de matemática. A nota do aluno está em B2, e todas as notas na coluna B. O menor tempo ganha.",
         "enunciado": "Escreva a fórmula para classificar o tempo da célula B2 em relação à coluna B, em ordem crescente (menor é o 1º).",
+        "dica": "Sintaxe: =ORDEM(núm; ref; [ordem])",
         "respostas_aceitas": [
             "(?i)=ordem\\(\\s*B2\\s*;\\s*B:B\\s*;\\s*1\\s*\\)",
             "(?i)=ordem\\.eq\\(\\s*B2\\s*;\\s*B:B\\s*;\\s*1\\s*\\)"
@@ -538,6 +555,7 @@
         ],
         "contexto": "Cálculo de despesas corporativas. Valor na coluna C, Departamento na coluna A.",
         "enunciado": "Escreva a fórmula de MÉDIASES para calcular o gasto médio da coluna C apenas quando o Departamento (A:A) for 'TI'.",
+        "dica": "Sintaxe: =MÉDIASES(intervalo_média; intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=m[eé]diases\\(\\s*C:C\\s*;\\s*A:A\\s*;\\s*\"TI\"\\s*\\)"
         ],
@@ -599,6 +617,7 @@
         ],
         "contexto": "Financiamento de um notebook Asus TUF Gaming. O Banco cobra 18% ao ano (A1), para pagar em 24 meses (A2). O valor da máquina (A3) é R$ 8.000,00 e o cliente quer dar uma entrada de R$ 1.500,00 (A4).",
         "enunciado": "Complete a fórmula para calcular a parcela mensal exata.",
+        "dica": "Sintaxe: =PGTO(taxa; nper; vp; [vf]; [tipo])",
         "estrutura": "=PGTO(A1/12; A2; ____(A3-____))",
         "lacunas_esperadas": [
             "-",
@@ -614,6 +633,7 @@
         ],
         "contexto": "Um novo equipamento de ginástica para a Power Fitness custa R$ 12.000,00 (B2). O prazo é de 5 ANOS (B3), com pagamentos TRIMESTRAIS. A taxa informada é de 3% ao TRIMESTRE (B4).",
         "enunciado": "Escreva a fórmula do PGTO. Atenção à unidade de tempo de B3 e B4. O resultado final deve ser um valor positivo.",
+        "dica": "Sintaxe: =PGTO(taxa; nper; vp; [vf]; [tipo])",
         "respostas_aceitas": [
             "(?i)=-pgto\\(\\s*B4\\s*;\\s*B3\\*4\\s*;\\s*B2\\s*\\)",
             "(?i)=pgto\\(\\s*B4\\s*;\\s*B3\\*4\\s*;\\s*-B2\\s*\\)"
@@ -629,6 +649,7 @@
         ],
         "contexto": "Avaliando o tempo de duração de cortes na Malibu Barbearia. Coluna D = Tempo em Minutos. Coluna C = Barbeiro. Célula H1 = 'Lucas'.",
         "enunciado": "Escreva a fórmula para calcular a média de tempo da coluna D, apenas para o barbeiro da célula H1, desconsiderando tempos registrados como zero (0).",
+        "dica": "Sintaxe: =MÉDIASES(intervalo_média; intervalo_critérios1; critérios1; ...)",
         "respostas_aceitas": [
             "(?i)=m[eé]diases\\(\\s*D:D\\s*;\\s*C:C\\s*;\\s*H1\\s*;\\s*D:D\\s*;\\s*\"<>0\"\\s*\\)",
             "(?i)=m[eé]diases\\(\\s*D:D\\s*;\\s*D:D\\s*;\\s*\"<>0\"\\s*;\\s*C:C\\s*;\\s*H1\\s*\\)"
