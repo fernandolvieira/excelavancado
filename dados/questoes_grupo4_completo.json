@@ -291,6 +291,7 @@
         ],
         "contexto": "Buscando o preço (coluna 3) de uma camisa (A2) na matriz F:H. Exigindo correspondência exata.",
         "enunciado": "Preencha as lacunas da função PROCV.",
+        "dica": "Sintaxe: =PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo])",
         "estrutura": "=PROCV(A2; F:H; ____; ____)",
         "lacunas_esperadas": [
             "3",
@@ -306,6 +307,7 @@
         ],
         "contexto": "Descobrindo em qual linha está a 'Heineken' na coluna A. Busca exata.",
         "enunciado": "Complete a sintaxe do CORRESP.",
+        "dica": "Sintaxe: =CORRESP(valor_procurado; matriz_procurada; [tipo_correspondência])",
         "estrutura": "=CORRESP(\"Heineken\"; ____; ____)",
         "lacunas_esperadas": [
             "A:A",
@@ -322,6 +324,7 @@
         ],
         "contexto": "Retornar o Endereço (coluna C) com base no nome procurado na coluna B.",
         "enunciado": "A função CORRESP vai dentro do ÍNDICE.",
+        "dica": "Sintaxe: =ÍNDICE(matriz; núm_linha; [núm_coluna]) | =CORRESP(valor_procurado; matriz_procurada; [tipo_correspondência])",
         "estrutura": "=ÍNDICE(____; CORRESP(____; B:B; 0))",
         "lacunas_esperadas": [
             "C:C",
@@ -337,6 +340,7 @@
         ],
         "contexto": "O usuário digitou 'Fevereiro' na célula A2. Você quer somar a coluna B da aba Fevereiro.",
         "enunciado": "Use INDIRETO para concatenar o nome da aba com o intervalo.",
+        "dica": "Sintaxe: =INDIRETO(texto_ref; [a1])",
         "estrutura": "=SOMA(INDIRETO(____ & \"!B:B\"))",
         "lacunas_esperadas": [
             "A2"
@@ -351,6 +355,7 @@
         ],
         "contexto": "Você quer pegar o valor 2 linhas abaixo e 1 coluna à direita de C5.",
         "enunciado": "Preencha a célula base e as coordenadas.",
+        "dica": "Sintaxe: =DESLOC(ref; lins; cols; [altura]; [largura])",
         "estrutura": "=DESLOC(____; ____; 1)",
         "lacunas_esperadas": [
             "C5",
@@ -366,6 +371,7 @@
         ],
         "contexto": "Buscando o imposto para o mês em B7. A matriz vai de A1 a M5. A taxa está na linha 4.",
         "enunciado": "Complete os argumentos.",
+        "dica": "Sintaxe: =PROCH(valor_procurado; matriz_tabela; núm_índice_lin; [procurar_intervalo])",
         "estrutura": "=PROCH(B7; A1:M5; ____; FALSO)",
         "lacunas_esperadas": [
             "4"
@@ -380,6 +386,7 @@
         ],
         "contexto": "Busca aproximada de bônus por vendas (A2) na matriz TabelaBonus (que está ordenada).",
         "enunciado": "O último argumento deve permitir aproximação.",
+        "dica": "Sintaxe: =PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo])",
         "estrutura": "=PROCV(A2; TabelaBonus; 2; ____)",
         "lacunas_esperadas": [
             "VERDADEIRO"
@@ -394,6 +401,7 @@
         ],
         "contexto": "Tabela bidimensional de Notas. Tabela em B2:G20. Você já achou as posições: linha 5, coluna 3.",
         "enunciado": "Puxe o valor usando ÍNDICE de forma estática.",
+        "dica": "Sintaxe: =ÍNDICE(matriz; núm_linha; [núm_coluna])",
         "estrutura": "=ÍNDICE(B2:G20; ____; ____)",
         "lacunas_esperadas": [
             "5",
@@ -409,6 +417,7 @@
         ],
         "contexto": "Criar um intervalo que sempre pega os últimos 5 valores de uma lista que cresce na coluna A (onde CONT.VALORES(A:A) diz o total).",
         "enunciado": "A altura do intervalo final será determinada pelo 4º argumento.",
+        "dica": "Sintaxe: =DESLOC(ref; lins; cols; [altura]; [largura])",
         "estrutura": "=SOMA(DESLOC(A1; CONT.VALORES(A:A)-____; 0; ____))",
         "lacunas_esperadas": [
             "5",
@@ -424,6 +433,7 @@
         ],
         "contexto": "Busca de telefone. O nome está em A2. A matriz de contatos está em D:F. O telefone é a 3ª coluna.",
         "enunciado": "Escreva a fórmula do PROCV para busca EXATA do nome em A2 na matriz D:F.",
+        "dica": "Sintaxe: =PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo])",
         "respostas_aceitas": [
             "(?i)=procv\\(\\s*A2\\s*;\\s*D:F\\s*;\\s*3\\s*;\\s*(falso|0)\\s*\\)"
         ],
@@ -438,6 +448,7 @@
         ],
         "contexto": "Verificar a posição do produto 'SSD 1TB' (célula G1) na lista da coluna A.",
         "enunciado": "Escreva a fórmula do CORRESP para achar a posição exata de G1 na coluna A.",
+        "dica": "Sintaxe: =CORRESP(valor_procurado; matriz_procurada; [tipo_correspondência])",
         "respostas_aceitas": [
             "(?i)=corresp\\(\\s*G1\\s*;\\s*A:A\\s*;\\s*0\\s*\\)"
         ],
@@ -453,6 +464,7 @@
         ],
         "contexto": "Busca à esquerda. O nome da loja está em H2. O CNPJ (o que queremos) está na coluna A e o Nome da loja na coluna B.",
         "enunciado": "Escreva a fórmula ÍNDICE+CORRESP para buscar o CNPJ na coluna A correspondente à loja procurada na coluna B.",
+        "dica": "Sintaxe: =ÍNDICE(matriz; núm_linha; [núm_coluna]) | =CORRESP(valor_procurado; matriz_procurada; [tipo_correspondência])",
         "respostas_aceitas": [
             "(?i)=[íi]ndice\\(\\s*A:A\\s*;\\s*corresp\\(\\s*H2\\s*;\\s*B:B\\s*;\\s*0\\s*\\)\\s*\\)"
         ],
@@ -467,6 +479,7 @@
         ],
         "contexto": "A célula D5 contém o texto 'G10'. Você quer buscar o valor da célula G10 usando a referência em D5.",
         "enunciado": "Escreva a fórmula com INDIRETO para acessar o valor de G10 através da D5.",
+        "dica": "Sintaxe: =INDIRETO(texto_ref; [a1])",
         "respostas_aceitas": [
             "(?i)=indireto\\(\\s*D5\\s*\\)"
         ],
@@ -481,6 +494,7 @@
         ],
         "contexto": "O código do mês está em C1. A tabela de metas está horizontalmente no intervalo H1:S5. O valor que você quer está na linha 5.",
         "enunciado": "Escreva a fórmula PROCH para achar a meta de forma exata.",
+        "dica": "Sintaxe: =PROCH(valor_procurado; matriz_tabela; núm_índice_lin; [procurar_intervalo])",
         "respostas_aceitas": [
             "(?i)=proch\\(\\s*C1\\s*;\\s*H1:S5\\s*;\\s*5\\s*;\\s*(falso|0)\\s*\\)"
         ],
@@ -495,6 +509,7 @@
         ],
         "contexto": "A partir da célula B2, você quer retornar o valor que está 3 linhas abaixo e 2 colunas à direita.",
         "enunciado": "Escreva a fórmula usando DESLOC.",
+        "dica": "Sintaxe: =DESLOC(ref; lins; cols; [altura]; [largura])",
         "respostas_aceitas": [
             "(?i)=desloc\\(\\s*B2\\s*;\\s*3\\s*;\\s*2\\s*\\)"
         ],
@@ -509,6 +524,7 @@
         ],
         "contexto": "Tabela de descontos por volume. Coluna J = Volume, Coluna K = Desconto. O volume da compra está em A2.",
         "enunciado": "Escreva a fórmula PROCV para busca APROXIMADA na matriz J:K. Retorne o Desconto (coluna 2).",
+        "dica": "Sintaxe: =PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo])",
         "respostas_aceitas": [
             "(?i)=procv\\(\\s*A2\\s*;\\s*J:K\\s*;\\s*2\\s*;\\s*(verdadeiro|1)?\\s*\\)"
         ],
@@ -523,6 +539,7 @@
         ],
         "contexto": "Você quer pegar estaticamente a célula na intersecção da 4ª linha e 2ª coluna da matriz A2:E11.",
         "enunciado": "Escreva a fórmula ÍNDICE de forma direta, com números absolutos.",
+        "dica": "Sintaxe: =ÍNDICE(matriz; núm_linha; [núm_coluna])",
         "respostas_aceitas": [
             "(?i)=[íi]ndice\\(\\s*A2:E11\\s*;\\s*4\\s*;\\s*2\\s*\\)"
         ],
@@ -538,6 +555,7 @@
         ],
         "contexto": "Buscando o Status (Coluna F) do pedido 'PED-500' (na célula Z1). Os códigos do pedido estão na Coluna D.",
         "enunciado": "Escreva a fórmula combinada de ÍNDICE+CORRESP para esta busca bidirecional exata.",
+        "dica": "Sintaxe: =ÍNDICE(matriz; núm_linha; [núm_coluna]) | =CORRESP(valor_procurado; matriz_procurada; [tipo_correspondência])",
         "respostas_aceitas": [
             "(?i)=[íi]ndice\\(\\s*F:F\\s*;\\s*corresp\\(\\s*Z1\\s*;\\s*D:D\\s*;\\s*0\\s*\\)\\s*\\)"
         ],
@@ -599,6 +617,7 @@
         ],
         "contexto": "Avaliando bônus por pontos no TryHackMe. O usuário fez 850 pontos (A2). A tabela de prêmios (D2:E6) exige 0, 500, 1000, 1500 pontos. Ele deve receber o prêmio da faixa de 500.",
         "enunciado": "Complete o PROCV para buscar valores APROXIMADOS (buscando o maior valor menor ou igual a A2).",
+        "dica": "Sintaxe: =PROCV(valor_procurado; matriz_tabela; núm_índice_coluna; [procurar_intervalo])",
         "estrutura": "=PROCV(A2; D2:E6; 2; ____)",
         "lacunas_esperadas": [
             "VERDADEIRO"
@@ -614,6 +633,7 @@
         ],
         "contexto": "Buscando à esquerda. A coluna E contém o 'ID do Processador' e a coluna C contém o 'Nome do Produto' (ex: Ryzen 9). O ID procurado está em A2.",
         "enunciado": "Escreva a fórmula usando ÍNDICE e CORRESP para retornar o Nome do Produto (C:C) baseado no ID exato (E:E).",
+        "dica": "Sintaxe: =ÍNDICE(matriz; núm_linha; [núm_coluna]) | =CORRESP(valor_procurado; matriz_procurada; [tipo_correspondência])",
         "respostas_aceitas": [
             "(?i)=[íi]ndice\\(\\s*C:C\\s*;\\s*corresp\\(\\s*A2\\s*;\\s*E:E\\s*;\\s*0\\s*\\)\\s*\\)"
         ],
@@ -629,6 +649,7 @@
         ],
         "contexto": "No cabeçalho da linha 1 temos os meses. Nas linhas de 2 a 10 temos as despesas de condomínio do Airbnb. Célula Z2 = 'Agosto'.",
         "enunciado": "Escreva a fórmula usando PROCH para buscar 'Agosto' na linha 1 e retornar o valor correspondente à 'Taxa Extra', que sempre está localizada estaticamente na linha 5 da matriz A1:M10.",
+        "dica": "Sintaxe: =PROCH(valor_procurado; matriz_tabela; núm_índice_lin; [procurar_intervalo])",
         "respostas_aceitas": [
             "(?i)=proch\\(\\s*Z2\\s*;\\s*A1:M10\\s*;\\s*5\\s*;\\s*(falso|0)\\s*\\)"
         ],
