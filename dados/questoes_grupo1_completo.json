@@ -34,7 +34,7 @@
             "SEERRO"
         ],
         "contexto": "Controle de estoque de hardware (Processadores, RAM, SSDs). Custo médio = Custo Total (E) / Quantidade (F). Algumas peças têm Quantidade = 0.",
-        "enunciado": "Calcule o custo médio na primeira linha e arraste. Aplique a correção de erro para retornar 0 nas divisões por zero e informe o somatório total.",
+        "enunciado": "Calcule o custo médio na linha 2 e arraste. Aplique a correção de erro para retornar 0 nas divisões por zero e informe o somatório total.",
         "dica": "O tratamento de erros evita que o somatório final quebre.",
         "arquivo_download": "estoque_hardware.xlsx",
         "resultado_esperado": "12450"
@@ -350,9 +350,9 @@
         "tags": [
             "SE"
         ],
-        "contexto": "Se a média (A1) for >= 70, retorna 'Aprovado', senão 'Recuperação'.",
+        "contexto": "Se a média (A2) for >= 70, retorna 'Aprovado', senão 'Recuperação'.",
         "enunciado": "Complete a função SE.",
-        "estrutura": "=SE(A1>=70; ____; ____)",
+        "estrutura": "=SE(A2>=70; ____; ____)",
         "lacunas_esperadas": [
             "\"Aprovado\"",
             "\"Recuperação\""
@@ -365,9 +365,9 @@
         "tags": [
             "OU"
         ],
-        "contexto": "Frete grátis se o valor (B1) for maior que 200 OU cliente for 'VIP' (C1).",
+        "contexto": "Frete grátis se o valor (B2) for maior que 200 OU cliente for 'VIP' (C2).",
         "enunciado": "Preencha a função lógica.",
-        "estrutura": "=SE(____(B1>200; C1=\"VIP\"); \"Grátis\"; \"Cobrar\")",
+        "estrutura": "=SE(____(B2>200; C2=\"VIP\"); \"Grátis\"; \"Cobrar\")",
         "lacunas_esperadas": [
             "OU"
         ]
@@ -394,12 +394,12 @@
         "tags": [
             "CONT.SES"
         ],
-        "contexto": "Contar reservas do app '99' na data de 'Hoje' (A1). O app está na coluna B e a data na D.",
+        "contexto": "Contar reservas do app '99' na data de 'Hoje' (A2). O app está na coluna B e a data na D.",
         "enunciado": "Preencha os argumentos.",
         "estrutura": "=CONT.SES(____; \"99\"; D:D; ____)",
         "lacunas_esperadas": [
             "B:B",
-            "A1"
+            "A2"
         ]
     },
     {
